@@ -1,0 +1,624 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Caveat:wght@500;600&display=swap');
+
+/* =========================================
+   FILLET Y PAPAS PONT NEUF
+   Paleta: olivo, mostaza y tonos tierra
+========================================= */
+
+body.fillet-pont-neuf-page {
+    --fp-olive: #78805c;
+    --fp-dark: #454a35;
+    --fp-green: #a2a184;
+    --fp-light: #e9e7d8;
+    --fp-pale: #f3f0e5;
+    --fp-mustard: #c5a45e;
+    --fp-brown: #94765a;
+    --fp-ink: #4e4b40;
+    --fp-muted: #898477;
+    --fp-line: #e4dfcf;
+
+    margin: 0;
+    padding: 35px 18px;
+    background: #e7e0d3;
+    color: var(--fp-ink);
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.75;
+}
+
+/* =========================================
+   HOJA PRINCIPAL
+========================================= */
+
+.fillet-pont-neuf-page .eq-page {
+    width: min(1120px, 100%);
+    margin: 0 auto;
+    padding: 35px 65px 30px;
+    background: #faf8f1;
+    border: 1px solid rgba(69, 74, 53, .10);
+    box-shadow: 0 18px 55px rgba(67, 59, 42, .10);
+    position: relative;
+    overflow: hidden;
+}
+
+.fillet-pont-neuf-page .eq-page::before,
+.fillet-pont-neuf-page .eq-page::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: #e7e1d2;
+}
+
+.fillet-pont-neuf-page .eq-page::before {
+    left: 23px;
+}
+
+.fillet-pont-neuf-page .eq-page::after {
+    right: 23px;
+}
+
+/* =========================================
+   PORTADA
+========================================= */
+
+.fillet-pont-neuf-page .eq-cover {
+    min-height: 365px;
+    margin-bottom: 65px;
+    padding: 65px 55px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 90% 15%, rgba(255,255,255,.6) 0 75px, transparent 76px),
+        radial-gradient(circle at 92% 100%, rgba(197,164,94,.23) 0 145px, transparent 146px),
+        linear-gradient(125deg, #e8e6d7 0%, #f0eadb 55%, #e8e2d2 100%);
+    border: 1px solid #dedac8;
+}
+
+.fillet-pont-neuf-page .eq-cover > div {
+    max-width: 680px;
+    position: relative;
+    z-index: 1;
+}
+
+.fillet-pont-neuf-page .eq-subtitle {
+    margin: 0 0 20px;
+    color: var(--fp-olive);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+}
+
+.fillet-pont-neuf-page .eq-cover h1 {
+    margin: 0;
+    color: var(--fp-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(43px, 6vw, 68px);
+    font-weight: 500;
+    line-height: 1.08;
+    letter-spacing: -1.5px;
+}
+
+.fillet-pont-neuf-page .eq-cover > div > p:last-child {
+    max-width: 520px;
+    margin: 22px 0 0;
+    color: #746f5e;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.fillet-pont-neuf-page .eq-cover-number {
+    position: absolute;
+    right: 40px;
+    bottom: 27px;
+    color: var(--fp-olive);
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    letter-spacing: 3px;
+}
+
+.fillet-pont-neuf-page .eq-cover-number::before {
+    content: "";
+    display: block;
+    width: 42px;
+    height: 1px;
+    margin: 0 auto 9px;
+    background: var(--fp-mustard);
+}
+
+/* =========================================
+   INTRODUCCIÓN
+========================================= */
+
+.fillet-pont-neuf-page .eq-intro {
+    max-width: 880px;
+    margin: 0 auto 45px;
+}
+
+.fillet-pont-neuf-page .eq-intro .eq-heading {
+    margin: 0 0 14px;
+    color: var(--fp-olive);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.fillet-pont-neuf-page .eq-intro > p:last-child {
+    margin: 0;
+    color: #716e62;
+    font-size: 14px;
+    line-height: 2;
+}
+
+/* =========================================
+   DATOS DE LA RECETA
+========================================= */
+
+.fillet-pont-neuf-page .recipe-data {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+    margin: 0 0 65px;
+}
+
+.fillet-pont-neuf-page .recipe-data .eq-card {
+    min-height: 98px;
+    padding: 19px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7px;
+    background: #fffdf8;
+    border: 1px solid var(--fp-line);
+    border-top: 3px solid var(--fp-olive);
+    border-radius: 5px;
+    box-shadow: 0 5px 14px rgba(67, 59, 42, .035);
+}
+
+.fillet-pont-neuf-page .recipe-data .eq-card:nth-child(2),
+.fillet-pont-neuf-page .recipe-data .eq-card:nth-child(5) {
+    border-top-color: var(--fp-mustard);
+}
+
+.fillet-pont-neuf-page .recipe-data .eq-card:nth-child(3),
+.fillet-pont-neuf-page .recipe-data .eq-card:nth-child(6) {
+    border-top-color: var(--fp-brown);
+}
+
+.fillet-pont-neuf-page .recipe-data span {
+    color: var(--fp-muted);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.fillet-pont-neuf-page .recipe-data strong {
+    color: var(--fp-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+/* =========================================
+   SECCIONES
+========================================= */
+
+.fillet-pont-neuf-page .recipe-section {
+    margin: 0 0 58px;
+}
+
+.fillet-pont-neuf-page .recipe-section > .eq-heading {
+    margin: 0 0 23px;
+    padding-bottom: 15px;
+    color: var(--fp-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.3;
+    border-bottom: 1px solid var(--fp-line);
+    position: relative;
+}
+
+.fillet-pont-neuf-page .recipe-section > .eq-heading::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 68px;
+    height: 2px;
+    background: var(--fp-olive);
+}
+
+/* =========================================
+   TARJETAS DE CONTENIDO
+========================================= */
+
+.fillet-pont-neuf-page .recipe-content-card {
+    padding: 27px 30px;
+    background: #fffdf8;
+    border: 1px solid var(--fp-line);
+    border-radius: 5px;
+    box-shadow: 0 7px 20px rgba(67, 59, 42, .035);
+}
+
+.fillet-pont-neuf-page .recipe-content-card p {
+    margin: 0;
+    color: #716e62;
+    font-size: 14px;
+    line-height: 1.95;
+}
+
+/* =========================================
+   TABLA DE INGREDIENTES
+========================================= */
+
+.fillet-pont-neuf-page .recipe-ingredients-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.fillet-pont-neuf-page .recipe-ingredients-table thead {
+    background: #eeeddf;
+}
+
+.fillet-pont-neuf-page .recipe-ingredients-table th {
+    padding: 15px 17px;
+    color: var(--fp-dark);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.fillet-pont-neuf-page .recipe-ingredients-table td {
+    padding: 14px 17px;
+    color: #6e6a5d;
+    border-bottom: 1px solid #eeeadd;
+    line-height: 1.65;
+}
+
+.fillet-pont-neuf-page .recipe-ingredients-table tbody tr:nth-child(even) {
+    background: #fcfaf4;
+}
+
+.fillet-pont-neuf-page .recipe-ingredients-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.fillet-pont-neuf-page .recipe-ingredients-table tbody tr:hover {
+    background: #f4f0e4;
+}
+
+/* =========================================
+   NOTA DE LA RECETA
+========================================= */
+
+.fillet-pont-neuf-page .recipe-note {
+    margin: 22px 0 0;
+    padding: 17px 20px;
+    color: #746e5e;
+    background: #f3f0e5;
+    border-left: 3px solid var(--fp-mustard);
+    font-size: 13px;
+    line-height: 1.85;
+}
+
+.fillet-pont-neuf-page .recipe-note strong {
+    color: var(--fp-dark);
+}
+
+/* =========================================
+   MISE EN PLACE
+   Sin viñetas predeterminadas
+========================================= */
+
+.fillet-pont-neuf-page .recipe-list {
+    list-style: none !important;
+    margin: 0;
+    padding: 0;
+    counter-reset: mise;
+}
+
+.fillet-pont-neuf-page .recipe-list li {
+    list-style: none !important;
+    position: relative;
+    margin: 0;
+    padding: 14px 8px 14px 48px;
+    color: #716e62;
+    font-size: 14px;
+    line-height: 1.8;
+    border-bottom: 1px solid #eeeadd;
+    counter-increment: mise;
+}
+
+.fillet-pont-neuf-page .recipe-list li::marker {
+    content: none !important;
+}
+
+.fillet-pont-neuf-page .recipe-list li::before {
+    content: counter(mise, decimal-leading-zero);
+    position: absolute;
+    left: 3px;
+    top: 13px;
+    color: var(--fp-olive);
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.fillet-pont-neuf-page .recipe-list li:last-child {
+    border-bottom: none;
+}
+
+/* =========================================
+   PASOS DE PREPARACIÓN
+========================================= */
+
+.fillet-pont-neuf-page .recipe-steps {
+    list-style: none !important;
+    margin: 0;
+    padding: 0;
+}
+
+.fillet-pont-neuf-page .recipe-steps .recipe-step {
+    list-style: none !important;
+    display: grid;
+    grid-template-columns: 43px minmax(0, 1fr);
+    align-items: start;
+    gap: 18px;
+    margin: 0;
+    padding: 19px 0;
+    border-bottom: 1px solid #eeeadd;
+}
+
+.fillet-pont-neuf-page .recipe-steps .recipe-step:first-child {
+    padding-top: 3px;
+}
+
+.fillet-pont-neuf-page .recipe-steps .recipe-step:last-child {
+    padding-bottom: 3px;
+    border-bottom: none;
+}
+
+.fillet-pont-neuf-page .recipe-steps .recipe-step::marker {
+    content: none !important;
+}
+
+.fillet-pont-neuf-page .step-number {
+    width: 39px;
+    height: 39px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--fp-dark);
+    background: #eeeddf;
+    border: 1px solid #dedcc8;
+    border-radius: 50%;
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.fillet-pont-neuf-page .recipe-steps .recipe-step strong {
+    display: block;
+    margin: 0 0 7px;
+    color: var(--fp-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.fillet-pont-neuf-page .recipe-steps .recipe-step p {
+    margin: 0;
+    color: #716e62;
+    font-size: 13px;
+    line-height: 1.95;
+}
+
+/* =========================================
+   GALERÍA DE IMÁGENES
+========================================= */
+
+.fillet-pont-neuf-page .recipe-gallery-space {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.fillet-pont-neuf-page .recipe-image-space {
+    min-height: 215px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background:
+        linear-gradient(145deg, rgba(255,255,255,.65), rgba(255,255,255,.2)),
+        #eeeddf;
+    border: 1px dashed #c9c6aa;
+    border-radius: 5px;
+    color: var(--fp-olive);
+}
+
+.fillet-pont-neuf-page .recipe-image-space:nth-child(2) {
+    background:
+        linear-gradient(145deg, rgba(255,255,255,.65), rgba(255,255,255,.2)),
+        #f2eadb;
+    border-color: #d9c5a0;
+    color: #9b8051;
+}
+
+.fillet-pont-neuf-page .recipe-image-space:nth-child(3) {
+    background:
+        linear-gradient(145deg, rgba(255,255,255,.65), rgba(255,255,255,.2)),
+        #e9e8dc;
+    border-color: #c6c9b3;
+    color: #747c5c;
+}
+
+.fillet-pont-neuf-page .recipe-image-space span {
+    max-width: 270px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    line-height: 1.7;
+}
+
+.fillet-pont-neuf-page .recipe-image-space p {
+    max-width: 270px;
+    margin: 10px 0 0;
+    color: #898477;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* =========================================
+   NAVEGACIÓN
+========================================= */
+
+.fillet-pont-neuf-page .eq-page-navigation {
+    display: flex;
+    justify-content: flex-start;
+    margin: 65px 0 25px;
+    padding-top: 25px;
+    border-top: 1px solid var(--fp-line);
+}
+
+.fillet-pont-neuf-page .eq-page-navigation a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 21px;
+    color: var(--fp-dark);
+    background: #eeeddf;
+    border: 1px solid #dedcc8;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .25s ease;
+}
+
+.fillet-pont-neuf-page .eq-page-navigation a:hover {
+    color: white;
+    background: var(--fp-olive);
+    border-color: var(--fp-olive);
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.fillet-pont-neuf-page .eq-footer {
+    margin-top: 25px;
+    padding: 20px 0 5px;
+    text-align: center;
+    border-top: 1px solid var(--fp-line);
+}
+
+.fillet-pont-neuf-page .eq-footer p {
+    margin: 0;
+    color: var(--fp-muted);
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 760px) {
+    body.fillet-pont-neuf-page {
+        padding: 12px;
+    }
+
+    .fillet-pont-neuf-page .eq-page {
+        padding: 22px 25px;
+    }
+
+    .fillet-pont-neuf-page .eq-page::before {
+        left: 9px;
+    }
+
+    .fillet-pont-neuf-page .eq-page::after {
+        right: 9px;
+    }
+
+    .fillet-pont-neuf-page .eq-cover {
+        min-height: 300px;
+        padding: 42px 28px;
+        margin-bottom: 45px;
+    }
+
+    .fillet-pont-neuf-page .eq-cover h1 {
+        font-size: 43px;
+    }
+
+    .fillet-pont-neuf-page .recipe-data {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        margin-bottom: 45px;
+    }
+
+    .fillet-pont-neuf-page .recipe-data .eq-card {
+        padding: 15px 13px;
+    }
+
+    .fillet-pont-neuf-page .recipe-content-card {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 520px) {
+    .fillet-pont-neuf-page .eq-cover {
+        min-height: 270px;
+        padding: 32px 22px;
+    }
+
+    .fillet-pont-neuf-page .eq-cover h1 {
+        font-size: 36px;
+    }
+
+    .fillet-pont-neuf-page .recipe-gallery-space {
+        grid-template-columns: 1fr;
+    }
+
+    .fillet-pont-neuf-page .recipe-image-space {
+        min-height: 180px;
+    }
+
+    .fillet-pont-neuf-page .recipe-section > .eq-heading {
+        font-size: 24px;
+    }
+
+    .fillet-pont-neuf-page .recipe-content-card {
+        padding: 16px;
+        overflow-x: auto;
+    }
+
+    .fillet-pont-neuf-page .recipe-ingredients-table {
+        min-width: 410px;
+    }
+
+    .fillet-pont-neuf-page .recipe-steps .recipe-step {
+        grid-template-columns: 35px minmax(0, 1fr);
+        gap: 12px;
+    }
+
+    .fillet-pont-neuf-page .step-number {
+        width: 34px;
+        height: 34px;
+        font-size: 12px;
+    }
+}

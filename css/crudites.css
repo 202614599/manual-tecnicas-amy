@@ -1,0 +1,660 @@
+
+/* =========================================
+   CRUDITÉS
+   Cuaderno gastronómico
+========================================= */
+
+body.crudites-page {
+    --cr-green: #758c69;
+    --cr-dark: #465c43;
+    --cr-light: #e4ecdc;
+    --cr-pale: #f0f4e9;
+    --cr-orange: #d69a61;
+    --cr-pink: #c98283;
+    --cr-ink: #494a40;
+    --cr-muted: #89877b;
+    --cr-line: #e3e3d5;
+
+    background: #e8e1d5;
+    color: var(--cr-ink);
+    font-family: "DM Sans", sans-serif;
+}
+
+/* ENCABEZADO */
+
+.crudites-page .eq-header {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 30px 25px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.crudites-page .eq-back {
+    color: var(--cr-dark);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: color .2s ease;
+}
+
+.crudites-page .eq-back:hover {
+    color: var(--cr-orange);
+}
+
+.crudites-page .eq-label {
+    color: var(--cr-muted);
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* HOJA PRINCIPAL */
+
+.crudites-page .eq-container {
+    max-width: 1120px;
+    margin: 0 auto 55px;
+    padding: 42px 58px 40px;
+    background: #faf8f1;
+    border: 1px solid #e4dccf;
+    box-shadow: 0 12px 35px rgba(75, 60, 42, .08);
+    position: relative;
+    overflow: hidden;
+}
+
+.crudites-page .eq-container::before,
+.crudites-page .eq-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: rgba(117, 140, 105, .2);
+    pointer-events: none;
+}
+
+.crudites-page .eq-container::before {
+    left: 25px;
+}
+
+.crudites-page .eq-container::after {
+    right: 25px;
+}
+
+/* PORTADA */
+
+.crudites-page .eq-cover {
+    min-height: 390px;
+    padding: 55px 48px;
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    align-items: center;
+    gap: 35px;
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 85% 15%, rgba(255,255,255,.7), transparent 28%),
+        linear-gradient(125deg, #e4ecdc 0%, #eff1e2 55%, #f5e9d7 100%);
+    border: 1px solid #dce5d4;
+}
+
+.crudites-page .eq-cover::before {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border: 1px solid rgba(117, 140, 105, .25);
+    border-radius: 50%;
+    right: -70px;
+    top: -95px;
+}
+
+.crudites-page .eq-cover::after {
+    content: "";
+    position: absolute;
+    width: 175px;
+    height: 175px;
+    border: 1px solid rgba(214, 154, 97, .3);
+    border-radius: 50%;
+    right: 40px;
+    bottom: -105px;
+}
+
+.crudites-page .eq-cover-text {
+    position: relative;
+    z-index: 2;
+}
+
+.crudites-page .eq-kicker {
+    display: block;
+    color: var(--cr-green);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.crudites-page .eq-cover h1 {
+    color: var(--cr-dark);
+    font-family: "Playfair Display", serif;
+    font-size: clamp(40px, 5vw, 64px);
+    line-height: 1.08;
+    font-weight: 500;
+    margin: 0 0 20px;
+}
+
+.crudites-page .eq-cover p {
+    max-width: 470px;
+    color: #62685b;
+    font-size: 14px;
+    line-height: 1.9;
+    margin: 0;
+}
+
+.crudites-page .eq-line {
+    width: 65px;
+    height: 2px;
+    background: var(--cr-orange);
+    margin: 25px 0 15px;
+}
+
+.crudites-page .eq-small {
+    color: var(--cr-muted);
+    font-size: 11px;
+    letter-spacing: .7px;
+}
+
+/* DECORACIÓN DE PORTADA */
+
+.crudites-page .eq-cover-drawing {
+    position: relative;
+    z-index: 2;
+    min-height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.crudites-page .eq-cover-drawing > span {
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .55);
+    border: 1px solid rgba(117, 140, 105, .3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--cr-green);
+    font-size: 100px;
+    font-family: "Playfair Display", serif;
+    box-shadow: 0 10px 30px rgba(70, 92, 67, .07);
+}
+
+.crudites-page .eq-page-number {
+    position: absolute;
+    bottom: 20px;
+    right: 25px;
+    color: rgba(70, 92, 67, .55);
+    font-family: "Playfair Display", serif;
+    font-size: 14px;
+}
+
+/* INTRODUCCIÓN */
+
+.crudites-page .eq-intro {
+    padding: 45px 10px 40px;
+    border-bottom: 1px solid var(--cr-line);
+}
+
+.crudites-page .eq-intro h2 {
+    color: var(--cr-dark);
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    font-weight: 500;
+    margin: 0 0 14px;
+}
+
+.crudites-page .eq-intro p {
+    max-width: 850px;
+    color: #68675d;
+    font-size: 13px;
+    line-height: 1.9;
+    margin: 0;
+}
+
+/* SECCIONES */
+
+.crudites-page .recipe-section {
+    padding: 42px 10px 12px;
+}
+
+.crudites-page .eq-heading {
+    margin-bottom: 23px;
+}
+
+.crudites-page .eq-heading h2 {
+    color: var(--cr-dark);
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    font-weight: 500;
+    margin: 0 0 10px;
+}
+
+.crudites-page .eq-heading p {
+    color: var(--cr-muted);
+    font-size: 13px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* IMAGEN PRINCIPAL */
+
+.crudites-page .recipe-section > .recipe-image-space {
+    min-height: 290px;
+    padding: 25px;
+    background: linear-gradient(135deg, #eef1e5, #f7eee1);
+    border: 1px dashed #b8c5ad;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--cr-dark);
+    font-family: "Caveat", cursive;
+    font-size: 25px;
+    line-height: 1.4;
+}
+
+.crudites-page .recipe-image-space img {
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: 9px;
+}
+
+/* INFORMACIÓN GENERAL */
+
+.crudites-page .recipe-information {
+    padding: 32px 10px 15px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 13px;
+}
+
+.crudites-page .recipe-information .recipe-data {
+    min-height: 88px;
+    padding: 17px;
+    background: #fffefa;
+    border: 1px solid var(--cr-line);
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 9px;
+    box-shadow: 0 4px 12px rgba(75, 60, 42, .035);
+}
+
+.crudites-page .recipe-data span {
+    color: var(--cr-muted);
+    font-size: 10px;
+    letter-spacing: .8px;
+    text-transform: uppercase;
+}
+
+.crudites-page .recipe-data strong {
+    color: var(--cr-dark);
+    font-family: "Playfair Display", serif;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+/* TARJETAS DE CONTENIDO */
+
+.crudites-page .eq-card.recipe-content-card {
+    background: #fffefa;
+    border: 1px solid var(--cr-line);
+    border-radius: 10px;
+    padding: 27px 30px;
+    box-shadow: 0 5px 16px rgba(75, 60, 42, .035);
+}
+
+.crudites-page .recipe-content-card > p {
+    color: #626056;
+    font-size: 13px;
+    line-height: 1.9;
+    margin: 0 0 14px;
+}
+
+.crudites-page .recipe-content-card > p:last-child {
+    margin-bottom: 0;
+}
+
+/* TABLA DE INGREDIENTES */
+
+.crudites-page .recipe-ingredients-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.crudites-page .recipe-ingredients-table th {
+    background: var(--cr-pale);
+    color: var(--cr-dark);
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 15px 16px;
+    text-align: left;
+}
+
+.crudites-page .recipe-ingredients-table td {
+    padding: 15px 16px;
+    border-bottom: 1px solid var(--cr-line);
+    color: #55564c;
+    line-height: 1.6;
+}
+
+.crudites-page .recipe-ingredients-table tbody tr:nth-child(even) {
+    background: #fbfaf5;
+}
+
+.crudites-page .recipe-ingredients-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.crudites-page .recipe-ingredients-table th:nth-child(2),
+.crudites-page .recipe-ingredients-table th:nth-child(3),
+.crudites-page .recipe-ingredients-table td:nth-child(2),
+.crudites-page .recipe-ingredients-table td:nth-child(3) {
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* LISTAS Y MISE EN PLACE */
+
+.crudites-page .recipe-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.crudites-page .recipe-list li {
+    position: relative;
+    padding: 15px 12px 15px 36px;
+    border-bottom: 1px solid var(--cr-line);
+    color: #55564c;
+    font-size: 13px;
+    line-height: 1.85;
+}
+
+.crudites-page .recipe-list li:last-child {
+    border-bottom: none;
+}
+
+.crudites-page .recipe-list li::before {
+    content: "✦";
+    position: absolute;
+    left: 9px;
+    top: 17px;
+    color: var(--cr-green);
+    font-size: 12px;
+}
+
+/* PROCEDIMIENTO */
+
+.crudites-page .recipe-steps {
+    counter-reset: crudite-step;
+}
+
+.crudites-page .recipe-steps li {
+    padding-left: 55px;
+    min-height: 50px;
+}
+
+.crudites-page .recipe-steps li::before {
+    counter-increment: crudite-step;
+    content: "0" counter(crudite-step);
+    width: 34px;
+    height: 34px;
+    left: 5px;
+    top: 15px;
+    border-radius: 50%;
+    background: var(--cr-light);
+    color: var(--cr-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Playfair Display", serif;
+    font-size: 12px;
+}
+
+/* NOTA GASTRONÓMICA */
+
+.crudites-page .recipe-note {
+    margin: 40px 10px 25px;
+    padding: 27px 30px;
+    background: #edf0e6;
+    border-left: 4px solid var(--cr-green);
+    border-radius: 0 9px 9px 0;
+}
+
+.crudites-page .recipe-note h3 {
+    color: var(--cr-dark);
+    font-family: "Playfair Display", serif;
+    font-size: 21px;
+    font-weight: 500;
+    margin: 0 0 10px;
+}
+
+.crudites-page .recipe-note p {
+    color: #62665a;
+    font-size: 13px;
+    line-height: 1.9;
+    margin: 0;
+}
+
+/* GALERÍA */
+
+.crudites-page .recipe-gallery-space {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 17px;
+}
+
+.crudites-page .recipe-gallery-space .recipe-image-space {
+    min-height: 200px;
+    padding: 20px;
+    background: #f0f2e8;
+    border: 1px dashed #bac6ae;
+    border-radius: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--cr-muted);
+    font-family: "Caveat", cursive;
+    font-size: 21px;
+    line-height: 1.4;
+}
+
+/* NAVEGACIÓN */
+
+.crudites-page .eq-page-navigation {
+    margin: 42px 10px 20px;
+    padding: 23px 0 5px;
+    border-top: 1px solid var(--cr-line);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.crudites-page .eq-page-navigation a {
+    color: var(--cr-dark);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    transition: color .2s ease, transform .2s ease;
+}
+
+.crudites-page .eq-page-navigation a:hover {
+    color: var(--cr-orange);
+    transform: translateX(-3px);
+}
+
+.crudites-page .eq-page-navigation span {
+    color: var(--cr-muted);
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+/* PIE DE PÁGINA */
+
+.crudites-page .eq-footer {
+    max-width: 1120px;
+    margin: -55px auto 0;
+    padding: 20px 25px 28px;
+    color: var(--cr-muted);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-align: center;
+}
+
+.crudites-page .eq-footer p {
+    margin: 0;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 760px) {
+    .crudites-page .eq-container {
+        padding: 25px 30px;
+        margin: 0 12px 55px;
+    }
+
+    .crudites-page .eq-cover {
+        grid-template-columns: 1fr;
+        padding: 40px 30px;
+        gap: 15px;
+    }
+
+    .crudites-page .eq-cover-drawing {
+        min-height: 150px;
+    }
+
+    .crudites-page .eq-cover-drawing > span {
+        width: 135px;
+        height: 135px;
+        font-size: 75px;
+    }
+
+    .crudites-page .recipe-information {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .crudites-page .recipe-section {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .crudites-page .eq-header {
+        padding: 20px 18px;
+    }
+
+    .crudites-page .eq-label {
+        font-size: 8px;
+        text-align: right;
+    }
+
+    .crudites-page .eq-container {
+        padding: 18px 22px;
+    }
+
+    .crudites-page .eq-container::before {
+        left: 10px;
+    }
+
+    .crudites-page .eq-container::after {
+        right: 10px;
+    }
+
+    .crudites-page .eq-cover {
+        padding: 32px 23px;
+    }
+
+    .crudites-page .eq-cover h1 {
+        font-size: 40px;
+    }
+
+    .crudites-page .eq-intro h2,
+    .crudites-page .eq-heading h2 {
+        font-size: 25px;
+    }
+
+    .crudites-page .recipe-information {
+        gap: 8px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .crudites-page .recipe-information .recipe-data {
+        min-height: 78px;
+        padding: 12px;
+    }
+
+    .crudites-page .recipe-data strong {
+        font-size: 14px;
+    }
+
+    .crudites-page .eq-card.recipe-content-card {
+        padding: 17px 13px;
+    }
+
+    .crudites-page .recipe-ingredients-table {
+        font-size: 11px;
+    }
+
+    .crudites-page .recipe-ingredients-table th,
+    .crudites-page .recipe-ingredients-table td {
+        padding: 12px 8px;
+    }
+
+    .crudites-page .recipe-gallery-space {
+        grid-template-columns: 1fr;
+    }
+
+    .crudites-page .recipe-gallery-space .recipe-image-space {
+        min-height: 155px;
+    }
+
+    .crudites-page .recipe-note {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 21px 18px;
+    }
+
+    .crudites-page .eq-page-navigation {
+        margin-left: 0;
+        margin-right: 0;
+        flex-wrap: wrap;
+    }
+
+    .crudites-page .eq-page-navigation span {
+        font-size: 8px;
+    }
+
+    .crudites-page .eq-footer {
+        padding: 20px 15px;
+        margin-top: -55px;
+        line-height: 1.8;
+    }
+}

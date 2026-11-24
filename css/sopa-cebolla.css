@@ -1,0 +1,647 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Caveat:wght@500;600&display=swap');
+
+/* =========================================
+   SOPA DE CEBOLLA
+   Paleta: vino, cobre, crema y dorado
+========================================= */
+
+.sopa-cebolla-page {
+    --sc-wine: #75464b;
+    --sc-dark: #513238;
+    --sc-copper: #b87551;
+    --sc-gold: #c9a15e;
+    --sc-light: #f3e8dc;
+    --sc-cream: #faf5ed;
+    --sc-paper: #fffdf8;
+    --sc-text: #403b37;
+    --sc-muted: #81776d;
+    --sc-border: #e8ddd0;
+
+    margin: 0;
+    padding: 30px 18px 20px;
+    background:
+        radial-gradient(circle at 10% 8%, #eee3d9 0, transparent 30%),
+        #f1ede6;
+    color: var(--sc-text);
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* ENCABEZADO */
+
+.sopa-cebolla-page .eq-header {
+    max-width: 1120px;
+    margin: 0 auto 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.sopa-cebolla-page .eq-back {
+    display: inline-flex;
+    align-items: center;
+    padding: 11px 19px;
+    border: 1px solid #e2d5c9;
+    border-radius: 30px;
+    background: var(--sc-paper);
+    color: var(--sc-dark);
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .25s ease;
+}
+
+.sopa-cebolla-page .eq-back:hover {
+    background: var(--sc-wine);
+    border-color: var(--sc-wine);
+    color: white;
+    transform: translateX(-3px);
+}
+
+.sopa-cebolla-page .eq-label {
+    color: var(--sc-muted);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* CONTENEDOR PRINCIPAL */
+
+.sopa-cebolla-page .eq-container {
+    position: relative;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 45px 55px;
+    overflow: hidden;
+    background: var(--sc-paper);
+    border: 1px solid #e8dfd4;
+    box-shadow: 0 18px 55px rgba(86, 54, 45, .09);
+}
+
+.sopa-cebolla-page .eq-container::before,
+.sopa-cebolla-page .eq-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(
+        to bottom,
+        var(--sc-wine),
+        var(--sc-copper),
+        var(--sc-gold)
+    );
+    opacity: .7;
+}
+
+.sopa-cebolla-page .eq-container::before {
+    left: 0;
+}
+
+.sopa-cebolla-page .eq-container::after {
+    right: 0;
+}
+
+/* PORTADA */
+
+.sopa-cebolla-page .eq-cover {
+    position: relative;
+    min-height: 390px;
+    padding: 55px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    overflow: hidden;
+    border-radius: 5px;
+    background:
+        radial-gradient(circle at 88% 18%, rgba(255,255,255,.12) 0 90px, transparent 91px),
+        radial-gradient(circle at 90% 90%, rgba(201,161,94,.2) 0 145px, transparent 146px),
+        linear-gradient(120deg, #513238 0%, #75464b 58%, #986b5b 100%);
+    color: white;
+}
+
+.sopa-cebolla-page .eq-cover-text {
+    position: relative;
+    z-index: 2;
+    max-width: 650px;
+}
+
+.sopa-cebolla-page .eq-kicker {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: var(--sc-copper);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.sopa-cebolla-page .eq-cover .eq-kicker {
+    padding: 8px 15px;
+    border: 1px solid rgba(255,255,255,.35);
+    border-radius: 30px;
+    color: #f0d5b3;
+}
+
+.sopa-cebolla-page .eq-cover h1 {
+    margin: 0 0 20px;
+    color: #fffaf2;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 5vw, 62px);
+    line-height: 1.1;
+    font-weight: 600;
+}
+
+.sopa-cebolla-page .eq-cover p {
+    max-width: 580px;
+    margin: 0;
+    color: rgba(255,255,255,.86);
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.sopa-cebolla-page .eq-line {
+    width: 75px;
+    height: 2px;
+    margin: 27px 0 16px;
+    background: var(--sc-gold);
+}
+
+.sopa-cebolla-page .eq-small {
+    color: rgba(255,255,255,.72);
+    font-family: 'Caveat', cursive;
+    font-size: 19px;
+}
+
+.sopa-cebolla-page .eq-cover-drawing {
+    position: relative;
+    z-index: 1;
+    flex: 0 0 190px;
+    width: 190px;
+    height: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255,255,255,.35);
+    border-radius: 50%;
+    background: rgba(255,255,255,.07);
+    color: #f0d5b3;
+    font-size: 95px;
+}
+
+.sopa-cebolla-page .eq-cover-drawing::before,
+.sopa-cebolla-page .eq-cover-drawing::after {
+    content: "";
+    position: absolute;
+    border: 1px solid rgba(255,255,255,.2);
+    border-radius: 50%;
+}
+
+.sopa-cebolla-page .eq-cover-drawing::before {
+    inset: 13px;
+}
+
+.sopa-cebolla-page .eq-cover-drawing::after {
+    inset: -14px;
+}
+
+.sopa-cebolla-page .eq-page-number {
+    position: absolute;
+    right: 25px;
+    bottom: 20px;
+    color: rgba(255,255,255,.55);
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+/* INTRODUCCIÓN */
+
+.sopa-cebolla-page .eq-intro {
+    margin-top: 55px;
+    padding: 5px 5px 0;
+}
+
+.sopa-cebolla-page .eq-intro h2 {
+    margin: 0 0 17px;
+    color: var(--sc-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 31px;
+    line-height: 1.3;
+}
+
+.sopa-cebolla-page .eq-intro > p {
+    max-width: 900px;
+    margin: 0;
+    color: #6e665e;
+    font-size: 15px;
+    line-height: 1.95;
+}
+
+/* SECCIONES */
+
+.sopa-cebolla-page .recipe-section {
+    margin-top: 55px;
+}
+
+.sopa-cebolla-page .eq-heading {
+    margin-bottom: 25px;
+}
+
+.sopa-cebolla-page .eq-heading .eq-kicker {
+    margin-bottom: 10px;
+    color: var(--sc-copper);
+}
+
+.sopa-cebolla-page .eq-heading h2 {
+    position: relative;
+    margin: 0 0 16px;
+    padding-bottom: 14px;
+    color: var(--sc-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.sopa-cebolla-page .eq-heading h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 65px;
+    height: 3px;
+    border-radius: 5px;
+    background: var(--sc-copper);
+}
+
+/* IMÁGENES */
+
+.sopa-cebolla-page .recipe-image-space {
+    min-height: 230px;
+    margin-top: 25px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed #d7bda9;
+    border-radius: 9px;
+    background:
+        linear-gradient(145deg, rgba(184,117,81,.10), rgba(201,161,94,.09)),
+        #f8f3eb;
+    color: var(--sc-dark);
+    text-align: center;
+}
+
+.sopa-cebolla-page .recipe-image-space > span {
+    color: var(--sc-wine);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    line-height: 1.7;
+}
+
+.sopa-cebolla-page .recipe-image-space img {
+    display: block;
+    width: 100%;
+    max-height: 390px;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+/* INFORMACIÓN GENERAL */
+
+.sopa-cebolla-page .recipe-information {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 30px;
+}
+
+.sopa-cebolla-page .recipe-data {
+    position: relative;
+    min-height: 105px;
+    padding: 24px;
+    overflow: hidden;
+    border: 1px solid var(--sc-border);
+    border-radius: 8px;
+    background: #fffefa;
+    box-shadow: 0 5px 16px rgba(86, 54, 45, .035);
+}
+
+.sopa-cebolla-page .recipe-data::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: var(--sc-wine);
+}
+
+.sopa-cebolla-page .recipe-data:nth-child(2)::before {
+    background: var(--sc-copper);
+}
+
+.sopa-cebolla-page .recipe-data:nth-child(3)::before {
+    background: var(--sc-gold);
+}
+
+.sopa-cebolla-page .recipe-data span {
+    display: block;
+    margin-bottom: 12px;
+    color: var(--sc-muted);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.sopa-cebolla-page .recipe-data strong {
+    display: block;
+    color: var(--sc-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+/* TARJETAS DE CONTENIDO */
+
+.sopa-cebolla-page .eq-card.recipe-content-card {
+    padding: 30px 34px;
+    border: 1px solid var(--sc-border);
+    border-radius: 9px;
+    background: #fffefa;
+    box-shadow: 0 5px 18px rgba(86, 54, 45, .035);
+}
+
+.sopa-cebolla-page .recipe-content-card > p {
+    margin: 0;
+    color: #68635c;
+    font-size: 14px;
+    line-height: 1.95;
+}
+
+/* LISTAS */
+
+.sopa-cebolla-page .recipe-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sopa-cebolla-page .recipe-list li {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 12px;
+    padding: 13px 16px;
+    border: 1px solid #eee5db;
+    border-radius: 7px;
+    background: #fffefa;
+    color: var(--sc-text);
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+.sopa-cebolla-page .recipe-list li:last-child {
+    margin-bottom: 0;
+}
+
+/* INGREDIENTES Y UTENSILIOS */
+
+.sopa-cebolla-page ul.recipe-list li::before {
+    content: "✦";
+    flex: 0 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    margin-top: 1px;
+    border-radius: 50%;
+    background: var(--sc-light);
+    color: var(--sc-wine);
+    font-size: 11px;
+}
+
+/* MISE EN PLACE Y PROCEDIMIENTO */
+
+.sopa-cebolla-page ol.recipe-list {
+    counter-reset: sc-step;
+}
+
+.sopa-cebolla-page ol.recipe-list li {
+    counter-increment: sc-step;
+}
+
+.sopa-cebolla-page ol.recipe-list li::before {
+    content: counter(sc-step, decimal-leading-zero);
+    flex: 0 0 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    margin-top: -3px;
+    border-radius: 50%;
+    background: #f3e5db;
+    color: var(--sc-wine);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.sopa-cebolla-page ol.recipe-steps li::before {
+    background: var(--sc-wine);
+    color: white;
+}
+
+/* NOTA GASTRONÓMICA */
+
+.sopa-cebolla-page .recipe-note {
+    margin-top: 55px;
+    padding: 30px 34px;
+    border: 1px solid #e7d5c1;
+    border-left: 5px solid var(--sc-gold);
+    border-radius: 7px;
+    background: #f8f0e5;
+}
+
+.sopa-cebolla-page .recipe-note .eq-kicker {
+    margin-bottom: 12px;
+    color: #9a7047;
+}
+
+.sopa-cebolla-page .recipe-note h3 {
+    margin: 0 0 13px;
+    color: var(--sc-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+}
+
+.sopa-cebolla-page .recipe-note p {
+    margin: 0;
+    color: #6c6258;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* GALERÍA DE FOTOGRAFÍAS */
+
+.sopa-cebolla-page .recipe-gallery-space {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.sopa-cebolla-page .recipe-gallery-space .recipe-image-space {
+    min-height: 210px;
+    margin-top: 0;
+}
+
+/* NAVEGACIÓN */
+
+.sopa-cebolla-page .eq-page-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 55px;
+    padding-top: 25px;
+    border-top: 1px solid var(--sc-border);
+}
+
+.sopa-cebolla-page .eq-page-navigation a {
+    color: var(--sc-wine);
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: .2s ease;
+}
+
+.sopa-cebolla-page .eq-page-navigation a:hover {
+    color: var(--sc-copper);
+    transform: translateX(-3px);
+}
+
+.sopa-cebolla-page .eq-page-navigation span {
+    color: var(--sc-muted);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: right;
+}
+
+/* PIE DE PÁGINA */
+
+.sopa-cebolla-page .eq-footer {
+    max-width: 1120px;
+    margin: 22px auto 0;
+    padding: 15px;
+    color: var(--sc-muted);
+    text-align: center;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 760px) {
+    .sopa-cebolla-page {
+        padding: 20px 12px;
+    }
+
+    .sopa-cebolla-page .eq-container {
+        padding: 28px 25px;
+    }
+
+    .sopa-cebolla-page .eq-cover {
+        min-height: 340px;
+        padding: 40px 30px;
+    }
+
+    .sopa-cebolla-page .eq-cover-drawing {
+        flex-basis: 140px;
+        width: 140px;
+        height: 140px;
+        font-size: 70px;
+    }
+
+    .sopa-cebolla-page .recipe-information {
+        grid-template-columns: 1fr;
+    }
+
+    .sopa-cebolla-page .recipe-gallery-space {
+        grid-template-columns: 1fr;
+    }
+
+    .sopa-cebolla-page .recipe-gallery-space .recipe-image-space {
+        min-height: 190px;
+    }
+
+    .sopa-cebolla-page .eq-card.recipe-content-card {
+        padding: 24px 20px;
+    }
+}
+
+@media (max-width: 520px) {
+    .sopa-cebolla-page .eq-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .sopa-cebolla-page .eq-container {
+        padding: 22px 17px;
+    }
+
+    .sopa-cebolla-page .eq-cover {
+        min-height: 320px;
+        padding: 30px 23px;
+    }
+
+    .sopa-cebolla-page .eq-cover-drawing {
+        display: none;
+    }
+
+    .sopa-cebolla-page .eq-cover h1 {
+        font-size: 42px;
+    }
+
+    .sopa-cebolla-page .eq-cover p {
+        font-size: 14px;
+    }
+
+    .sopa-cebolla-page .eq-intro h2,
+    .sopa-cebolla-page .eq-heading h2 {
+        font-size: 26px;
+    }
+
+    .sopa-cebolla-page .recipe-section {
+        margin-top: 45px;
+    }
+
+    .sopa-cebolla-page .eq-card.recipe-content-card {
+        padding: 20px 16px;
+    }
+
+    .sopa-cebolla-page .recipe-list li {
+        gap: 10px;
+        padding: 12px;
+        font-size: 13px;
+    }
+
+    .sopa-cebolla-page .recipe-note {
+        padding: 24px 20px;
+    }
+
+    .sopa-cebolla-page .eq-page-navigation {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .sopa-cebolla-page .eq-page-navigation span {
+        text-align: left;
+    }
+}

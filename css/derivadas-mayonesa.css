@@ -1,0 +1,707 @@
+
+/* ============================================
+   CUADERNO GASTRONÓMICO
+   DERIVADAS DE LA MAYONESA
+   Diseño limpio · Coral · Rosa · Crema
+   ============================================ */
+
+body.derivadas-mayonesa-page {
+    --dm-coral: #c77f78;
+    --dm-dark: #80514e;
+    --dm-rose: #d9aaa2;
+    --dm-light: #f1dfdc;
+    --dm-pale: #faf0ed;
+    --dm-ink: #514743;
+    --dm-muted: #91817a;
+    --dm-line: #e9ded8;
+
+    background: #e8e1d5 !important;
+    color: var(--dm-ink);
+    font-family: "DM Sans", sans-serif;
+    line-height: 1.7;
+}
+
+/* ============================================
+   ENCABEZADO SUPERIOR
+   ============================================ */
+
+.derivadas-mayonesa-page .eq-header {
+    max-width: 1120px;
+    margin: 25px auto 0;
+    padding: 0 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.derivadas-mayonesa-page .eq-back {
+    color: var(--dm-dark);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: color .25s ease;
+}
+
+.derivadas-mayonesa-page .eq-back:hover {
+    color: var(--dm-coral);
+}
+
+.derivadas-mayonesa-page .eq-label {
+    color: var(--dm-muted);
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* ============================================
+   HOJA PRINCIPAL
+   ============================================ */
+
+.derivadas-mayonesa-page .eq-container {
+    max-width: 1120px;
+    margin: 30px auto;
+    padding: 55px 65px;
+    background: #faf8f1;
+    border: 1px solid #e5ded1;
+    box-shadow: 0 12px 35px rgba(75, 57, 43, .08);
+    position: relative;
+    overflow: hidden;
+}
+
+/* ============================================
+   PORTADA
+   ============================================ */
+
+.derivadas-mayonesa-page .eq-cover {
+    min-height: 390px;
+    padding: 55px 48px;
+    background: linear-gradient(120deg, #f4e5df, #ead2cb 55%, #f3e9dc);
+    border: 1px solid #ead8d0;
+    border-radius: 3px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    align-items: center;
+    gap: 35px;
+    overflow: hidden;
+}
+
+.derivadas-mayonesa-page .eq-cover-text {
+    position: relative;
+    z-index: 1;
+    min-width: 0;
+}
+
+.derivadas-mayonesa-page .eq-kicker {
+    display: block !important;
+    width: 100%;
+    position: relative;
+    margin: 0 0 14px !important;
+    padding: 0;
+    color: var(--dm-coral);
+    font-family: "DM Sans", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    line-height: 1.6;
+    text-transform: uppercase;
+    white-space: normal;
+}
+
+.derivadas-mayonesa-page .eq-cover h1 {
+    color: var(--dm-dark);
+    font-family: "Playfair Display", serif;
+    font-size: clamp(36px, 5vw, 55px);
+    line-height: 1.12;
+    font-weight: 500;
+    margin: 0 0 20px;
+}
+
+.derivadas-mayonesa-page .eq-cover p {
+    max-width: 490px;
+    color: #75635d;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.derivadas-mayonesa-page .eq-line {
+    width: 75px;
+    height: 2px;
+    background: var(--dm-coral);
+    margin: 25px 0 15px;
+}
+
+.derivadas-mayonesa-page .eq-small {
+    color: var(--dm-muted);
+    font-family: "Caveat", cursive;
+    font-size: 21px;
+}
+
+.derivadas-mayonesa-page .eq-cover-drawing {
+    position: relative;
+    z-index: 1;
+    min-width: 0;
+}
+
+.derivadas-mayonesa-page .eq-page-number {
+    position: absolute;
+    bottom: 22px;
+    right: 28px;
+    color: var(--dm-dark);
+    font-family: "Playfair Display", serif;
+    font-size: 16px;
+}
+
+/* ============================================
+   CORRECCIÓN IMPORTANTE DE ENCABEZADOS
+   Evita que el número y el título se encimen
+   ============================================ */
+
+.derivadas-mayonesa-page .eq-heading {
+    display: block !important;
+    width: 100%;
+    position: relative;
+    margin: 0 0 30px !important;
+    padding: 0 !important;
+    text-align: left;
+    clear: both;
+}
+
+.derivadas-mayonesa-page .eq-heading .eq-kicker {
+    display: block !important;
+    position: static !important;
+    width: 100%;
+    margin: 0 0 12px !important;
+    padding: 0 !important;
+    font-size: 10px;
+    line-height: 1.7;
+    letter-spacing: 3px;
+    white-space: normal;
+    transform: none !important;
+}
+
+.derivadas-mayonesa-page .eq-heading h2 {
+    display: block !important;
+    position: static !important;
+    width: 100%;
+    clear: both;
+    margin: 0 0 15px !important;
+    padding: 0 !important;
+    color: var(--dm-dark);
+    font-family: "Playfair Display", serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.3 !important;
+    letter-spacing: normal;
+    transform: none !important;
+}
+
+.derivadas-mayonesa-page .eq-heading h3 {
+    display: block !important;
+    position: static !important;
+    width: 100%;
+    clear: both;
+    margin: 5px 0 12px !important;
+    padding: 0;
+    color: var(--dm-dark);
+    font-family: "Playfair Display", serif;
+    font-size: 23px;
+    font-weight: 500;
+    line-height: 1.35;
+}
+
+.derivadas-mayonesa-page .eq-heading p {
+    display: block;
+    position: static;
+    margin: 8px 0 0;
+    color: var(--dm-muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* También corregir el encabezado de introducción */
+
+.derivadas-mayonesa-page .eq-intro > .eq-kicker {
+    display: block !important;
+    margin-bottom: 12px !important;
+}
+
+.derivadas-mayonesa-page .eq-intro h2 {
+    display: block !important;
+    position: static !important;
+    width: 100%;
+    margin: 0 0 20px !important;
+    color: var(--dm-dark);
+    font-family: "Playfair Display", serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+/* ============================================
+   INTRODUCCIÓN Y SECCIONES
+   ============================================ */
+
+.derivadas-mayonesa-page .eq-intro {
+    display: block;
+    margin: 70px 0;
+}
+
+.derivadas-mayonesa-page .recipe-section {
+    display: block;
+    width: 100%;
+    margin: 75px 0;
+    scroll-margin-top: 25px;
+}
+
+.derivadas-mayonesa-page .eq-intro p {
+    color: #6e625c;
+    font-size: 14px;
+    line-height: 1.9;
+    margin: 0 0 15px;
+}
+
+/* ============================================
+   TARJETAS
+   ============================================ */
+
+.derivadas-mayonesa-page .eq-card {
+    background: #fffefa;
+    border: 1px solid var(--dm-line);
+    border-radius: 3px;
+    padding: 27px;
+    box-shadow: 0 4px 14px rgba(86, 62, 52, .035);
+}
+
+.derivadas-mayonesa-page .recipe-content-card {
+    padding: 30px;
+}
+
+.derivadas-mayonesa-page .cut-color-card {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    background: #fffefa;
+    border: 1px solid var(--dm-line);
+    border-top: 2px solid var(--dm-rose);
+    padding: 28px;
+    transition: .25s ease;
+}
+
+.derivadas-mayonesa-page .cut-color-card:hover {
+    background: #fbf3ef;
+    border-top-color: var(--dm-coral);
+    transform: translateY(-3px);
+}
+
+.derivadas-mayonesa-page .cut-color-card .eq-kicker {
+    margin-bottom: 10px !important;
+}
+
+.derivadas-mayonesa-page .cut-color-card h3 {
+    color: var(--dm-dark);
+    font-family: "Playfair Display", serif;
+    font-size: 23px;
+    font-weight: 500;
+    margin: 0 0 10px;
+}
+
+.derivadas-mayonesa-page .cut-color-card p {
+    color: var(--dm-muted);
+    font-size: 12px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.derivadas-mayonesa-page .eq-table-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* ============================================
+   ESPACIOS PARA FOTOGRAFÍAS
+   ============================================ */
+
+.derivadas-mayonesa-page .recipe-image-space {
+    min-height: 230px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #f5eee8;
+    border: 1px solid #e8ddd5;
+    border-radius: 3px;
+    color: #987d73;
+    font-family: "DM Sans", sans-serif;
+    font-size: 12px;
+    letter-spacing: .5px;
+    overflow: hidden;
+}
+
+.derivadas-mayonesa-page .recipe-image-space::before {
+    display: none !important;
+    content: none !important;
+}
+
+/* ============================================
+   DATOS DE CADA RECETA
+   ============================================ */
+
+.derivadas-mayonesa-page .recipe-data {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+    margin: 30px 0 40px;
+}
+
+.derivadas-mayonesa-page .recipe-data > div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 17px 19px;
+    background: #f8efeb;
+    border: 1px solid #eadbd5;
+    border-radius: 3px;
+}
+
+.derivadas-mayonesa-page .recipe-data span {
+    color: var(--dm-muted);
+    font-size: 10px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+.derivadas-mayonesa-page .recipe-data strong {
+    color: var(--dm-dark);
+    font-family: "Playfair Display", serif;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+/* ============================================
+   TABLAS
+   ============================================ */
+
+.derivadas-mayonesa-page .recipe-ingredients-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.derivadas-mayonesa-page .recipe-ingredients-table th {
+    padding: 15px 17px;
+    background: #f2e5df;
+    color: var(--dm-dark);
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.derivadas-mayonesa-page .recipe-ingredients-table td {
+    padding: 13px 17px;
+    border-bottom: 1px solid var(--dm-line);
+    color: #645a54;
+}
+
+.derivadas-mayonesa-page .recipe-ingredients-table tbody tr:nth-child(even) {
+    background: #fbf7f3;
+}
+
+.derivadas-mayonesa-page .recipe-ingredients-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* ============================================
+   LISTAS SIN PUNTOS
+   ============================================ */
+
+.derivadas-mayonesa-page .recipe-list {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0;
+}
+
+.derivadas-mayonesa-page .recipe-list li {
+    list-style: none !important;
+    position: static;
+    padding: 14px 5px;
+    border-bottom: 1px solid var(--dm-line);
+    color: #665b55;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.derivadas-mayonesa-page .recipe-list li::before {
+    content: none !important;
+    display: none !important;
+}
+
+.derivadas-mayonesa-page .recipe-list li:last-child {
+    border-bottom: none;
+}
+
+/* ============================================
+   PROCEDIMIENTOS
+   ============================================ */
+
+.derivadas-mayonesa-page .recipe-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.derivadas-mayonesa-page .recipe-step {
+    display: grid;
+    grid-template-columns: 48px minmax(0, 1fr);
+    gap: 20px;
+    align-items: start;
+    padding: 24px;
+    background: #fffefa;
+    border: 1px solid var(--dm-line);
+    border-left: 2px solid var(--dm-rose);
+    border-radius: 3px;
+}
+
+.derivadas-mayonesa-page .step-number {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--dm-light);
+    color: var(--dm-dark);
+    font-family: "Playfair Display", serif;
+    font-size: 15px;
+}
+
+.derivadas-mayonesa-page .recipe-step h3 {
+    color: var(--dm-dark);
+    font-family: "Playfair Display", serif;
+    font-size: 19px;
+    font-weight: 500;
+    margin: 0 0 8px;
+}
+
+.derivadas-mayonesa-page .recipe-step p {
+    color: #70645e;
+    font-size: 13px;
+    line-height: 1.85;
+    margin: 0;
+}
+
+/* ============================================
+   GALERÍAS
+   ============================================ */
+
+.derivadas-mayonesa-page .recipe-gallery-space {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 30px;
+}
+
+.derivadas-mayonesa-page .recipe-gallery-space .recipe-image-space {
+    min-height: 165px;
+    font-size: 12px;
+}
+
+/* ============================================
+   NOTAS
+   ============================================ */
+
+.derivadas-mayonesa-page .recipe-note {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin: 45px 0;
+    padding: 28px 32px;
+    background: #f7eee8;
+    border-left: 3px solid var(--dm-coral);
+    border-radius: 2px;
+}
+
+.derivadas-mayonesa-page .recipe-note > span {
+    display: none !important;
+}
+
+.derivadas-mayonesa-page .recipe-note h3 {
+    color: var(--dm-dark);
+    font-family: "Playfair Display", serif;
+    font-size: 21px;
+    font-weight: 500;
+    margin: 0 0 8px;
+}
+
+.derivadas-mayonesa-page .recipe-note p {
+    color: #70615b;
+    font-size: 13px;
+    line-height: 1.85;
+    margin: 0;
+}
+
+/* ============================================
+   NAVEGACIÓN INFERIOR
+   ============================================ */
+
+.derivadas-mayonesa-page .eq-page-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-top: 65px;
+    padding-top: 25px;
+    border-top: 1px solid var(--dm-line);
+}
+
+.derivadas-mayonesa-page .eq-page-navigation a {
+    display: inline-flex;
+    align-items: center;
+    color: var(--dm-dark);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 12px 18px;
+    border: 1px solid #e5d5ce;
+    border-radius: 2px;
+    background: #fffefa;
+    transition: .25s ease;
+}
+
+.derivadas-mayonesa-page .eq-page-navigation a:hover {
+    color: white;
+    background: var(--dm-coral);
+    border-color: var(--dm-coral);
+}
+
+/* ============================================
+   PIE DE PÁGINA
+   ============================================ */
+
+.derivadas-mayonesa-page .eq-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 35px;
+    padding-top: 20px;
+    border-top: 1px solid var(--dm-line);
+    color: var(--dm-muted);
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 850px) {
+    .derivadas-mayonesa-page .eq-container {
+        margin: 15px;
+        padding: 35px 30px;
+    }
+
+    .derivadas-mayonesa-page .eq-cover {
+        grid-template-columns: 1fr;
+        padding: 40px 30px;
+    }
+
+    .derivadas-mayonesa-page .eq-table-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .derivadas-mayonesa-page .recipe-data {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .derivadas-mayonesa-page .eq-container {
+        margin: 10px;
+        padding: 25px 20px;
+    }
+
+    .derivadas-mayonesa-page .eq-header {
+        margin: 15px 12px 0;
+        align-items: flex-start;
+    }
+
+    .derivadas-mayonesa-page .eq-label {
+        text-align: right;
+        font-size: 9px;
+    }
+
+    .derivadas-mayonesa-page .eq-cover {
+        padding: 35px 23px;
+        min-height: auto;
+    }
+
+    .derivadas-mayonesa-page .eq-cover h1 {
+        font-size: 37px;
+    }
+
+    .derivadas-mayonesa-page .eq-heading h2,
+    .derivadas-mayonesa-page .eq-intro h2 {
+        font-size: 27px;
+    }
+
+    .derivadas-mayonesa-page .recipe-data {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .derivadas-mayonesa-page .recipe-gallery-space {
+        grid-template-columns: 1fr;
+    }
+
+    .derivadas-mayonesa-page .recipe-gallery-space .recipe-image-space {
+        min-height: 185px;
+    }
+
+    .derivadas-mayonesa-page .recipe-step {
+        grid-template-columns: 38px minmax(0, 1fr);
+        gap: 12px;
+        padding: 18px 14px;
+    }
+
+    .derivadas-mayonesa-page .step-number {
+        width: 35px;
+        height: 35px;
+        font-size: 13px;
+    }
+
+    .derivadas-mayonesa-page .recipe-content-card {
+        padding: 18px;
+    }
+
+    .derivadas-mayonesa-page .recipe-ingredients-table {
+        font-size: 11px;
+    }
+
+    .derivadas-mayonesa-page .recipe-ingredients-table th,
+    .derivadas-mayonesa-page .recipe-ingredients-table td {
+        padding: 10px 8px;
+    }
+
+    .derivadas-mayonesa-page .recipe-note {
+        padding: 22px 18px;
+    }
+
+    .derivadas-mayonesa-page .eq-page-navigation {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .derivadas-mayonesa-page .eq-page-navigation a {
+        justify-content: center;
+    }
+
+    .derivadas-mayonesa-page .eq-footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+

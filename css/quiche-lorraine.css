@@ -1,0 +1,545 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Caveat:wght@500;600&display=swap');
+
+/* ========================================
+   QUICHE LORRAINE | CUADERNO GASTRONÓMICO
+   Paleta: crema, terracota, vino y dorado
+======================================== */
+
+.quiche-lorraine-page {
+    --quiche-wine: #75443f;
+    --quiche-red: #a66559;
+    --quiche-terracotta: #bd806b;
+    --quiche-gold: #b99a65;
+    --quiche-sage: #92977b;
+    --quiche-cream: #faf6ee;
+    --quiche-pale: #f0e7dc;
+    --quiche-text: #514941;
+    --quiche-muted: #82766b;
+
+    margin: 0;
+    padding: 30px 18px;
+    background: #e8e0d7;
+    color: var(--quiche-text);
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* ENCABEZADO */
+
+.quiche-lorraine-page .eq-header {
+    max-width: 1120px;
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.quiche-lorraine-page .eq-back {
+    display: inline-flex;
+    align-items: center;
+    padding: 11px 19px;
+    border: 1px solid #d8c5b8;
+    border-radius: 30px;
+    background: #faf7f0;
+    color: var(--quiche-wine);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: .25s ease;
+}
+
+.quiche-lorraine-page .eq-back:hover {
+    background: var(--quiche-wine);
+    color: white;
+    border-color: var(--quiche-wine);
+    transform: translateX(-3px);
+}
+
+.quiche-lorraine-page .eq-label {
+    color: #89776b;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: right;
+}
+
+/* CONTENEDOR PRINCIPAL */
+
+.quiche-lorraine-page .eq-container {
+    position: relative;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 45px 55px;
+    overflow: hidden;
+    background: var(--quiche-cream);
+    border: 1px solid #ded4c8;
+    box-shadow: 0 15px 45px rgba(78, 53, 43, .10);
+}
+
+.quiche-lorraine-page .eq-container::before,
+.quiche-lorraine-page .eq-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background: linear-gradient(
+        to bottom,
+        var(--quiche-wine),
+        var(--quiche-gold),
+        var(--quiche-sage)
+    );
+    opacity: .65;
+}
+
+.quiche-lorraine-page .eq-container::before {
+    left: 0;
+}
+
+.quiche-lorraine-page .eq-container::after {
+    right: 0;
+}
+
+/* PORTADA */
+
+.quiche-lorraine-page .eq-cover {
+    position: relative;
+    min-height: 390px;
+    padding: 55px 48px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: linear-gradient(
+        125deg,
+        #f0e2d5 0%,
+        #e8d1c1 52%,
+        #d7b5a2 100%
+    );
+    border: 1px solid #dfc8b8;
+}
+
+.quiche-lorraine-page .eq-cover::before {
+    content: "";
+    position: absolute;
+    width: 340px;
+    height: 340px;
+    top: -185px;
+    right: -70px;
+    border: 1px solid rgba(117, 68, 63, .18);
+    border-radius: 50%;
+}
+
+.quiche-lorraine-page .eq-cover::after {
+    content: "";
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    bottom: -155px;
+    right: 25%;
+    border: 1px solid rgba(117, 68, 63, .18);
+    border-radius: 50%;
+}
+
+.quiche-lorraine-page .eq-cover > div {
+    position: relative;
+    z-index: 2;
+    max-width: 680px;
+}
+
+.quiche-lorraine-page .eq-kicker {
+    display: block;
+    margin-bottom: 13px;
+    color: var(--quiche-red);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+}
+
+.quiche-lorraine-page .eq-cover h1 {
+    margin: 0 0 20px;
+    color: var(--quiche-wine);
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(45px, 6vw, 68px);
+    font-weight: 600;
+    line-height: 1.08;
+}
+
+.quiche-lorraine-page .eq-cover p {
+    max-width: 620px;
+    margin: 0;
+    color: #705b50;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.quiche-lorraine-page .eq-page-number {
+    position: absolute;
+    right: 25px;
+    bottom: 20px;
+    z-index: 3;
+    color: var(--quiche-wine);
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+}
+
+/* SECCIONES */
+
+.quiche-lorraine-page .recipe-section {
+    margin: 0 0 55px;
+}
+
+.quiche-lorraine-page .recipe-heading {
+    position: relative;
+    margin: 0 0 24px;
+    padding-bottom: 15px;
+    color: var(--quiche-wine);
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.quiche-lorraine-page .recipe-heading::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 65px;
+    height: 2px;
+    background: var(--quiche-gold);
+}
+
+/* INFORMACIÓN DE LA RECETA */
+
+.quiche-lorraine-page .eq-table-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.quiche-lorraine-page .eq-table-grid .eq-card {
+    min-height: 92px;
+    padding: 20px 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 9px;
+    background: #f1e9df;
+    border: 1px solid #e5d8ca;
+    border-left: 3px solid var(--quiche-red);
+}
+
+.quiche-lorraine-page .eq-table-grid .eq-card span {
+    color: var(--quiche-muted);
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.quiche-lorraine-page .eq-table-grid .eq-card strong {
+    color: var(--quiche-wine);
+    font-size: 15px;
+    font-weight: 700;
+}
+
+/* TARJETAS Y CONTENIDO */
+
+.quiche-lorraine-page .recipe-content {
+    padding: 30px 34px;
+    background: #fffef9;
+    border: 1px solid #e8dfd5;
+    box-shadow: 0 6px 20px rgba(78, 53, 43, .045);
+}
+
+.quiche-lorraine-page .eq-card {
+    background: #fffef9;
+    border: 1px solid #e8dfd5;
+}
+
+.quiche-lorraine-page .recipe-content p {
+    margin: 0 0 16px;
+    color: #62594f;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* TABLA DE INGREDIENTES */
+
+.quiche-lorraine-page .recipe-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.quiche-lorraine-page .recipe-table th {
+    padding: 16px 18px;
+    background: var(--quiche-wine);
+    color: #fffaf2;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.quiche-lorraine-page .recipe-table th:first-child {
+    border-radius: 5px 0 0 0;
+}
+
+.quiche-lorraine-page .recipe-table th:last-child {
+    border-radius: 0 5px 0 0;
+}
+
+.quiche-lorraine-page .recipe-table td {
+    padding: 16px 18px;
+    border-bottom: 1px solid #eee5dc;
+    color: #5b534a;
+    font-size: 14px;
+}
+
+.quiche-lorraine-page .recipe-table tbody tr:nth-child(even) {
+    background: #f5eee6;
+}
+
+.quiche-lorraine-page .recipe-table tbody tr:hover {
+    background: #eee2d7;
+}
+
+/* BLOQUES Y LISTAS */
+
+.quiche-lorraine-page .recipe-block ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: quiche-step;
+}
+
+.quiche-lorraine-page .recipe-block li {
+    position: relative;
+    counter-increment: quiche-step;
+    margin: 0 0 15px;
+    padding: 20px 22px 20px 68px;
+    background: #f6f0e9;
+    border: 1px solid #eadfd5;
+    border-left: 4px solid var(--quiche-sage);
+    color: #5c554d;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.quiche-lorraine-page .recipe-block li:last-child {
+    margin-bottom: 0;
+}
+
+.quiche-lorraine-page .recipe-block li::before {
+    content: counter(quiche-step, decimal-leading-zero);
+    position: absolute;
+    top: 19px;
+    left: 17px;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #eadfd3;
+    color: var(--quiche-wine);
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* GALERÍA DE FOTOGRAFÍAS */
+
+.quiche-lorraine-page .recipe-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.quiche-lorraine-page .recipe-photo {
+    min-height: 205px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f1e9df;
+    border: 1px dashed #c9ad9c;
+    color: #92786a;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.quiche-lorraine-page .recipe-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+/* RECETAS RELACIONADAS */
+
+.quiche-lorraine-page .recipe-content .eq-card {
+    padding: 27px 30px;
+    background: #f5eee6;
+    border: 1px solid #e5d8ca;
+    border-left: 4px solid var(--quiche-gold);
+}
+
+.quiche-lorraine-page .recipe-content .eq-card h3 {
+    margin: 0 0 12px;
+    color: var(--quiche-wine);
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+}
+
+.quiche-lorraine-page .recipe-content .eq-card p {
+    margin: 0 0 17px;
+}
+
+.quiche-lorraine-page .recipe-content .eq-card a {
+    display: inline-block;
+    margin: 5px 18px 5px 0;
+    color: var(--quiche-red);
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: .2s ease;
+}
+
+.quiche-lorraine-page .recipe-content .eq-card a:hover {
+    color: var(--quiche-wine);
+    transform: translateX(3px);
+}
+
+/* NAVEGACIÓN INFERIOR */
+
+.quiche-lorraine-page .eq-page-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 25px 0;
+    border-top: 1px solid #e5d9ce;
+    border-bottom: 1px solid #e5d9ce;
+}
+
+.quiche-lorraine-page .eq-page-navigation a {
+    color: var(--quiche-wine);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    transition: .2s ease;
+}
+
+.quiche-lorraine-page .eq-page-navigation a:hover {
+    color: var(--quiche-sage);
+    transform: translateY(-2px);
+}
+
+/* PIE DE PÁGINA */
+
+.quiche-lorraine-page .eq-footer {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 22px 5px 0;
+    color: #897b70;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 760px) {
+    .quiche-lorraine-page {
+        padding: 18px 10px;
+    }
+
+    .quiche-lorraine-page .eq-container {
+        padding: 25px 22px;
+    }
+
+    .quiche-lorraine-page .eq-cover {
+        min-height: 330px;
+        padding: 38px 28px;
+    }
+
+    .quiche-lorraine-page .eq-cover h1 {
+        font-size: 48px;
+    }
+
+    .quiche-lorraine-page .eq-table-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .quiche-lorraine-page .recipe-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .quiche-lorraine-page .recipe-photo {
+        min-height: 190px;
+    }
+
+    .quiche-lorraine-page .recipe-content {
+        padding: 22px 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .quiche-lorraine-page .eq-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .quiche-lorraine-page .eq-label {
+        text-align: left;
+    }
+
+    .quiche-lorraine-page .eq-container {
+        padding: 22px 17px;
+    }
+
+    .quiche-lorraine-page .eq-cover {
+        min-height: 300px;
+        padding: 32px 22px;
+    }
+
+    .quiche-lorraine-page .eq-cover h1 {
+        font-size: 40px;
+    }
+
+    .quiche-lorraine-page .recipe-heading {
+        font-size: 26px;
+    }
+
+    .quiche-lorraine-page .eq-table-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .quiche-lorraine-page .recipe-block li {
+        padding: 19px 15px 19px 58px;
+    }
+
+    .quiche-lorraine-page .recipe-block li::before {
+        left: 12px;
+    }
+
+    .quiche-lorraine-page .eq-page-navigation {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 17px;
+    }
+
+    .quiche-lorraine-page .recipe-table th,
+    .quiche-lorraine-page .recipe-table td {
+        padding: 13px 11px;
+        font-size: 12px;
+    }
+
+    .quiche-lorraine-page .recipe-content {
+        overflow-x: auto;
+    }
+}

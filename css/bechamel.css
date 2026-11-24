@@ -1,0 +1,869 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Caveat:wght@500;600&display=swap');
+
+/* =========================================
+   BECHAMEL — CUADERNO GASTRONÓMICO
+   Crema · Verde salvia · Mantequilla · Dorado
+========================================= */
+
+body.bechamel-page {
+    --cream: #f8f5eb;
+    --paper: #fffdf8;
+    --sage: #89977c;
+    --sage-dark: #52634d;
+    --sage-light: #e9eee3;
+    --butter: #e9ddb5;
+    --gold: #b79b5b;
+    --text: #4e4d42;
+    --muted: #858476;
+    --border: #e6dfce;
+
+    margin: 0;
+    padding: 30px 18px;
+    background: #e9e8df;
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.7;
+}
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+body.bechamel-page .eq-header {
+    max-width: 1120px;
+    margin: 0 auto 22px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+body.bechamel-page .eq-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 19px;
+    color: var(--sage-dark);
+    background: #f4f2e8;
+    border: 1px solid #d9dece;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+
+body.bechamel-page .eq-back:hover {
+    color: white;
+    background: var(--sage-dark);
+    transform: translateX(-3px);
+}
+
+body.bechamel-page .eq-label {
+    padding: 8px 16px;
+    color: var(--sage-dark);
+    background: #eeefe5;
+    border: 1px solid #dce0d1;
+    border-radius: 30px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+/* =========================================
+   CONTENEDOR PRINCIPAL
+========================================= */
+
+body.bechamel-page .eq-container {
+    position: relative;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 45px 55px;
+    background: var(--cream);
+    border: 1px solid #ded8c8;
+    box-shadow: 0 12px 35px rgba(70, 72, 53, 0.10);
+    overflow: hidden;
+}
+
+body.bechamel-page .eq-container::before,
+body.bechamel-page .eq-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background: linear-gradient(
+        to bottom,
+        var(--sage),
+        var(--butter),
+        var(--gold)
+    );
+    opacity: 0.8;
+}
+
+body.bechamel-page .eq-container::before {
+    left: 0;
+}
+
+body.bechamel-page .eq-container::after {
+    right: 0;
+}
+
+/* =========================================
+   PORTADA
+========================================= */
+
+body.bechamel-page .eq-cover {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    min-height: 390px;
+    margin-bottom: 55px;
+    padding: 55px 48px;
+    overflow: hidden;
+    background: linear-gradient(
+        125deg,
+        #e9e5d0 0%,
+        #f3efdf 50%,
+        #dfe7d9 100%
+    );
+    border: 1px solid #ded9c4;
+    border-radius: 5px;
+    box-shadow: 0 8px 25px rgba(75, 69, 51, 0.04);
+}
+
+body.bechamel-page .eq-cover::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    right: -100px;
+    top: -135px;
+    border: 1px solid rgba(82, 99, 77, 0.20);
+    border-radius: 50%;
+}
+
+body.bechamel-page .eq-cover::after {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    right: 35px;
+    bottom: -155px;
+    border: 1px solid rgba(183, 155, 91, 0.30);
+    border-radius: 50%;
+}
+
+body.bechamel-page .eq-cover-text {
+    position: relative;
+    z-index: 2;
+    max-width: 650px;
+}
+
+body.bechamel-page .eq-kicker {
+    display: block;
+    margin-bottom: 12px;
+    color: var(--sage-dark);
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 1.7px;
+}
+
+body.bechamel-page .eq-cover h1 {
+    margin: 15px 0 18px;
+    color: #465440;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.8rem, 6vw, 4.5rem);
+    font-weight: 600;
+    line-height: 1.12;
+}
+
+body.bechamel-page .eq-cover-text > p {
+    max-width: 560px;
+    margin: 0;
+    color: #6d705e;
+    font-size: 1rem;
+    line-height: 1.9;
+}
+
+body.bechamel-page .eq-line {
+    width: 85px;
+    height: 3px;
+    margin: 25px 0 17px;
+    background: var(--gold);
+}
+
+body.bechamel-page .eq-small {
+    color: #777966;
+    font-size: 0.77rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+body.bechamel-page .eq-cover-drawing {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    color: var(--sage-dark);
+    background: rgba(255, 253, 248, 0.78);
+    border: 1px solid #c8cfbd;
+    border-radius: 50%;
+}
+
+body.bechamel-page .recipe-cover-decoration {
+    position: absolute;
+    top: 22px;
+    color: var(--gold);
+    font-size: 25px;
+}
+
+body.bechamel-page .eq-cover-drawing > span {
+    font-family: 'Playfair Display', serif;
+    font-size: 70px;
+    line-height: 1;
+}
+
+body.bechamel-page .eq-cover-drawing small {
+    margin-top: 10px;
+    color: #858875;
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+}
+
+body.bechamel-page .eq-page-number {
+    position: absolute;
+    right: 28px;
+    bottom: 23px;
+    z-index: 2;
+    color: #858b76;
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+}
+
+/* =========================================
+   INTRODUCCIÓN
+========================================= */
+
+body.bechamel-page .eq-intro {
+    max-width: 100%;
+    margin: 0 auto 55px;
+    padding: 30px 35px;
+    background: #f0efe4;
+    border-left: 4px solid var(--sage);
+    border-radius: 0 8px 8px 0;
+    text-align: left;
+}
+
+body.bechamel-page .eq-intro .eq-kicker {
+    color: var(--gold);
+}
+
+body.bechamel-page .eq-intro h2 {
+    margin: 8px 0 15px;
+    color: var(--sage-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+body.bechamel-page .eq-intro > p,
+body.bechamel-page .eq-intro .recipe-content-card > p {
+    max-width: 850px;
+    margin: 0 0 15px;
+    color: #69695b;
+    font-size: 0.97rem;
+    line-height: 1.9;
+}
+
+body.bechamel-page .eq-intro p:last-child {
+    margin-bottom: 0;
+}
+
+/* =========================================
+   SECCIONES Y ENCABEZADOS
+========================================= */
+
+body.bechamel-page .recipe-section {
+    margin: 0 0 55px;
+}
+
+body.bechamel-page .eq-heading {
+    position: relative;
+    margin-bottom: 27px;
+    padding-left: 20px;
+    border-left: 4px solid var(--sage);
+}
+
+body.bechamel-page .eq-heading .eq-kicker {
+    margin-bottom: 9px;
+    color: var(--gold);
+}
+
+body.bechamel-page .eq-heading h2 {
+    margin: 0 0 12px;
+    color: var(--sage-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+body.bechamel-page .eq-heading h3 {
+    margin: 0;
+    color: var(--sage-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+body.bechamel-page .eq-heading > p {
+    max-width: 750px;
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.96rem;
+    line-height: 1.85;
+}
+
+/* =========================================
+   TARJETAS
+========================================= */
+
+body.bechamel-page .eq-card,
+body.bechamel-page .recipe-content-card {
+    padding: 30px 34px;
+    margin-bottom: 22px;
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    box-shadow: 0 5px 18px rgba(78, 93, 72, 0.045);
+}
+
+body.bechamel-page .recipe-content-card > p {
+    margin: 0 0 16px;
+    color: #69695b;
+    font-size: 0.97rem;
+    line-height: 1.9;
+}
+
+body.bechamel-page .recipe-content-card > p:last-child {
+    margin-bottom: 0;
+}
+
+body.bechamel-page .recipe-content-card > h2 {
+    margin: 8px 0 16px;
+    color: var(--sage-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.9rem;
+    font-weight: 600;
+}
+
+body.bechamel-page .recipe-content-card > h3 {
+    margin: 30px 0 17px;
+    color: var(--sage-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.45rem;
+    font-weight: 600;
+}
+
+/* =========================================
+   LISTAS
+========================================= */
+
+body.bechamel-page .recipe-list {
+    margin: 0;
+    padding-left: 27px;
+    color: #646456;
+    font-size: 0.97rem;
+    line-height: 1.85;
+}
+
+body.bechamel-page .recipe-list li {
+    margin-bottom: 15px;
+    padding-left: 8px;
+}
+
+body.bechamel-page .recipe-list li:last-child {
+    margin-bottom: 0;
+}
+
+body.bechamel-page .recipe-list li::marker {
+    color: var(--sage);
+    font-weight: 700;
+}
+
+/* =========================================
+   FOTOGRAFÍAS
+========================================= */
+
+body.bechamel-page .recipe-image-space {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 270px;
+    margin: 25px 0 30px;
+    padding: 25px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #eeeddf, #e4e9dd);
+    border: 1px dashed #b9c1ae;
+    border-radius: 8px;
+    color: #858775;
+    text-align: center;
+    transition: all 0.25s ease;
+}
+
+body.bechamel-page .recipe-image-space:hover {
+    border-color: var(--gold);
+    background: #f3f0e3;
+}
+
+body.bechamel-page .recipe-image-space img {
+    display: block;
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+body.bechamel-page .image-placeholder-icon {
+    color: var(--sage);
+    font-size: 2rem;
+}
+
+body.bechamel-page .recipe-image-space p {
+    margin: 12px 0 5px;
+    color: var(--sage-dark);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+body.bechamel-page .recipe-image-space small {
+    color: #999482;
+    font-size: 0.8rem;
+}
+
+body.bechamel-page .recipe-image-space.small {
+    min-height: 190px;
+    margin: 0;
+    padding: 20px;
+}
+
+/* =========================================
+   GALERÍAS
+========================================= */
+
+body.bechamel-page .recipe-gallery-space {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+
+body.bechamel-page .recipe-gallery-space .recipe-image-space {
+    min-width: 0;
+    min-height: 220px;
+    margin: 0;
+}
+
+/* =========================================
+   TABLAS
+========================================= */
+
+body.bechamel-page .recipe-ingredients-table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+    background: var(--paper);
+    font-size: 0.94rem;
+}
+
+body.bechamel-page .recipe-ingredients-table thead {
+    background: #e8ecdf;
+}
+
+body.bechamel-page .recipe-ingredients-table th {
+    padding: 17px 20px;
+    color: var(--sage-dark);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-align: left;
+}
+
+body.bechamel-page .recipe-ingredients-table td {
+    padding: 16px 20px;
+    color: #626253;
+    border-bottom: 1px solid #ece9dc;
+}
+
+body.bechamel-page .recipe-ingredients-table tbody tr:nth-child(even) {
+    background: #f7f6ee;
+}
+
+body.bechamel-page .recipe-ingredients-table tbody tr:hover {
+    background: #eff1e7;
+}
+
+body.bechamel-page .recipe-ingredients-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* =========================================
+   DATOS DE RECETA
+========================================= */
+
+body.bechamel-page .recipe-data {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin: 30px 0 45px;
+}
+
+body.bechamel-page .recipe-data > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    min-height: 100px;
+    padding: 20px 22px;
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--sage);
+    border-radius: 7px;
+    box-shadow: 0 4px 12px rgba(78, 93, 72, 0.045);
+}
+
+body.bechamel-page .recipe-data > div:nth-child(3n + 2) {
+    border-top-color: var(--gold);
+}
+
+body.bechamel-page .recipe-data > div:nth-child(3n) {
+    border-top-color: var(--butter);
+}
+
+body.bechamel-page .recipe-data span {
+    color: #92917e;
+    font-size: 0.73rem;
+    font-weight: 700;
+    letter-spacing: 0.9px;
+}
+
+body.bechamel-page .recipe-data strong {
+    color: var(--sage-dark);
+    font-size: 0.98rem;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+/* =========================================
+   PROCEDIMIENTO
+========================================= */
+
+body.bechamel-page .recipe-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    margin: 25px 0;
+}
+
+body.bechamel-page .recipe-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 22px;
+    padding: 25px 27px;
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--sage);
+    border-radius: 8px;
+    box-shadow: 0 4px 13px rgba(78, 93, 72, 0.04);
+}
+
+body.bechamel-page .recipe-step:nth-child(2) {
+    border-left-color: var(--gold);
+}
+
+body.bechamel-page .recipe-step:nth-child(3) {
+    border-left-color: #c5b77e;
+}
+
+body.bechamel-page .step-number {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 43px;
+    height: 43px;
+    color: white;
+    background: var(--sage);
+    border-radius: 50%;
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+}
+
+body.bechamel-page .recipe-step:nth-child(2) .step-number {
+    background: var(--gold);
+}
+
+body.bechamel-page .recipe-step:nth-child(3) .step-number {
+    background: #a69b68;
+}
+
+body.bechamel-page .recipe-step h3,
+body.bechamel-page .recipe-steps h3 {
+    margin: 2px 0 9px;
+    color: var(--sage-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+body.bechamel-page .recipe-step p,
+body.bechamel-page .recipe-steps p {
+    margin: 0;
+    color: #6b6a5d;
+    font-size: 0.95rem;
+    line-height: 1.85;
+}
+
+/* =========================================
+   NOTAS
+========================================= */
+
+body.bechamel-page .recipe-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 17px;
+    margin: 35px 0 50px;
+    padding: 27px 30px;
+    background: #edf0e5;
+    border: 1px solid #dce1d2;
+    border-left: 5px solid var(--gold);
+    border-radius: 8px;
+    color: #6c705f;
+    font-size: 0.96rem;
+    line-height: 1.9;
+}
+
+body.bechamel-page .recipe-note > span {
+    flex-shrink: 0;
+    color: var(--gold);
+    font-size: 1.7rem;
+}
+
+body.bechamel-page .recipe-note strong {
+    color: var(--sage-dark);
+}
+
+body.bechamel-page .recipe-note h3 {
+    margin: 0 0 10px;
+    color: var(--sage-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+body.bechamel-page .recipe-note p {
+    margin: 0;
+}
+
+/* =========================================
+   NAVEGACIÓN
+========================================= */
+
+body.bechamel-page .eq-page-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 55px 0 25px;
+    padding: 25px 5px;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+body.bechamel-page .eq-nav-link {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    color: var(--sage-dark);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+body.bechamel-page .eq-nav-link span {
+    color: #969181;
+    font-size: 0.76rem;
+}
+
+body.bechamel-page .eq-nav-link strong {
+    color: var(--sage-dark);
+    font-size: 0.9rem;
+}
+
+body.bechamel-page .eq-nav-link:hover {
+    transform: translateX(-4px);
+}
+
+body.bechamel-page .eq-nav-link.next {
+    text-align: right;
+}
+
+body.bechamel-page .eq-nav-link.next:hover {
+    transform: translateX(4px);
+}
+
+/* =========================================
+   PIE DE PÁGINA
+========================================= */
+
+body.bechamel-page .eq-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 25px;
+    padding: 20px 5px;
+    color: #898978;
+    border-top: 1px solid var(--border);
+    font-size: 0.76rem;
+    letter-spacing: 0.8px;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 760px) {
+
+    body.bechamel-page {
+        padding: 18px 10px;
+    }
+
+    body.bechamel-page .eq-container {
+        padding: 35px 28px;
+    }
+
+    body.bechamel-page .eq-cover {
+        min-height: 350px;
+        padding: 40px 30px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    body.bechamel-page .eq-cover-drawing {
+        align-self: center;
+        width: 155px;
+        height: 155px;
+    }
+
+    body.bechamel-page .eq-cover-drawing > span {
+        font-size: 55px;
+    }
+
+    body.bechamel-page .recipe-data {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    body.bechamel-page .recipe-gallery-space {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    body.bechamel-page .recipe-gallery-space .recipe-image-space:last-child {
+        grid-column: 1 / -1;
+    }
+
+    body.bechamel-page .eq-card,
+    body.bechamel-page .recipe-content-card {
+        padding: 25px 23px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    body.bechamel-page {
+        padding: 10px 7px;
+    }
+
+    body.bechamel-page .eq-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    body.bechamel-page .eq-container {
+        padding: 25px 18px;
+    }
+
+    body.bechamel-page .eq-cover {
+        min-height: 320px;
+        padding: 32px 22px;
+    }
+
+    body.bechamel-page .eq-cover h1 {
+        font-size: 2.6rem;
+    }
+
+    body.bechamel-page .eq-intro {
+        padding: 23px 20px;
+    }
+
+    body.bechamel-page .eq-card,
+    body.bechamel-page .recipe-content-card {
+        padding: 21px 17px;
+    }
+
+    body.bechamel-page .recipe-data,
+    body.bechamel-page .recipe-gallery-space {
+        grid-template-columns: 1fr;
+    }
+
+    body.bechamel-page .recipe-gallery-space .recipe-image-space:last-child {
+        grid-column: auto;
+    }
+
+    body.bechamel-page .recipe-step {
+        gap: 14px;
+        padding: 20px 16px;
+    }
+
+    body.bechamel-page .step-number {
+        width: 36px;
+        height: 36px;
+    }
+
+    body.bechamel-page .recipe-ingredients-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    body.bechamel-page .recipe-ingredients-table th,
+    body.bechamel-page .recipe-ingredients-table td {
+        padding: 13px 12px;
+    }
+
+    body.bechamel-page .eq-page-navigation {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    body.bechamel-page .eq-nav-link.next {
+        text-align: left;
+    }
+
+    body.bechamel-page .eq-footer {
+        flex-direction: column;
+    }
+}
+
+

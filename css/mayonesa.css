@@ -1,0 +1,734 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Caveat:wght@500;600&display=swap');
+
+/* ========================================
+   MAYONESA | CUADERNO GASTRONÓMICO
+   Paleta: rosa, frambuesa, crema y salvia
+======================================== */
+
+body.mayonesa-page {
+    --may-cream: #fbf7f2;
+    --may-paper: #fffdf9;
+    --may-pink: #f1d9d9;
+    --may-pink-light: #faeeee;
+    --may-rose: #bd777e;
+    --may-berry: #92515d;
+    --may-sage: #a5ad91;
+    --may-sage-light: #edf0e7;
+    --may-text: #514747;
+    --may-muted: #897c78;
+    --may-border: #eadbd7;
+
+    background: #eee7e2;
+    color: var(--may-text);
+    font-family: 'DM Sans', sans-serif;
+    margin: 0;
+    padding: 35px 18px;
+}
+
+/* CONTENEDOR PRINCIPAL */
+
+.mayonesa-page .eq-container {
+    position: relative;
+    width: min(1120px, 100%);
+    margin: 0 auto;
+    padding: 42px 58px 35px;
+    background: var(--may-paper);
+    border: 1px solid #e8ddd7;
+    box-shadow: 0 12px 38px rgba(91, 65, 65, 0.08);
+    overflow: hidden;
+}
+
+.mayonesa-page .eq-container::before,
+.mayonesa-page .eq-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--may-pink);
+    opacity: .65;
+}
+
+.mayonesa-page .eq-container::before {
+    left: 15px;
+}
+
+.mayonesa-page .eq-container::after {
+    right: 15px;
+}
+
+/* ENCABEZADO Y REGRESO */
+
+.mayonesa-page .eq-header {
+    width: min(1120px, 100%);
+    margin: 0 auto 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+    padding: 0 4px;
+}
+
+.mayonesa-page .eq-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--may-berry);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 11px 17px;
+    border: 1px solid #d9b9ba;
+    border-radius: 30px;
+    background: #fffaf8;
+    transition: .25s ease;
+}
+
+.mayonesa-page .eq-back:hover {
+    background: var(--may-berry);
+    color: white;
+    transform: translateX(-3px);
+}
+
+.mayonesa-page .eq-label {
+    color: var(--may-muted);
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* PORTADA */
+
+.mayonesa-page .eq-cover {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.15fr .85fr;
+    align-items: center;
+    gap: 35px;
+    min-height: 345px;
+    padding: 48px 45px;
+    margin-bottom: 65px;
+    background: linear-gradient(125deg, #f8e9e7 0%, #f4dfdf 55%, #e9e9dc 100%);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.mayonesa-page .eq-cover::before {
+    content: "";
+    position: absolute;
+    width: 270px;
+    height: 270px;
+    border: 1px solid rgba(146, 81, 93, .19);
+    border-radius: 50%;
+    right: -75px;
+    top: -100px;
+}
+
+.mayonesa-page .eq-cover::after {
+    content: "";
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    border: 1px solid rgba(146, 81, 93, .16);
+    border-radius: 50%;
+    right: 30px;
+    bottom: -125px;
+}
+
+.mayonesa-page .eq-cover-text {
+    position: relative;
+    z-index: 2;
+}
+
+.mayonesa-page .eq-kicker {
+    display: block;
+    margin-bottom: 13px;
+    color: var(--may-berry);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.mayonesa-page .eq-cover h1 {
+    margin: 0 0 17px;
+    color: #75434b;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(48px, 6vw, 76px);
+    line-height: 1.05;
+    font-weight: 600;
+}
+
+.mayonesa-page .eq-cover p {
+    max-width: 470px;
+    margin: 0;
+    color: #675656;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.mayonesa-page .eq-line {
+    width: 75px;
+    height: 2px;
+    margin: 23px 0 14px;
+    background: var(--may-rose);
+}
+
+.mayonesa-page .eq-small {
+    color: #80666a;
+    font-family: 'Caveat', cursive;
+    font-size: 21px;
+}
+
+.mayonesa-page .eq-cover-drawing {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mayonesa-page .eq-cover-drawing .recipe-image-space {
+    width: 100%;
+    min-height: 220px;
+    background: rgba(255, 253, 249, .65);
+    border: 1px dashed #c58d91;
+    border-radius: 48% 48% 8px 8px;
+}
+
+.mayonesa-page .eq-page-number {
+    position: absolute;
+    right: 24px;
+    bottom: 18px;
+    color: #986c70;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+}
+
+/* DATOS DE LA RECETA */
+
+.mayonesa-page .eq-intro {
+    margin-bottom: 65px;
+}
+
+.mayonesa-page .eq-intro h2,
+.mayonesa-page .eq-heading h2 {
+    margin: 0;
+    color: #69484d;
+    font-family: 'Playfair Display', serif;
+    font-size: 29px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.mayonesa-page .recipe-data {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 13px;
+    margin-top: 27px;
+}
+
+.mayonesa-page .recipe-data > div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-height: 76px;
+    padding: 17px 19px;
+    background: #fbf1ef;
+    border: 1px solid #efdfdc;
+    border-radius: 7px;
+}
+
+.mayonesa-page .recipe-data > div:nth-child(even) {
+    background: #f1f2eb;
+    border-color: #e3e6d9;
+}
+
+.mayonesa-page .recipe-data span {
+    color: var(--may-muted);
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.mayonesa-page .recipe-data strong {
+    color: #68484c;
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+/* SECCIONES */
+
+.mayonesa-page .recipe-section {
+    margin: 0 0 65px;
+}
+
+.mayonesa-page .eq-heading {
+    margin-bottom: 23px;
+    padding-bottom: 17px;
+    border-bottom: 1px solid var(--may-border);
+}
+
+.mayonesa-page .eq-heading > p {
+    margin: 10px 0 0;
+    color: var(--may-muted);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.mayonesa-page .eq-heading .eq-kicker {
+    margin-bottom: 8px;
+}
+
+.mayonesa-page .recipe-content-card {
+    padding: 29px 32px;
+    background: #fffdfa;
+    border: 1px solid var(--may-border);
+    border-radius: 8px;
+    box-shadow: 0 5px 18px rgba(110, 77, 77, .045);
+}
+
+.mayonesa-page .recipe-content-card p {
+    margin: 0 0 17px;
+    color: #625656;
+    font-size: 14px;
+    line-height: 1.95;
+}
+
+.mayonesa-page .recipe-content-card p:last-child {
+    margin-bottom: 0;
+}
+
+/* TABLA DE INGREDIENTES */
+
+.mayonesa-page .recipe-ingredients-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 13px;
+}
+
+.mayonesa-page .recipe-ingredients-table thead {
+    background: #f4e4e3;
+}
+
+.mayonesa-page .recipe-ingredients-table th {
+    padding: 15px 18px;
+    color: #774b52;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.mayonesa-page .recipe-ingredients-table td {
+    padding: 14px 18px;
+    color: #5e5553;
+    border-bottom: 1px solid #eee5e1;
+}
+
+.mayonesa-page .recipe-ingredients-table tbody tr:nth-child(even) {
+    background: #faf5f1;
+}
+
+.mayonesa-page .recipe-ingredients-table tbody tr:hover {
+    background: #f6e9e7;
+}
+
+.mayonesa-page .recipe-ingredients-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* NOTAS */
+
+.mayonesa-page .recipe-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+    margin-top: 22px;
+    padding: 18px 21px;
+    background: #f1f2eb;
+    border-left: 3px solid var(--may-sage);
+    border-radius: 5px;
+}
+
+.mayonesa-page .recipe-note > span:first-child {
+    color: var(--may-berry);
+    font-size: 18px;
+}
+
+.mayonesa-page .recipe-note > span:last-child {
+    color: #6c655b;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.mayonesa-page .recipe-note h3 {
+    margin: 0 0 8px;
+    color: #754b52;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+}
+
+.mayonesa-page .recipe-note p {
+    margin: 0;
+    color: #655b57;
+    font-size: 13px;
+    line-height: 1.85;
+}
+
+/* LISTAS */
+
+.mayonesa-page .recipe-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.mayonesa-page .recipe-list li {
+    position: relative;
+    margin: 0;
+    padding: 13px 10px 13px 23px;
+    color: #625755;
+    font-size: 13px;
+    line-height: 1.8;
+    border-bottom: 1px solid #f0e8e3;
+}
+
+.mayonesa-page .recipe-list li::before {
+    content: "";
+    position: absolute;
+    top: 22px;
+    left: 3px;
+    width: 7px;
+    height: 7px;
+    background: var(--may-rose);
+    border-radius: 50%;
+}
+
+.mayonesa-page .recipe-list li:last-child {
+    border-bottom: none;
+}
+
+/* PROCEDIMIENTO */
+
+.mayonesa-page .recipe-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.mayonesa-page .recipe-step {
+    display: grid;
+    grid-template-columns: 58px 1fr;
+    gap: 20px;
+    align-items: start;
+    padding: 23px 25px;
+    background: #fffdfa;
+    border: 1px solid var(--may-border);
+    border-radius: 7px;
+    transition: .25s ease;
+}
+
+.mayonesa-page .recipe-step:hover {
+    border-color: #d8a9a9;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(115, 75, 75, .07);
+}
+
+.mayonesa-page .step-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    color: white;
+    background: var(--may-berry);
+    border-radius: 50%;
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+}
+
+.mayonesa-page .recipe-step:nth-child(even) .step-number {
+    background: var(--may-sage);
+}
+
+.mayonesa-page .recipe-step h3 {
+    margin: 2px 0 9px;
+    color: #70494e;
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.mayonesa-page .recipe-step p {
+    margin: 0;
+    color: #675e5a;
+    font-size: 13px;
+    line-height: 1.85;
+}
+
+/* TARJETAS DE TÉCNICAS */
+
+.mayonesa-page .eq-table-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 17px;
+}
+
+.mayonesa-page .cut-color-card {
+    padding: 25px 27px;
+    background: #f9eeee;
+    border: 1px solid #eedcda;
+    border-radius: 8px;
+}
+
+.mayonesa-page .cut-color-card:nth-child(2) {
+    background: #eff1e9;
+    border-color: #e1e5d7;
+}
+
+.mayonesa-page .cut-color-card:nth-child(3) {
+    background: #f8f0e9;
+    border-color: #eee0d4;
+}
+
+.mayonesa-page .cut-color-card:nth-child(4) {
+    background: #f3e9ec;
+    border-color: #e9d9df;
+}
+
+.mayonesa-page .cut-color-card h3 {
+    margin: 0 0 12px;
+    color: #784d54;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+}
+
+.mayonesa-page .cut-color-card p {
+    margin: 0;
+    color: #665b58;
+    font-size: 13px;
+    line-height: 1.85;
+}
+
+/* GALERÍA DE FOTOGRAFÍAS */
+
+.mayonesa-page .recipe-gallery-space {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 17px;
+}
+
+.mayonesa-page .recipe-image-space {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 155px;
+    padding: 15px;
+    background: #f8efeb;
+    border: 1px dashed #d8b8b4;
+    border-radius: 7px;
+    text-align: center;
+    transition: .25s ease;
+}
+
+.mayonesa-page .recipe-image-space span {
+    max-width: 180px;
+    color: #94777a;
+    font-family: 'Caveat', cursive;
+    font-size: 19px;
+    line-height: 1.4;
+}
+
+.mayonesa-page .recipe-image-space:hover {
+    background: #f3e4e2;
+    border-color: var(--may-rose);
+}
+
+/* DATO GASTRONÓMICO */
+
+.mayonesa-page > .eq-container > .recipe-note {
+    margin: 0 0 60px;
+    padding: 25px 28px;
+    background: #f7e9e8;
+    border-left: 4px solid var(--may-rose);
+}
+
+.mayonesa-page > .eq-container > .recipe-note > span:first-child {
+    font-size: 22px;
+}
+
+/* NAVEGACIÓN ENTRE RECETAS */
+
+.mayonesa-page .eq-page-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-top: 65px;
+    padding: 22px 0;
+    border-top: 1px solid var(--may-border);
+    border-bottom: 1px solid var(--may-border);
+}
+
+.mayonesa-page .eq-page-navigation a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 18px;
+    color: var(--may-berry);
+    background: #fbf0ee;
+    border: 1px solid #ecd9d7;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    transition: .25s ease;
+}
+
+.mayonesa-page .eq-page-navigation a:hover {
+    color: white;
+    background: var(--may-berry);
+    border-color: var(--may-berry);
+}
+
+/* PIE DE PÁGINA */
+
+.mayonesa-page .eq-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 25px 0 5px;
+    color: #998985;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+    body.mayonesa-page {
+        padding: 20px 12px;
+    }
+
+    .mayonesa-page .eq-container {
+        padding: 30px 32px;
+    }
+
+    .mayonesa-page .eq-cover {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 35px 30px;
+    }
+
+    .mayonesa-page .eq-cover-drawing .recipe-image-space {
+        min-height: 170px;
+    }
+
+    .mayonesa-page .recipe-data {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .mayonesa-page .recipe-gallery-space {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 520px) {
+    body.mayonesa-page {
+        padding: 12px 8px;
+    }
+
+    .mayonesa-page .eq-container {
+        padding: 25px 22px;
+    }
+
+    .mayonesa-page .eq-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .mayonesa-page .eq-label {
+        padding-left: 5px;
+    }
+
+    .mayonesa-page .eq-cover {
+        padding: 30px 23px;
+        margin-bottom: 45px;
+    }
+
+    .mayonesa-page .eq-cover h1 {
+        font-size: 48px;
+    }
+
+    .mayonesa-page .eq-cover p {
+        font-size: 13px;
+    }
+
+    .mayonesa-page .eq-intro h2,
+    .mayonesa-page .eq-heading h2 {
+        font-size: 25px;
+    }
+
+    .mayonesa-page .recipe-data {
+        grid-template-columns: 1fr 1fr;
+        gap: 9px;
+    }
+
+    .mayonesa-page .recipe-data > div {
+        padding: 13px;
+    }
+
+    .mayonesa-page .recipe-data strong {
+        font-size: 15px;
+    }
+
+    .mayonesa-page .recipe-content-card {
+        padding: 20px 17px;
+    }
+
+    .mayonesa-page .recipe-ingredients-table th,
+    .mayonesa-page .recipe-ingredients-table td {
+        padding: 12px 9px;
+        font-size: 11px;
+    }
+
+    .mayonesa-page .recipe-step {
+        grid-template-columns: 42px 1fr;
+        gap: 13px;
+        padding: 18px 14px;
+    }
+
+    .mayonesa-page .step-number {
+        width: 39px;
+        height: 39px;
+        font-size: 14px;
+    }
+
+    .mayonesa-page .recipe-step h3 {
+        font-size: 17px;
+    }
+
+    .mayonesa-page .eq-table-grid,
+    .mayonesa-page .recipe-gallery-space {
+        grid-template-columns: 1fr;
+    }
+
+    .mayonesa-page .eq-page-navigation {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .mayonesa-page .eq-page-navigation a {
+        justify-content: center;
+    }
+
+    .mayonesa-page .eq-footer {
+        flex-direction: column;
+        gap: 8px;
+    }
+}

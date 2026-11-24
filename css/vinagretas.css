@@ -1,0 +1,750 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Caveat:wght@500;600&display=swap');
+
+/* =========================================
+   VINAGRETAS · CUADERNO GASTRONÓMICO
+   Paleta: verde salvia, limón y crema
+========================================= */
+
+body.vinagretas-page {
+    --cream: #f7f5eb;
+    --paper: #fffdf7;
+    --sage: #879779;
+    --sage-dark: #52664e;
+    --sage-light: #e9eee3;
+    --lemon: #e9d98e;
+    --lemon-light: #f8f2d9;
+    --olive: #a5a276;
+    --text: #494b3e;
+    --muted: #858575;
+    --border: #e5e1cf;
+
+    margin: 0;
+    padding: 30px 18px;
+    background: #e9e9df;
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.75;
+}
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+body.vinagretas-page .eq-header {
+    max-width: 1120px;
+    margin: 0 auto 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+body.vinagretas-page .eq-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 19px;
+    border: 1px solid #d8ddcf;
+    border-radius: 30px;
+    background: var(--paper);
+    color: var(--sage-dark);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: .25s ease;
+}
+
+body.vinagretas-page .eq-back:hover {
+    background: var(--sage-dark);
+    color: white;
+    transform: translateX(-3px);
+}
+
+body.vinagretas-page .eq-label {
+    padding: 9px 17px;
+    border-radius: 30px;
+    background: var(--sage-light);
+    color: var(--sage-dark);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+/* =========================================
+   HOJA PRINCIPAL
+========================================= */
+
+body.vinagretas-page .eq-container {
+    position: relative;
+    max-width: 1120px;
+    margin: auto;
+    padding: 48px 55px;
+    background: var(--paper);
+    border: 1px solid #e8e3d4;
+    box-shadow: 0 15px 45px rgba(70, 75, 55, .09);
+    overflow: hidden;
+}
+
+body.vinagretas-page .eq-container::before,
+body.vinagretas-page .eq-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(
+        to bottom,
+        var(--sage),
+        var(--lemon),
+        var(--sage)
+    );
+    opacity: .55;
+}
+
+body.vinagretas-page .eq-container::before {
+    left: 0;
+}
+
+body.vinagretas-page .eq-container::after {
+    right: 0;
+}
+
+/* =========================================
+   PORTADA
+========================================= */
+
+body.vinagretas-page .eq-cover {
+    position: relative;
+    min-height: 390px;
+    padding: 55px 48px;
+    margin-bottom: 65px;
+    display: grid;
+    grid-template-columns: 1.15fr .85fr;
+    align-items: center;
+    gap: 35px;
+    background: linear-gradient(
+        120deg,
+        #edf0e5 0%,
+        #f7f3df 55%,
+        #f1edda 100%
+    );
+    border: 1px solid #e1e4d5;
+    overflow: hidden;
+}
+
+body.vinagretas-page .eq-cover::before {
+    content: "";
+    position: absolute;
+    width: 310px;
+    height: 310px;
+    right: -90px;
+    top: -120px;
+    border: 1px solid rgba(135, 151, 121, .25);
+    border-radius: 50%;
+}
+
+body.vinagretas-page .eq-cover::after {
+    content: "";
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    right: -35px;
+    top: -80px;
+    border: 1px solid rgba(135, 151, 121, .2);
+    border-radius: 50%;
+}
+
+body.vinagretas-page .eq-cover-text {
+    position: relative;
+    z-index: 2;
+}
+
+body.vinagretas-page .eq-kicker {
+    display: block;
+    margin-bottom: 12px;
+    color: var(--sage-dark);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+body.vinagretas-page .eq-cover h1 {
+    margin: 12px 0 18px;
+    color: #485c45;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 6vw, 66px);
+    line-height: 1.08;
+    font-weight: 600;
+}
+
+body.vinagretas-page .eq-cover-text p {
+    max-width: 520px;
+    margin: 0;
+    color: #686b5c;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+body.vinagretas-page .eq-line {
+    width: 75px;
+    height: 3px;
+    margin: 25px 0 15px;
+    background: var(--olive);
+}
+
+body.vinagretas-page .eq-small {
+    color: var(--sage-dark);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+body.vinagretas-page .eq-cover-drawing {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body.vinagretas-page .eq-cover-drawing .recipe-image-space {
+    width: 100%;
+    min-height: 235px;
+    background: rgba(255, 253, 247, .75);
+    border: 1px solid #d9dfcf;
+    transform: rotate(2deg);
+}
+
+body.vinagretas-page .eq-page-number {
+    position: absolute;
+    right: 27px;
+    bottom: 22px;
+    color: var(--sage-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    opacity: .65;
+}
+
+/* =========================================
+   INTRODUCCIÓN
+========================================= */
+
+body.vinagretas-page .eq-intro {
+    margin-bottom: 65px;
+    padding: 32px;
+    background: #f6f5ec;
+    border-left: 4px solid var(--sage);
+}
+
+body.vinagretas-page .eq-intro h2 {
+    margin: 0 0 22px;
+    color: var(--sage-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+/* =========================================
+   SECCIONES Y TÍTULOS
+========================================= */
+
+body.vinagretas-page .recipe-section {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+body.vinagretas-page .eq-heading {
+    position: relative;
+    margin-bottom: 27px;
+    padding-left: 20px;
+    border-left: 4px solid var(--sage);
+}
+
+body.vinagretas-page .eq-heading .eq-kicker {
+    margin-bottom: 7px;
+    color: #92915f;
+}
+
+body.vinagretas-page .eq-heading h2 {
+    margin: 0;
+    color: #4e6048;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(25px, 3.5vw, 34px);
+    line-height: 1.25;
+    font-weight: 600;
+}
+
+body.vinagretas-page .eq-heading h3 {
+    margin: 0;
+    color: #53644b;
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+body.vinagretas-page .eq-heading p {
+    max-width: 760px;
+    margin: 12px 0 0;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* =========================================
+   TARJETAS
+========================================= */
+
+body.vinagretas-page .eq-card {
+    background: #fffefa;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    box-shadow: 0 5px 16px rgba(75, 77, 55, .045);
+}
+
+body.vinagretas-page .recipe-content-card {
+    padding: 30px 34px;
+    margin-bottom: 25px;
+}
+
+body.vinagretas-page .recipe-content-card p {
+    margin: 0 0 17px;
+    color: #626355;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+body.vinagretas-page .recipe-content-card p:last-child {
+    margin-bottom: 0;
+}
+
+/* =========================================
+   ÍNDICE DE PREPARACIONES
+========================================= */
+
+body.vinagretas-page .eq-table-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+body.vinagretas-page .cut-color-card {
+    display: block;
+    min-height: 155px;
+    padding: 25px;
+    color: inherit;
+    text-decoration: none;
+    background: linear-gradient(145deg, #f8f8ef, #eef1e5);
+    border: 1px solid #dce3d4;
+    border-radius: 5px;
+    transition: .25s ease;
+}
+
+body.vinagretas-page .cut-color-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--sage);
+    box-shadow: 0 10px 22px rgba(80, 100, 70, .1);
+}
+
+body.vinagretas-page .cut-color-card .eq-kicker {
+    color: #99945e;
+    font-family: 'Caveat', cursive;
+    font-size: 20px;
+    letter-spacing: 0;
+}
+
+body.vinagretas-page .cut-color-card h3 {
+    margin: 8px 0;
+    color: var(--sage-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+}
+
+body.vinagretas-page .cut-color-card p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* =========================================
+   DATOS DE LAS RECETAS
+========================================= */
+
+body.vinagretas-page .recipe-data {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 13px;
+    margin: 28px 0 38px;
+}
+
+body.vinagretas-page .recipe-data > div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-height: 75px;
+    padding: 17px 19px;
+    background: #f0f2e9;
+    border: 1px solid #e0e5d8;
+    border-radius: 4px;
+}
+
+body.vinagretas-page .recipe-data span {
+    color: #8b8d79;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+body.vinagretas-page .recipe-data strong {
+    color: #506249;
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* =========================================
+   TABLAS DE INGREDIENTES
+========================================= */
+
+body.vinagretas-page .recipe-ingredients-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 13px;
+}
+
+body.vinagretas-page .recipe-ingredients-table thead {
+    background: #e9eee2;
+}
+
+body.vinagretas-page .recipe-ingredients-table th {
+    padding: 16px 18px;
+    color: #53664c;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .8px;
+    text-align: left;
+    text-transform: uppercase;
+    border-bottom: 2px solid #d5deca;
+}
+
+body.vinagretas-page .recipe-ingredients-table td {
+    padding: 14px 18px;
+    color: #626355;
+    border-bottom: 1px solid #ece9dc;
+}
+
+body.vinagretas-page .recipe-ingredients-table tbody tr:nth-child(even) {
+    background: #faf9f2;
+}
+
+body.vinagretas-page .recipe-ingredients-table tbody tr:hover {
+    background: #f1f3e9;
+}
+
+/* =========================================
+   LISTAS
+========================================= */
+
+body.vinagretas-page .recipe-list {
+    margin: 0;
+    padding-left: 23px;
+    color: #626355;
+}
+
+body.vinagretas-page .recipe-list li {
+    padding-left: 7px;
+    margin-bottom: 13px;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+body.vinagretas-page .recipe-list li:last-child {
+    margin-bottom: 0;
+}
+
+body.vinagretas-page .recipe-list li::marker {
+    color: var(--sage);
+}
+
+/* =========================================
+   PROCEDIMIENTO
+========================================= */
+
+body.vinagretas-page .recipe-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+body.vinagretas-page .recipe-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 23px 25px;
+    background: #f8f8f1;
+    border: 1px solid #e8e9dc;
+    border-left: 3px solid var(--sage);
+    border-radius: 4px;
+}
+
+body.vinagretas-page .step-number {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 39px;
+    height: 39px;
+    border-radius: 50%;
+    background: #e6ebdd;
+    color: #53664c;
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+body.vinagretas-page .recipe-step h3 {
+    margin: 2px 0 8px;
+    color: #53644b;
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+body.vinagretas-page .recipe-step p {
+    margin: 0;
+    color: #6d6d60;
+    font-size: 13px;
+    line-height: 1.85;
+}
+
+/* =========================================
+   ESPACIOS PARA FOTOGRAFÍAS
+========================================= */
+
+body.vinagretas-page .recipe-image-space {
+    min-height: 210px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(145deg, #f0f1e7, #f8f5e8);
+    border: 1px dashed #b9c3a9;
+    border-radius: 5px;
+    color: #7c866e;
+    font-family: 'Caveat', cursive;
+    font-size: 22px;
+}
+
+body.vinagretas-page .eq-cover-drawing .recipe-image-space {
+    min-height: 235px;
+}
+
+body.vinagretas-page > .eq-container > .recipe-section > .recipe-image-space {
+    margin: 25px 0;
+}
+
+body.vinagretas-page .recipe-gallery-space {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 35px 0 20px;
+}
+
+body.vinagretas-page .recipe-gallery-space .recipe-image-space {
+    min-height: 155px;
+    font-size: 17px;
+}
+
+/* =========================================
+   NOTAS GASTRONÓMICAS
+========================================= */
+
+body.vinagretas-page .recipe-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    margin: 55px 0;
+    padding: 28px 32px;
+    background: #f7f1d9;
+    border: 1px solid #e9dfb6;
+    border-left: 4px solid #c7b56e;
+}
+
+body.vinagretas-page .recipe-note > span {
+    color: #b3a052;
+    font-size: 27px;
+}
+
+body.vinagretas-page .recipe-note h3 {
+    margin: 0 0 8px;
+    color: #777044;
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+}
+
+body.vinagretas-page .recipe-note p {
+    margin: 0;
+    color: #77745e;
+    font-size: 13px;
+    line-height: 1.85;
+}
+
+/* =========================================
+   NAVEGACIÓN INFERIOR
+========================================= */
+
+body.vinagretas-page .eq-page-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-top: 65px;
+    padding-top: 25px;
+    border-top: 1px solid var(--border);
+}
+
+body.vinagretas-page .eq-page-navigation a {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 19px;
+    background: #edf0e6;
+    border: 1px solid #dce3d3;
+    border-radius: 30px;
+    color: #53664c;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: .25s ease;
+}
+
+body.vinagretas-page .eq-page-navigation a:hover {
+    background: var(--sage-dark);
+    border-color: var(--sage-dark);
+    color: white;
+}
+
+/* =========================================
+   PIE DE PÁGINA
+========================================= */
+
+body.vinagretas-page .eq-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 35px;
+    padding-top: 20px;
+    border-top: 1px solid #ece9dc;
+    color: #92917f;
+    font-size: 11px;
+    letter-spacing: .6px;
+}
+
+/* =========================================
+   AJUSTES RESPONSIVOS
+========================================= */
+
+@media (max-width: 850px) {
+    body.vinagretas-page .eq-container {
+        padding: 35px 30px;
+    }
+
+    body.vinagretas-page .eq-cover {
+        padding: 40px 30px;
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    body.vinagretas-page .eq-cover-drawing {
+        max-width: 420px;
+    }
+
+    body.vinagretas-page .eq-table-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    body.vinagretas-page {
+        padding: 15px 10px;
+    }
+
+    body.vinagretas-page .eq-header {
+        align-items: flex-start;
+    }
+
+    body.vinagretas-page .eq-label {
+        font-size: 9px;
+    }
+
+    body.vinagretas-page .eq-container {
+        padding: 25px 18px;
+    }
+
+    body.vinagretas-page .eq-cover {
+        padding: 35px 23px;
+        margin-bottom: 45px;
+    }
+
+    body.vinagretas-page .eq-cover h1 {
+        font-size: 43px;
+    }
+
+    body.vinagretas-page .eq-intro {
+        padding: 23px 19px;
+        margin-bottom: 45px;
+    }
+
+    body.vinagretas-page .eq-intro h2 {
+        font-size: 25px;
+    }
+
+    body.vinagretas-page .recipe-section {
+        margin-top: 45px;
+        margin-bottom: 45px;
+    }
+
+    body.vinagretas-page .eq-table-grid,
+    body.vinagretas-page .recipe-data,
+    body.vinagretas-page .recipe-gallery-space {
+        grid-template-columns: 1fr;
+    }
+
+    body.vinagretas-page .recipe-content-card {
+        padding: 20px 17px;
+        overflow-x: auto;
+    }
+
+    body.vinagretas-page .recipe-ingredients-table {
+        min-width: 420px;
+    }
+
+    body.vinagretas-page .recipe-step {
+        padding: 19px 15px;
+        gap: 13px;
+    }
+
+    body.vinagretas-page .recipe-note {
+        padding: 22px 18px;
+    }
+
+    body.vinagretas-page .eq-page-navigation {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    body.vinagretas-page .eq-page-navigation a {
+        justify-content: center;
+    }
+
+    body.vinagretas-page .eq-footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}

@@ -1,0 +1,542 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Caveat:wght@500;600&display=swap');
+
+/* =====================================
+   ENSALADA DE FRUTAS
+   Paleta: frambuesa, durazno y salvia
+===================================== */
+
+body.ensalada-frutas-page {
+    --ef-berry: #ad6475;
+    --ef-dark: #754653;
+    --ef-pink: #f1dfe2;
+    --ef-pale: #fbf0ef;
+    --ef-peach: #e9b69c;
+    --ef-sage: #89977b;
+    --ef-cream: #faf7f0;
+    --ef-ink: #514747;
+    --ef-muted: #92847f;
+    --ef-line: #e9ded9;
+
+    margin: 0;
+    padding: 35px 18px;
+    background: #e9dfd8;
+    color: var(--ef-ink);
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.75;
+}
+
+/* Página principal */
+
+.ensalada-frutas-page .eq-page {
+    width: min(1120px, 100%);
+    margin: 0 auto;
+    padding: 35px 65px 28px;
+    background: var(--ef-cream);
+    border: 1px solid rgba(117, 70, 83, 0.10);
+    box-shadow: 0 18px 55px rgba(83, 59, 52, 0.10);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Detalles laterales */
+
+.ensalada-frutas-page .eq-page::before,
+.ensalada-frutas-page .eq-page::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: #eadbd5;
+    opacity: .8;
+}
+
+.ensalada-frutas-page .eq-page::before {
+    left: 23px;
+}
+
+.ensalada-frutas-page .eq-page::after {
+    right: 23px;
+}
+
+/* =====================================
+   PORTADA
+===================================== */
+
+.ensalada-frutas-page .eq-cover {
+    min-height: 370px;
+    padding: 65px 55px;
+    margin-bottom: 65px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 88% 15%, rgba(255,255,255,.65) 0 65px, transparent 66px),
+        radial-gradient(circle at 92% 90%, rgba(233,182,156,.30) 0 120px, transparent 121px),
+        linear-gradient(125deg, #f3e1df 0%, #f8eae0 52%, #e9eee2 100%);
+    border: 1px solid #eadbd5;
+}
+
+.ensalada-frutas-page .eq-cover > div {
+    max-width: 690px;
+    position: relative;
+    z-index: 1;
+}
+
+.ensalada-frutas-page .eq-subtitle {
+    margin: 0 0 20px;
+    color: var(--ef-berry);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+}
+
+.ensalada-frutas-page .eq-cover h1 {
+    max-width: 650px;
+    margin: 0;
+    color: var(--ef-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 6vw, 67px);
+    font-weight: 500;
+    line-height: 1.08;
+    letter-spacing: -1.8px;
+}
+
+.ensalada-frutas-page .eq-cover > div > p:last-child {
+    max-width: 520px;
+    margin: 23px 0 0;
+    color: #756663;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.ensalada-frutas-page .eq-cover-number {
+    position: absolute;
+    right: 40px;
+    bottom: 27px;
+    color: var(--ef-berry);
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    letter-spacing: 3px;
+}
+
+.ensalada-frutas-page .eq-cover-number::before {
+    content: "";
+    display: block;
+    width: 42px;
+    height: 1px;
+    margin: 0 auto 9px;
+    background: var(--ef-peach);
+}
+
+/* =====================================
+   INTRODUCCIÓN
+===================================== */
+
+.ensalada-frutas-page .eq-intro {
+    max-width: 850px;
+    margin: 0 auto 48px;
+}
+
+.ensalada-frutas-page .eq-intro .eq-heading {
+    margin-bottom: 15px;
+    color: var(--ef-berry);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.ensalada-frutas-page .eq-intro > p:last-child {
+    margin: 0;
+    color: #716763;
+    font-size: 15px;
+    line-height: 2;
+}
+
+/* =====================================
+   DATOS DE LA RECETA
+===================================== */
+
+.ensalada-frutas-page .recipe-data {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+    margin: 0 0 70px;
+}
+
+.ensalada-frutas-page .recipe-data .eq-card {
+    min-height: 100px;
+    padding: 20px 19px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7px;
+    background: #fffdf9;
+    border: 1px solid var(--ef-line);
+    border-top: 3px solid var(--ef-peach);
+    border-radius: 5px;
+    box-shadow: 0 5px 14px rgba(92, 65, 58, .035);
+}
+
+.ensalada-frutas-page .recipe-data .eq-card:nth-child(2),
+.ensalada-frutas-page .recipe-data .eq-card:nth-child(5) {
+    border-top-color: var(--ef-sage);
+}
+
+.ensalada-frutas-page .recipe-data .eq-card:nth-child(3),
+.ensalada-frutas-page .recipe-data .eq-card:nth-child(6) {
+    border-top-color: var(--ef-berry);
+}
+
+.ensalada-frutas-page .recipe-data span {
+    color: var(--ef-muted);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.ensalada-frutas-page .recipe-data strong {
+    color: var(--ef-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+/* =====================================
+   SECCIONES
+===================================== */
+
+.ensalada-frutas-page .recipe-section {
+    margin: 0 0 58px;
+}
+
+.ensalada-frutas-page .recipe-section > .eq-heading {
+    margin: 0 0 23px;
+    padding-bottom: 15px;
+    color: var(--ef-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.3;
+    border-bottom: 1px solid var(--ef-line);
+    position: relative;
+}
+
+.ensalada-frutas-page .recipe-section > .eq-heading::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 65px;
+    height: 2px;
+    background: var(--ef-berry);
+}
+
+/* =====================================
+   TARJETAS DE CONTENIDO
+===================================== */
+
+.ensalada-frutas-page .recipe-content-card {
+    padding: 27px 30px;
+    background: #fffdf9;
+    border: 1px solid var(--ef-line);
+    border-radius: 5px;
+    box-shadow: 0 7px 20px rgba(92, 65, 58, .035);
+}
+
+.ensalada-frutas-page .recipe-content-card p {
+    margin: 0;
+    color: #766b66;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.ensalada-frutas-page .recipe-content-card em {
+    color: var(--ef-berry);
+    font-family: 'Caveat', cursive;
+    font-size: 21px;
+    font-style: normal;
+}
+
+/* =====================================
+   TABLA DE INGREDIENTES
+===================================== */
+
+.ensalada-frutas-page .recipe-ingredients-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.ensalada-frutas-page .recipe-ingredients-table thead {
+    background: #f5e8e7;
+}
+
+.ensalada-frutas-page .recipe-ingredients-table th {
+    padding: 15px 17px;
+    color: var(--ef-dark);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.ensalada-frutas-page .recipe-ingredients-table td {
+    padding: 14px 17px;
+    color: #6f625e;
+    border-bottom: 1px solid #eee6e1;
+}
+
+.ensalada-frutas-page .recipe-ingredients-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.ensalada-frutas-page .recipe-ingredients-table tbody tr:nth-child(even) {
+    background: #fcf8f4;
+}
+
+.ensalada-frutas-page .recipe-ingredients-table tbody tr:hover {
+    background: #f8eeeb;
+}
+
+/* =====================================
+   MISE EN PLACE
+   Sin viñetas ni puntos extraños
+===================================== */
+
+.ensalada-frutas-page .recipe-list {
+    list-style: none !important;
+    margin: 0;
+    padding: 0;
+    counter-reset: preparacion;
+}
+
+.ensalada-frutas-page .recipe-list li {
+    list-style: none !important;
+    position: relative;
+    margin: 0;
+    padding: 14px 10px 14px 48px;
+    color: #716763;
+    font-size: 14px;
+    line-height: 1.75;
+    border-bottom: 1px solid #eee6e1;
+    counter-increment: preparacion;
+}
+
+.ensalada-frutas-page .recipe-list li::marker {
+    content: none !important;
+}
+
+.ensalada-frutas-page .recipe-list li::before {
+    content: counter(preparacion, decimal-leading-zero);
+    position: absolute;
+    left: 3px;
+    top: 13px;
+    color: var(--ef-berry);
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.ensalada-frutas-page .recipe-list li:last-child {
+    border-bottom: none;
+}
+
+/* =====================================
+   GALERÍA
+===================================== */
+
+.ensalada-frutas-page .recipe-gallery-space {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.ensalada-frutas-page .recipe-image-space {
+    min-height: 220px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background:
+        linear-gradient(145deg, rgba(255,255,255,.65), rgba(255,255,255,.2)),
+        #f3e7e3;
+    border: 1px dashed #d8b9b3;
+    border-radius: 5px;
+    color: var(--ef-berry);
+}
+
+.ensalada-frutas-page .recipe-image-space:nth-child(2) {
+    background:
+        linear-gradient(145deg, rgba(255,255,255,.65), rgba(255,255,255,.2)),
+        #edf0e7;
+    border-color: #c6cfb9;
+    color: #718267;
+}
+
+.ensalada-frutas-page .recipe-image-space span {
+    max-width: 260px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    line-height: 1.7;
+}
+
+.ensalada-frutas-page .recipe-image-space p {
+    max-width: 270px;
+    margin: 10px 0 0;
+    color: #8a7c76;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* =====================================
+   NAVEGACIÓN
+===================================== */
+
+.ensalada-frutas-page .eq-page-navigation {
+    display: flex;
+    justify-content: flex-start;
+    margin: 65px 0 25px;
+    padding-top: 25px;
+    border-top: 1px solid var(--ef-line);
+}
+
+.ensalada-frutas-page .eq-page-navigation a {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 21px;
+    color: var(--ef-dark);
+    background: #f5e8e7;
+    border: 1px solid #ead5d4;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .25s ease;
+}
+
+.ensalada-frutas-page .eq-page-navigation a:hover {
+    color: white;
+    background: var(--ef-berry);
+    border-color: var(--ef-berry);
+    transform: translateY(-2px);
+}
+
+/* =====================================
+   PIE DE PÁGINA
+===================================== */
+
+.ensalada-frutas-page .eq-footer {
+    margin-top: 25px;
+    padding: 20px 0 5px;
+    text-align: center;
+    border-top: 1px solid var(--ef-line);
+}
+
+.ensalada-frutas-page .eq-footer p {
+    margin: 0;
+    color: var(--ef-muted);
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 760px) {
+    body.ensalada-frutas-page {
+        padding: 12px;
+    }
+
+    .ensalada-frutas-page .eq-page {
+        padding: 22px 25px;
+    }
+
+    .ensalada-frutas-page .eq-page::before {
+        left: 9px;
+    }
+
+    .ensalada-frutas-page .eq-page::after {
+        right: 9px;
+    }
+
+    .ensalada-frutas-page .eq-cover {
+        min-height: 310px;
+        padding: 42px 28px;
+        margin-bottom: 45px;
+    }
+
+    .ensalada-frutas-page .eq-cover h1 {
+        font-size: 43px;
+    }
+
+    .ensalada-frutas-page .recipe-data {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        margin-bottom: 50px;
+    }
+
+    .ensalada-frutas-page .recipe-data .eq-card {
+        padding: 16px 13px;
+    }
+
+    .ensalada-frutas-page .recipe-content-card {
+        padding: 19px;
+    }
+
+    .ensalada-frutas-page .recipe-ingredients-table {
+        font-size: 12px;
+    }
+
+    .ensalada-frutas-page .recipe-ingredients-table th,
+    .ensalada-frutas-page .recipe-ingredients-table td {
+        padding: 11px 9px;
+    }
+}
+
+@media (max-width: 480px) {
+    .ensalada-frutas-page .eq-cover {
+        min-height: 280px;
+        padding: 35px 22px;
+    }
+
+    .ensalada-frutas-page .eq-cover h1 {
+        font-size: 36px;
+    }
+
+    .ensalada-frutas-page .recipe-data {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .ensalada-frutas-page .recipe-gallery-space {
+        grid-template-columns: 1fr;
+    }
+
+    .ensalada-frutas-page .recipe-image-space {
+        min-height: 190px;
+    }
+
+    .ensalada-frutas-page .recipe-section > .eq-heading {
+        font-size: 24px;
+    }
+
+    .ensalada-frutas-page .recipe-content-card {
+        padding: 15px;
+        overflow-x: auto;
+    }
+
+    .ensalada-frutas-page .recipe-ingredients-table {
+        min-width: 400px;
+    }
+}

@@ -1,0 +1,624 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Caveat:wght@500;600&display=swap');
+
+/* =========================================
+   SALSAS MADRE
+   Paleta: azul petróleo, salvia y dorado
+========================================= */
+
+.salsas-madre-page {
+    --sm-blue: #385d63;
+    --sm-dark: #29474c;
+    --sm-sage: #8b9e8b;
+    --sm-light-sage: #e9eee7;
+    --sm-gold: #c6a66b;
+    --sm-cream: #f7f3e9;
+    --sm-paper: #fffdf8;
+    --sm-text: #393d39;
+    --sm-muted: #777b72;
+    --sm-border: #e5dfd1;
+
+    margin: 0;
+    padding: 30px 18px 20px;
+    background:
+        radial-gradient(circle at 8% 8%, #e3e9e2 0, transparent 30%),
+        #eeeee7;
+    color: var(--sm-text);
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* ENCABEZADO */
+
+.salsas-madre-page .eq-header {
+    max-width: 1120px;
+    margin: 0 auto 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.salsas-madre-page .eq-back {
+    display: inline-flex;
+    align-items: center;
+    padding: 11px 19px;
+    border: 1px solid #d8ded6;
+    border-radius: 30px;
+    background: var(--sm-paper);
+    color: var(--sm-dark);
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .25s ease;
+}
+
+.salsas-madre-page .eq-back:hover {
+    background: var(--sm-blue);
+    border-color: var(--sm-blue);
+    color: white;
+    transform: translateX(-3px);
+}
+
+.salsas-madre-page .eq-label {
+    color: var(--sm-muted);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* CONTENEDOR PRINCIPAL */
+
+.salsas-madre-page .eq-container {
+    position: relative;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 45px 55px;
+    overflow: hidden;
+    background: var(--sm-paper);
+    border: 1px solid #e4dfd2;
+    box-shadow: 0 18px 55px rgba(49, 66, 59, .09);
+}
+
+.salsas-madre-page .eq-container::before,
+.salsas-madre-page .eq-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(
+        to bottom,
+        var(--sm-blue),
+        var(--sm-sage),
+        var(--sm-gold)
+    );
+    opacity: .7;
+}
+
+.salsas-madre-page .eq-container::before {
+    left: 0;
+}
+
+.salsas-madre-page .eq-container::after {
+    right: 0;
+}
+
+/* PORTADA */
+
+.salsas-madre-page .eq-cover {
+    position: relative;
+    min-height: 390px;
+    padding: 55px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    overflow: hidden;
+    border-radius: 5px;
+    background:
+        radial-gradient(circle at 85% 15%, rgba(255,255,255,.12) 0 95px, transparent 96px),
+        radial-gradient(circle at 90% 90%, rgba(198,166,107,.2) 0 150px, transparent 151px),
+        linear-gradient(120deg, #29474c 0%, #385d63 58%, #668078 100%);
+    color: white;
+}
+
+.salsas-madre-page .eq-cover-text {
+    position: relative;
+    z-index: 2;
+    max-width: 650px;
+}
+
+.salsas-madre-page .eq-kicker {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: var(--sm-gold);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.salsas-madre-page .eq-cover .eq-kicker {
+    padding: 8px 15px;
+    border: 1px solid rgba(255,255,255,.35);
+    border-radius: 30px;
+    color: #e8d6ae;
+}
+
+.salsas-madre-page .eq-cover h1 {
+    margin: 0 0 20px;
+    color: #fffaf0;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 5vw, 62px);
+    line-height: 1.1;
+    font-weight: 600;
+}
+
+.salsas-madre-page .eq-cover p {
+    max-width: 580px;
+    margin: 0;
+    color: rgba(255,255,255,.85);
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.salsas-madre-page .eq-line {
+    width: 75px;
+    height: 2px;
+    margin: 27px 0 16px;
+    background: var(--sm-gold);
+}
+
+.salsas-madre-page .eq-small {
+    color: rgba(255,255,255,.7);
+    font-family: 'Caveat', cursive;
+    font-size: 19px;
+}
+
+.salsas-madre-page .eq-cover-drawing {
+    position: relative;
+    z-index: 1;
+    flex: 0 0 210px;
+    width: 210px;
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255,255,255,.35);
+    border-radius: 50%;
+    background: rgba(255,255,255,.07);
+    color: white;
+}
+
+.salsas-madre-page .eq-cover-drawing::before,
+.salsas-madre-page .eq-cover-drawing::after {
+    content: "";
+    position: absolute;
+    border: 1px solid rgba(255,255,255,.22);
+    border-radius: 50%;
+}
+
+.salsas-madre-page .eq-cover-drawing::before {
+    inset: 13px;
+}
+
+.salsas-madre-page .eq-cover-drawing::after {
+    inset: -14px;
+}
+
+.salsas-madre-page .recipe-cover-decoration {
+    position: absolute;
+    top: 18px;
+    right: 30px;
+    color: var(--sm-gold);
+    font-size: 35px;
+}
+
+.salsas-madre-page .eq-cover-drawing > span {
+    font-family: 'Playfair Display', serif;
+    font-size: 57px;
+    font-weight: 600;
+}
+
+.salsas-madre-page .eq-cover-drawing small {
+    margin-top: 5px;
+    color: #e8d6ae;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+.salsas-madre-page .eq-page-number {
+    position: absolute;
+    right: 25px;
+    bottom: 20px;
+    color: rgba(255,255,255,.55);
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+/* INTRODUCCIÓN */
+
+.salsas-madre-page .eq-intro {
+    margin-top: 55px;
+    padding: 5px 5px 0;
+}
+
+.salsas-madre-page .eq-intro h2 {
+    margin: 0 0 17px;
+    color: var(--sm-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 31px;
+    line-height: 1.3;
+}
+
+.salsas-madre-page .eq-intro > p {
+    max-width: 900px;
+    margin: 0;
+    color: #666a62;
+    font-size: 15px;
+    line-height: 1.95;
+}
+
+/* ESPACIOS PARA FOTOGRAFÍAS */
+
+.salsas-madre-page .recipe-image-space {
+    min-height: 220px;
+    margin-top: 25px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed #bdc9bd;
+    border-radius: 9px;
+    background:
+        linear-gradient(145deg, rgba(139,158,139,.10), rgba(198,166,107,.09)),
+        #f6f6ef;
+    text-align: center;
+}
+
+.salsas-madre-page .recipe-image-space .image-placeholder-icon {
+    margin-bottom: 12px;
+    color: var(--sm-blue);
+    font-size: 32px;
+}
+
+.salsas-madre-page .recipe-image-space > p {
+    margin: 0 0 8px;
+    color: var(--sm-dark);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.salsas-madre-page .recipe-image-space > small {
+    color: var(--sm-muted);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.salsas-madre-page .recipe-image-space.small {
+    min-height: 175px;
+    margin-top: 0;
+    padding: 20px;
+}
+
+/* SECCIONES */
+
+.salsas-madre-page .recipe-section {
+    margin-top: 58px;
+}
+
+.salsas-madre-page .eq-heading {
+    margin-bottom: 25px;
+}
+
+.salsas-madre-page .eq-heading .eq-kicker {
+    margin-bottom: 10px;
+    color: var(--sm-blue);
+}
+
+.salsas-madre-page .eq-heading h2 {
+    position: relative;
+    margin: 0 0 16px;
+    padding-bottom: 14px;
+    color: var(--sm-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.salsas-madre-page .eq-heading h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 65px;
+    height: 3px;
+    border-radius: 5px;
+    background: var(--sm-gold);
+}
+
+.salsas-madre-page .eq-heading > p {
+    max-width: 850px;
+    margin: 0;
+    color: var(--sm-muted);
+    font-size: 14px;
+    line-height: 1.85;
+}
+
+/* TARJETAS DE CONTENIDO */
+
+.salsas-madre-page .eq-card.recipe-content-card {
+    padding: 32px 35px;
+    border: 1px solid var(--sm-border);
+    border-radius: 9px;
+    background: #fffefa;
+    box-shadow: 0 5px 18px rgba(49, 66, 59, .035);
+}
+
+.salsas-madre-page .recipe-content-card > p {
+    margin: 0 0 18px;
+    color: #62665e;
+    font-size: 14px;
+    line-height: 1.95;
+}
+
+.salsas-madre-page .recipe-content-card > p:last-of-type {
+    margin-bottom: 0;
+}
+
+/* TIPOS DE ROUX */
+
+.salsas-madre-page .recipe-sauce-card {
+    display: grid;
+    grid-template-columns: minmax(220px,  .8fr) 1.2fr;
+    align-items: center;
+    gap: 30px;
+    padding: 25px 0;
+    border-bottom: 1px solid var(--sm-border);
+}
+
+.salsas-madre-page .recipe-sauce-card:first-child {
+    padding-top: 0;
+}
+
+.salsas-madre-page .recipe-sauce-card:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.salsas-madre-page .recipe-sauce-card h3 {
+    margin: 0 0 13px;
+    color: var(--sm-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.salsas-madre-page .recipe-sauce-card p {
+    margin: 0;
+    color: #686c64;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* GALERÍA COMPARATIVA */
+
+.salsas-madre-page .recipe-gallery-space {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.salsas-madre-page .recipe-gallery-space .recipe-image-space {
+    min-height: 190px;
+}
+
+/* GALERÍA DE SALSAS MADRE */
+
+.salsas-madre-page .recipe-content-card > .recipe-image-space {
+    min-height: 190px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.salsas-madre-page .recipe-content-card > .recipe-image-space:last-child {
+    margin-bottom: 0;
+}
+
+/* NOTA DE COCINA */
+
+.salsas-madre-page .recipe-note {
+    padding: 30px 34px;
+    border: 1px solid #e3d8c0;
+    border-left: 5px solid var(--sm-gold);
+    border-radius: 7px;
+    background: #f7f2e6;
+}
+
+.salsas-madre-page .recipe-note .eq-kicker {
+    margin-bottom: 12px;
+    color: #927747;
+}
+
+.salsas-madre-page .recipe-note h3 {
+    margin: 0 0 13px;
+    color: var(--sm-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+}
+
+.salsas-madre-page .recipe-note p {
+    margin: 0;
+    color: #68685e;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* NAVEGACIÓN */
+
+.salsas-madre-page .eq-page-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 58px;
+    padding-top: 27px;
+    border-top: 1px solid var(--sm-border);
+}
+
+.salsas-madre-page .eq-nav-link {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    color: var(--sm-blue);
+    text-decoration: none;
+    transition: .2s ease;
+}
+
+.salsas-madre-page .eq-nav-link span {
+    color: var(--sm-muted);
+    font-size: 11px;
+    letter-spacing: .5px;
+}
+
+.salsas-madre-page .eq-nav-link strong {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.salsas-madre-page .eq-nav-link:hover {
+    color: var(--sm-gold);
+    transform: translateY(-2px);
+}
+
+.salsas-madre-page .eq-nav-link.next {
+    text-align: right;
+}
+
+/* PIE DE PÁGINA */
+
+.salsas-madre-page .eq-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 38px;
+    padding-top: 20px;
+    border-top: 1px solid var(--sm-border);
+    color: var(--sm-muted);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 760px) {
+    .salsas-madre-page {
+        padding: 20px 12px;
+    }
+
+    .salsas-madre-page .eq-container {
+        padding: 28px 25px;
+    }
+
+    .salsas-madre-page .eq-cover {
+        min-height: 340px;
+        padding: 40px 30px;
+    }
+
+    .salsas-madre-page .eq-cover-drawing {
+        flex-basis: 145px;
+        width: 145px;
+        height: 145px;
+    }
+
+    .salsas-madre-page .eq-cover-drawing > span {
+        font-size: 42px;
+    }
+
+    .salsas-madre-page .recipe-sauce-card {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .salsas-madre-page .recipe-gallery-space {
+        grid-template-columns: 1fr;
+    }
+
+    .salsas-madre-page .recipe-gallery-space .recipe-image-space {
+        min-height: 170px;
+    }
+
+    .salsas-madre-page .eq-card.recipe-content-card {
+        padding: 25px 22px;
+    }
+}
+
+@media (max-width: 520px) {
+    .salsas-madre-page .eq-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .salsas-madre-page .eq-container {
+        padding: 22px 17px;
+    }
+
+    .salsas-madre-page .eq-cover {
+        min-height: 330px;
+        padding: 30px 23px;
+    }
+
+    .salsas-madre-page .eq-cover-drawing {
+        display: none;
+    }
+
+    .salsas-madre-page .eq-cover h1 {
+        font-size: 42px;
+    }
+
+    .salsas-madre-page .eq-cover p {
+        font-size: 14px;
+    }
+
+    .salsas-madre-page .eq-intro h2,
+    .salsas-madre-page .eq-heading h2 {
+        font-size: 26px;
+    }
+
+    .salsas-madre-page .recipe-section {
+        margin-top: 45px;
+    }
+
+    .salsas-madre-page .recipe-image-space {
+        min-height: 180px;
+        padding: 20px;
+    }
+
+    .salsas-madre-page .eq-card.recipe-content-card {
+        padding: 21px 17px;
+    }
+
+    .salsas-madre-page .recipe-note {
+        padding: 24px 20px;
+    }
+
+    .salsas-madre-page .eq-page-navigation {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .salsas-madre-page .eq-nav-link.next {
+        align-self: flex-end;
+    }
+
+    .salsas-madre-page .eq-footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

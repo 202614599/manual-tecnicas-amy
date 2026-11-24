@@ -1,0 +1,581 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Caveat:wght@500;600&display=swap');
+
+/* =====================================
+   QUICHE DE POBLANO Y CHILORIO
+   Paleta: poblano, terracota y crema
+===================================== */
+
+.quiche-poblano-page {
+    --qp-green: #526b4d;
+    --qp-dark-green: #344b38;
+    --qp-light-green: #e8eee3;
+    --qp-terracotta: #b96e50;
+    --qp-gold: #d5a653;
+    --qp-cream: #faf6ed;
+    --qp-paper: #fffdf8;
+    --qp-text: #393a30;
+    --qp-muted: #77766a;
+    --qp-border: #e8dfcf;
+
+    margin: 0;
+    padding: 30px 18px 20px;
+    background:
+        radial-gradient(circle at 10% 10%, #e8ecdf 0, transparent 28%),
+        #f1eee5;
+    color: var(--qp-text);
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* ENCABEZADO */
+
+.quiche-poblano-page .eq-header {
+    max-width: 1120px;
+    margin: 0 auto 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.quiche-poblano-page .eq-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 19px;
+    border: 1px solid #d9d7c9;
+    border-radius: 30px;
+    background: #fffdf8;
+    color: var(--qp-dark-green);
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .25s ease;
+}
+
+.quiche-poblano-page .eq-back:hover {
+    background: var(--qp-green);
+    border-color: var(--qp-green);
+    color: white;
+    transform: translateX(-3px);
+}
+
+.quiche-poblano-page .eq-label {
+    color: var(--qp-muted);
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/* CONTENEDOR PRINCIPAL */
+
+.quiche-poblano-page .eq-container {
+    position: relative;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 45px 55px;
+    overflow: hidden;
+    background: var(--qp-paper);
+    border: 1px solid #e6dece;
+    box-shadow: 0 18px 55px rgba(67, 67, 45, .09);
+}
+
+.quiche-poblano-page .eq-container::before,
+.quiche-poblano-page .eq-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(
+        to bottom,
+        var(--qp-green),
+        var(--qp-gold),
+        var(--qp-terracotta)
+    );
+    opacity: .65;
+}
+
+.quiche-poblano-page .eq-container::before {
+    left: 0;
+}
+
+.quiche-poblano-page .eq-container::after {
+    right: 0;
+}
+
+/* PORTADA */
+
+.quiche-poblano-page .eq-cover {
+    position: relative;
+    min-height: 390px;
+    padding: 55px 48px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 5px;
+    background:
+        radial-gradient(circle at 85% 20%, rgba(255,255,255,.17) 0 85px, transparent 86px),
+        radial-gradient(circle at 92% 85%, rgba(213,166,83,.25) 0 145px, transparent 146px),
+        linear-gradient(120deg, #344b38 0%, #526b4d 55%, #718064 100%);
+    color: white;
+}
+
+.quiche-poblano-page .eq-cover::before {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    right: 45px;
+    top: 55px;
+    border: 1px solid rgba(255,255,255,.2);
+    border-radius: 50%;
+}
+
+.quiche-poblano-page .eq-cover::after {
+    content: "✿";
+    position: absolute;
+    right: 105px;
+    bottom: 45px;
+    color: rgba(255,255,255,.22);
+    font-size: 115px;
+    transform: rotate(-15deg);
+}
+
+.quiche-poblano-page .eq-cover > div {
+    position: relative;
+    z-index: 1;
+    max-width: 690px;
+}
+
+.quiche-poblano-page .eq-kicker {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 8px 15px;
+    border: 1px solid rgba(255,255,255,.4);
+    border-radius: 30px;
+    color: #f3dfb5;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.quiche-poblano-page .eq-cover h1 {
+    max-width: 680px;
+    margin: 0 0 20px;
+    color: #fffaf0;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(38px, 5vw, 60px);
+    line-height: 1.12;
+    font-weight: 600;
+}
+
+.quiche-poblano-page .eq-cover p {
+    max-width: 590px;
+    margin: 0;
+    color: rgba(255,255,255,.85);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* SECCIONES */
+
+.quiche-poblano-page .recipe-section {
+    margin-top: 55px;
+}
+
+.quiche-poblano-page .recipe-heading {
+    position: relative;
+    margin: 0 0 25px;
+    padding-bottom: 14px;
+    color: var(--qp-dark-green);
+    font-family: 'Playfair Display', serif;
+    font-size: 29px;
+    font-weight: 600;
+}
+
+.quiche-poblano-page .recipe-heading::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 68px;
+    height: 3px;
+    border-radius: 5px;
+    background: var(--qp-terracotta);
+}
+
+/* TARJETAS DE INFORMACIÓN */
+
+.quiche-poblano-page .eq-table-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.quiche-poblano-page .eq-card {
+    padding: 25px 24px;
+    border: 1px solid var(--qp-border);
+    border-radius: 8px;
+    background: #fffefa;
+    box-shadow: 0 5px 16px rgba(65, 65, 45, .035);
+}
+
+.quiche-poblano-page .eq-table-grid .eq-card {
+    position: relative;
+    overflow: hidden;
+    min-height: 105px;
+}
+
+.quiche-poblano-page .eq-table-grid .eq-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: var(--qp-green);
+}
+
+.quiche-poblano-page .eq-table-grid .eq-card:nth-child(2)::before {
+    background: var(--qp-terracotta);
+}
+
+.quiche-poblano-page .eq-table-grid .eq-card:nth-child(3)::before {
+    background: var(--qp-gold);
+}
+
+.quiche-poblano-page .eq-table-grid .eq-card span {
+    display: block;
+    margin-bottom: 12px;
+    color: var(--qp-muted);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .5px;
+}
+
+.quiche-poblano-page .eq-table-grid .eq-card strong {
+    display: block;
+    color: var(--qp-dark-green);
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.quiche-poblano-page .recipe-note {
+    margin-top: 18px;
+    padding: 17px 21px;
+    border-left: 4px solid var(--qp-gold);
+    border-radius: 0 6px 6px 0;
+    background: #f8f1df;
+    color: #71654d;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* CONTENIDO Y TABLAS */
+
+.quiche-poblano-page .recipe-content {
+    padding: 30px 32px;
+    border: 1px solid var(--qp-border);
+    border-radius: 8px;
+    background: #fffefa;
+}
+
+.quiche-poblano-page .recipe-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: var(--qp-text);
+    font-size: 14px;
+}
+
+.quiche-poblano-page .recipe-table th {
+    padding: 17px 18px;
+    background: var(--qp-dark-green);
+    color: white;
+    text-align: left;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .8px;
+    text-transform: uppercase;
+}
+
+.quiche-poblano-page .recipe-table th:first-child {
+    border-radius: 5px 0 0 0;
+}
+
+.quiche-poblano-page .recipe-table th:last-child {
+    border-radius: 0 5px 0 0;
+}
+
+.quiche-poblano-page .recipe-table td {
+    padding: 16px 18px;
+    border-bottom: 1px solid #eee7da;
+    line-height: 1.6;
+}
+
+.quiche-poblano-page .recipe-table tbody tr:nth-child(even) {
+    background: #f7f6ef;
+}
+
+.quiche-poblano-page .recipe-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* MISE EN PLACE Y PREPARACIÓN */
+
+.quiche-poblano-page .recipe-block ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: qp-step;
+}
+
+.quiche-poblano-page .recipe-block li {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 17px;
+    min-height: 55px;
+    margin-bottom: 13px;
+    padding: 14px 17px;
+    border: 1px solid #eee8dc;
+    border-radius: 7px;
+    background: #fffefa;
+    color: var(--qp-text);
+    font-size: 14px;
+    line-height: 1.75;
+    counter-increment: qp-step;
+}
+
+.quiche-poblano-page .recipe-block li:last-child {
+    margin-bottom: 0;
+}
+
+.quiche-poblano-page .recipe-block li::before {
+    content: counter(qp-step, decimal-leading-zero);
+    flex: 0 0 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: var(--qp-light-green);
+    color: var(--qp-dark-green);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.quiche-poblano-page .recipe-section:nth-of-type(4) .recipe-block li::before {
+    background: #f4e5dc;
+    color: #a45d43;
+}
+
+/* GALERÍA */
+
+.quiche-poblano-page .recipe-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.quiche-poblano-page .recipe-photo {
+    min-height: 210px;
+    padding: 20px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    border: 1px dashed #c9c5ae;
+    border-radius: 8px;
+    background:
+        linear-gradient(145deg, rgba(82,107,77,.08), rgba(185,110,80,.08)),
+        #f5f3e9;
+    text-align: center;
+}
+
+.quiche-poblano-page .recipe-photo span {
+    padding: 9px 14px;
+    border-radius: 20px;
+    background: rgba(255,253,248,.9);
+    color: var(--qp-dark-green);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+/* RECETAS RELACIONADAS */
+
+.quiche-poblano-page .recipe-content > .eq-card {
+    padding: 28px 30px;
+    background: #f8f6ed;
+}
+
+.quiche-poblano-page .recipe-content > .eq-card h3 {
+    margin: 0 0 12px;
+    color: var(--qp-dark-green);
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+}
+
+.quiche-poblano-page .recipe-content > .eq-card p {
+    margin: 0 0 20px;
+    color: var(--qp-muted);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.quiche-poblano-page .recipe-content > .eq-card a {
+    display: inline-flex;
+    align-items: center;
+    margin: 5px 12px 5px 0;
+    padding: 11px 17px;
+    border: 1px solid #cbd4c4;
+    border-radius: 25px;
+    background: white;
+    color: var(--qp-dark-green);
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: .25s ease;
+}
+
+.quiche-poblano-page .recipe-content > .eq-card a:hover {
+    border-color: var(--qp-green);
+    background: var(--qp-green);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* NAVEGACIÓN ENTRE RECETAS */
+
+.quiche-poblano-page .eq-page-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 55px;
+    padding-top: 25px;
+    border-top: 1px solid var(--qp-border);
+}
+
+.quiche-poblano-page .eq-page-navigation a {
+    color: var(--qp-green);
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: .2s ease;
+}
+
+.quiche-poblano-page .eq-page-navigation a:hover {
+    color: var(--qp-terracotta);
+}
+
+/* PIE DE PÁGINA */
+
+.quiche-poblano-page .eq-footer {
+    max-width: 1120px;
+    margin: 22px auto 0;
+    padding: 15px;
+    color: var(--qp-muted);
+    text-align: center;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 760px) {
+    .quiche-poblano-page {
+        padding: 20px 12px;
+    }
+
+    .quiche-poblano-page .eq-container {
+        padding: 28px 25px;
+    }
+
+    .quiche-poblano-page .eq-cover {
+        min-height: 330px;
+        padding: 40px 30px;
+    }
+
+    .quiche-poblano-page .eq-cover::before {
+        right: -100px;
+    }
+
+    .quiche-poblano-page .eq-cover::after {
+        right: 25px;
+        font-size: 85px;
+    }
+
+    .quiche-poblano-page .eq-table-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .quiche-poblano-page .recipe-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .quiche-poblano-page .recipe-photo {
+        min-height: 190px;
+    }
+
+    .quiche-poblano-page .recipe-content {
+        padding: 22px 18px;
+    }
+
+    .quiche-poblano-page .recipe-table {
+        font-size: 12px;
+    }
+
+    .quiche-poblano-page .recipe-table th,
+    .quiche-poblano-page .recipe-table td {
+        padding: 13px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .quiche-poblano-page .eq-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .quiche-poblano-page .eq-container {
+        padding: 22px 17px;
+    }
+
+    .quiche-poblano-page .eq-cover {
+        min-height: 300px;
+        padding: 32px 22px;
+    }
+
+    .quiche-poblano-page .eq-cover h1 {
+        font-size: 36px;
+    }
+
+    .quiche-poblano-page .eq-cover p {
+        font-size: 14px;
+    }
+
+    .quiche-poblano-page .recipe-heading {
+        font-size: 25px;
+    }
+
+    .quiche-poblano-page .recipe-block li {
+        gap: 11px;
+        padding: 12px;
+        font-size: 13px;
+    }
+
+    .quiche-poblano-page .eq-page-navigation {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .quiche-poblano-page .recipe-table {
+        font-size: 11px;
+    }
+}

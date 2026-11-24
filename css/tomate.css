@@ -1,0 +1,623 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Caveat:wght@500;600&display=swap');
+
+/* =========================================
+   SALSA DE TOMATE Y SALSA POMODORO
+   Rojo jitomate · Terracota · Crema · Verde
+========================================= */
+
+.salsa-tomate-page {
+    --tomato-red: #b94b43;
+    --tomato-dark: #813b35;
+    --tomato-light: #f2d9d2;
+    --tomato-pale: #fbefeb;
+    --terracotta: #c87960;
+    --herb-green: #758b68;
+    --herb-light: #e9eee3;
+    --gold: #bd965b;
+    --cream: #fffaf4;
+    --paper: #fffdf9;
+    --text: #514640;
+    --muted: #8b7b72;
+    --border: #eaded4;
+
+    margin: 0;
+    padding: 30px 18px;
+    background:
+        radial-gradient(circle at 7% 8%, #f3dfd9 0, transparent 25%),
+        radial-gradient(circle at 95% 85%, #e8ecdf 0, transparent 27%),
+        #f2ece5;
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* =========================================
+   PÁGINA PRINCIPAL
+========================================= */
+
+.salsa-tomate-page .eq-page {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 45px 55px;
+    position: relative;
+    overflow: hidden;
+    background: var(--cream);
+    border: 1px solid var(--border);
+    box-shadow: 0 18px 55px rgba(91, 55, 43, .09);
+}
+
+.salsa-tomate-page .eq-page::before,
+.salsa-tomate-page .eq-page::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(
+        to bottom,
+        var(--tomato-red),
+        var(--terracotta),
+        var(--herb-green)
+    );
+    opacity: .65;
+}
+
+.salsa-tomate-page .eq-page::before {
+    left: 0;
+}
+
+.salsa-tomate-page .eq-page::after {
+    right: 0;
+}
+
+/* =========================================
+   PORTADA
+========================================= */
+
+.salsa-tomate-page .eq-cover {
+    position: relative;
+    min-height: 390px;
+    padding: 55px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 88% 20%, rgba(255,255,255,.5), transparent 25%),
+        linear-gradient(120deg, #f1d2ca 0%, #f6e5d9 55%, #e8eddf 100%);
+    border: 1px solid #ead8ce;
+}
+
+.salsa-tomate-page .eq-cover::before {
+    content: "";
+    position: absolute;
+    width: 310px;
+    height: 310px;
+    right: 55px;
+    top: -190px;
+    border: 1px solid rgba(185, 75, 67, .22);
+    border-radius: 50%;
+}
+
+.salsa-tomate-page .eq-cover::after {
+    content: "";
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    right: 95px;
+    bottom: -155px;
+    border: 1px solid rgba(117, 139, 104, .3);
+    border-radius: 50%;
+}
+
+.salsa-tomate-page .eq-cover > div {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+}
+
+.salsa-tomate-page .eq-subtitle {
+    margin: 0;
+    color: var(--tomato-red);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+}
+
+.salsa-tomate-page .eq-cover h1 {
+    margin: 18px 0;
+    color: var(--tomato-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 6vw, 65px);
+    font-weight: 600;
+    line-height: 1.08;
+}
+
+.salsa-tomate-page .eq-cover > div > p:last-child {
+    max-width: 530px;
+    margin: 0;
+    color: #705e55;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.salsa-tomate-page .eq-cover-number {
+    position: absolute;
+    right: 28px;
+    bottom: 22px;
+    z-index: 3;
+    color: #98776b;
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+}
+
+/* =========================================
+   INTRODUCCIÓN
+========================================= */
+
+.salsa-tomate-page .eq-intro {
+    max-width: 850px;
+    margin: 55px auto 60px;
+    text-align: center;
+}
+
+.salsa-tomate-page .eq-intro .eq-heading {
+    margin: 0 0 13px;
+    color: var(--tomato-red);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.3px;
+    text-transform: uppercase;
+}
+
+.salsa-tomate-page .eq-intro > p:not(.eq-heading) {
+    margin: 0 auto;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 2;
+}
+
+/* =========================================
+   SECCIONES
+========================================= */
+
+.salsa-tomate-page .recipe-section {
+    margin: 60px 0;
+}
+
+.salsa-tomate-page .recipe-section > .eq-heading {
+    margin: 0 0 25px;
+    color: var(--tomato-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+/* =========================================
+   INFORMACIÓN DE CADA RECETA
+========================================= */
+
+.salsa-tomate-page .recipe-data {
+    margin: 25px 0 35px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.salsa-tomate-page .recipe-data .eq-card {
+    min-height: 105px;
+    padding: 23px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--tomato-red);
+    box-shadow: 0 5px 15px rgba(91, 55, 43, .035);
+}
+
+.salsa-tomate-page .recipe-data .eq-card:nth-child(3n + 2) {
+    border-top-color: var(--terracotta);
+}
+
+.salsa-tomate-page .recipe-data .eq-card:nth-child(3n) {
+    border-top-color: var(--herb-green);
+}
+
+.salsa-tomate-page .recipe-data .eq-card span {
+    color: var(--muted);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.salsa-tomate-page .recipe-data .eq-card strong {
+    color: var(--tomato-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+/* =========================================
+   TARJETAS DE CONTENIDO
+========================================= */
+
+.salsa-tomate-page .recipe-content-card {
+    margin: 25px 0;
+    padding: 30px 34px;
+    background: #fff;
+    border: 1px solid var(--border);
+    box-shadow: 0 8px 24px rgba(91, 55, 43, .045);
+}
+
+.salsa-tomate-page .recipe-content-card h3 {
+    margin: 0 0 23px;
+    padding-bottom: 14px;
+    color: var(--tomato-dark);
+    border-bottom: 1px solid #eee3dc;
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* =========================================
+   TABLAS DE INGREDIENTES
+========================================= */
+
+.salsa-tomate-page .recipe-ingredients-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: var(--text);
+    font-size: 13px;
+}
+
+.salsa-tomate-page .recipe-ingredients-table thead {
+    background: var(--tomato-pale);
+}
+
+.salsa-tomate-page .recipe-ingredients-table th {
+    padding: 17px 20px;
+    color: var(--tomato-dark);
+    text-align: left;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+}
+
+.salsa-tomate-page .recipe-ingredients-table td {
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee5de;
+    line-height: 1.6;
+}
+
+.salsa-tomate-page .recipe-ingredients-table tbody tr:nth-child(even) {
+    background: #fffaf7;
+}
+
+.salsa-tomate-page .recipe-ingredients-table tbody tr:hover {
+    background: #f7eee9;
+}
+
+.salsa-tomate-page .recipe-ingredients-table td:last-child,
+.salsa-tomate-page .recipe-ingredients-table th:last-child {
+    text-align: center;
+}
+
+/* =========================================
+   MISE EN PLACE
+========================================= */
+
+.salsa-tomate-page .recipe-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: mise;
+}
+
+.salsa-tomate-page .recipe-list li {
+    position: relative;
+    margin: 0;
+    padding: 15px 12px 15px 38px;
+    border-bottom: 1px solid #f0e8e1;
+    color: #625650;
+    font-size: 13px;
+    line-height: 1.9;
+    counter-increment: mise;
+}
+
+.salsa-tomate-page .recipe-list li:last-child {
+    border-bottom: none;
+}
+
+.salsa-tomate-page .recipe-content-card > .recipe-list li::before {
+    content: counter(mise, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    top: 15px;
+    color: var(--herb-green);
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* =========================================
+   PREPARACIÓN PASO A PASO
+========================================= */
+
+.salsa-tomate-page .recipe-steps {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.salsa-tomate-page .recipe-step {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px 5px;
+    border-bottom: 1px solid #f0e8e1;
+    list-style: none;
+}
+
+.salsa-tomate-page .recipe-step:last-child {
+    border-bottom: none;
+}
+
+.salsa-tomate-page .step-number {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--tomato-red);
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.salsa-tomate-page .recipe-step strong {
+    display: block;
+    margin: 2px 0 8px;
+    color: var(--tomato-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.salsa-tomate-page .recipe-step p {
+    margin: 0;
+    color: #71625a;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+/* =========================================
+   GALERÍA DE FOTOGRAFÍAS
+========================================= */
+
+.salsa-tomate-page .recipe-gallery-space {
+    margin: 30px 0 45px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.salsa-tomate-page .recipe-image-space {
+    min-height: 250px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    border: 1px dashed #d6aaa0;
+    background:
+        linear-gradient(rgba(255, 250, 244, .85), rgba(255, 250, 244, .85)),
+        repeating-linear-gradient(
+            45deg,
+            #f1dfd9,
+            #f1dfd9 10px,
+            #f9eee9 10px,
+            #f9eee9 20px
+        );
+}
+
+.salsa-tomate-page .recipe-image-space span {
+    color: var(--tomato-red);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+}
+
+.salsa-tomate-page .recipe-image-space p {
+    max-width: 280px;
+    margin: 12px 0 0;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.salsa-tomate-page .recipe-image-space img {
+    display: block;
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+}
+
+/* =========================================
+   SEPARACIÓN VISUAL ENTRE SALSA MADRE
+   Y SALSA DERIVADA
+========================================= */
+
+.salsa-tomate-page .recipe-section + .recipe-section {
+    padding-top: 25px;
+}
+
+.salsa-tomate-page .recipe-section > .eq-intro {
+    margin: 65px auto 40px;
+    padding: 35px 30px;
+    background: linear-gradient(120deg, #f7e5df, #f1eee4);
+    border: 1px solid #eadbd0;
+}
+
+.salsa-tomate-page .recipe-section > .eq-intro h2 {
+    margin: 10px 0 15px;
+    color: var(--herb-green);
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.salsa-tomate-page .recipe-section > .eq-intro > p:last-child {
+    max-width: 750px;
+    margin: 0 auto;
+    color: #75655c;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+/* Acento verde para la sección Pomodoro */
+
+.salsa-tomate-page .recipe-section > .eq-intro .eq-heading {
+    color: var(--herb-green);
+}
+
+/* =========================================
+   NAVEGACIÓN
+========================================= */
+
+.salsa-tomate-page .eq-page-navigation {
+    margin-top: 65px;
+    padding-top: 25px;
+    border-top: 1px solid var(--border);
+}
+
+.salsa-tomate-page .eq-page-navigation a {
+    color: var(--tomato-dark);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    transition: .2s ease;
+}
+
+.salsa-tomate-page .eq-page-navigation a:hover {
+    color: var(--terracotta);
+}
+
+/* =========================================
+   PIE DE PÁGINA
+========================================= */
+
+.salsa-tomate-page .eq-footer {
+    margin-top: 35px;
+    padding: 20px 10px 5px;
+    text-align: center;
+}
+
+.salsa-tomate-page .eq-footer p {
+    margin: 0;
+    color: #9b8b80;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 760px) {
+    .salsa-tomate-page {
+        padding: 18px 12px;
+    }
+
+    .salsa-tomate-page .eq-page {
+        padding: 30px 25px;
+    }
+
+    .salsa-tomate-page .eq-cover {
+        min-height: 320px;
+        padding: 42px 30px;
+    }
+
+    .salsa-tomate-page .recipe-data {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .salsa-tomate-page .eq-intro {
+        margin: 42px auto;
+    }
+
+    .salsa-tomate-page .recipe-section {
+        margin: 45px 0;
+    }
+}
+
+@media (max-width: 520px) {
+    .salsa-tomate-page {
+        padding: 12px 8px;
+    }
+
+    .salsa-tomate-page .eq-page {
+        padding: 22px 16px;
+    }
+
+    .salsa-tomate-page .eq-cover {
+        min-height: 290px;
+        padding: 35px 24px;
+    }
+
+    .salsa-tomate-page .eq-cover h1 {
+        font-size: 42px;
+    }
+
+    .salsa-tomate-page .recipe-data {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .salsa-tomate-page .recipe-data .eq-card {
+        min-height: 95px;
+        padding: 17px 13px;
+    }
+
+    .salsa-tomate-page .recipe-data .eq-card strong {
+        font-size: 16px;
+    }
+
+    .salsa-tomate-page .recipe-content-card {
+        padding: 22px 17px;
+    }
+
+    .salsa-tomate-page .recipe-content-card h3 {
+        font-size: 21px;
+    }
+
+    .salsa-tomate-page .recipe-ingredients-table th,
+    .salsa-tomate-page .recipe-ingredients-table td {
+        padding: 12px 9px;
+        font-size: 11px;
+    }
+
+    .salsa-tomate-page .recipe-gallery-space {
+        grid-template-columns: 1fr;
+    }
+
+    .salsa-tomate-page .recipe-section > .eq-intro {
+        padding: 27px 20px;
+    }
+
+    .salsa-tomate-page .recipe-section > .eq-intro h2 {
+        font-size: 30px;
+    }
+}

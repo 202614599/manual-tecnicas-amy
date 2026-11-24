@@ -1,0 +1,719 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Caveat:wght@500;600&display=swap');
+
+/* =========================================
+   TARTAR DE SALMÓN
+   Azul petróleo · Salvia · Perla · Crema
+========================================= */
+
+.tartar-salmon-page {
+    --salmon-blue: #527d83;
+    --salmon-dark: #31575e;
+    --salmon-light: #dce9e7;
+    --salmon-pale: #edf4f1;
+    --sage: #829783;
+    --sage-light: #e8eee5;
+    --silver: #b9c8c5;
+    --gold: #b99b69;
+    --cream: #fffaf4;
+    --paper: #fffdf9;
+    --text: #4c5754;
+    --muted: #87918b;
+    --border: #dce5df;
+
+    margin: 0;
+    padding: 30px 18px;
+    background:
+        radial-gradient(circle at 7% 8%, #e2eeeb 0, transparent 26%),
+        radial-gradient(circle at 95% 85%, #e8ece3 0, transparent 28%),
+        #f0f1eb;
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+.tartar-salmon-page .eq-header {
+    max-width: 1120px;
+    margin: 0 auto 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+.tartar-salmon-page .eq-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 19px;
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    background: var(--paper);
+    color: var(--salmon-dark);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: .25s ease;
+}
+
+.tartar-salmon-page .eq-back:hover {
+    background: var(--salmon-blue);
+    color: white;
+    border-color: var(--salmon-blue);
+    transform: translateX(-3px);
+}
+
+.tartar-salmon-page .eq-label {
+    color: var(--muted);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* =========================================
+   CONTENEDOR PRINCIPAL
+========================================= */
+
+.tartar-salmon-page .eq-container {
+    position: relative;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 45px 55px;
+    overflow: hidden;
+    background: var(--cream);
+    border: 1px solid var(--border);
+    box-shadow: 0 18px 55px rgba(52, 83, 79, .09);
+}
+
+.tartar-salmon-page .eq-container::before,
+.tartar-salmon-page .eq-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(
+        to bottom,
+        var(--salmon-blue),
+        var(--silver),
+        var(--sage)
+    );
+    opacity: .7;
+}
+
+.tartar-salmon-page .eq-container::before {
+    left: 0;
+}
+
+.tartar-salmon-page .eq-container::after {
+    right: 0;
+}
+
+/* =========================================
+   PORTADA
+========================================= */
+
+.tartar-salmon-page .eq-cover {
+    position: relative;
+    min-height: 390px;
+    padding: 55px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 85% 20%, rgba(255,255,255,.55), transparent 26%),
+        linear-gradient(120deg, #d6e6e3 0%, #e8eee8 55%, #dce7e2 100%);
+    border: 1px solid #d2e0da;
+}
+
+.tartar-salmon-page .eq-cover::before {
+    content: "";
+    position: absolute;
+    width: 310px;
+    height: 310px;
+    right: 65px;
+    top: -190px;
+    border: 1px solid rgba(82, 125, 131, .25);
+    border-radius: 50%;
+}
+
+.tartar-salmon-page .eq-cover::after {
+    content: "";
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    right: 105px;
+    bottom: -155px;
+    border: 1px solid rgba(130, 151, 131, .35);
+    border-radius: 50%;
+}
+
+.tartar-salmon-page .eq-cover-text {
+    position: relative;
+    z-index: 2;
+    max-width: 620px;
+}
+
+.tartar-salmon-page .eq-kicker {
+    display: inline-block;
+    color: var(--salmon-blue);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+}
+
+.tartar-salmon-page .eq-cover h1 {
+    margin: 17px 0 16px;
+    color: var(--salmon-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 6vw, 65px);
+    font-weight: 600;
+    line-height: 1.08;
+}
+
+.tartar-salmon-page .eq-cover p {
+    max-width: 510px;
+    margin: 0;
+    color: #60736e;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.tartar-salmon-page .eq-line {
+    width: 75px;
+    height: 2px;
+    margin: 27px 0 17px;
+    background: var(--salmon-blue);
+}
+
+.tartar-salmon-page .eq-small {
+    color: #81918a;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.tartar-salmon-page .eq-cover-drawing {
+    position: relative;
+    z-index: 2;
+    width: 175px;
+    height: 175px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(82, 125, 131, .3);
+    border-radius: 50%;
+    background: rgba(255, 253, 249, .55);
+    box-shadow:
+        0 0 0 12px rgba(255, 253, 249, .2),
+        0 0 0 25px rgba(255, 253, 249, .12);
+}
+
+.tartar-salmon-page .eq-cover-drawing span {
+    color: var(--salmon-blue);
+    font-size: 75px;
+    font-family: Georgia, serif;
+}
+
+.tartar-salmon-page .eq-page-number {
+    position: absolute;
+    right: 25px;
+    bottom: 20px;
+    z-index: 3;
+    color: #81918a;
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+}
+
+/* =========================================
+   INTRODUCCIÓN
+========================================= */
+
+.tartar-salmon-page .eq-intro {
+    max-width: 850px;
+    margin: 55px auto 60px;
+    text-align: center;
+}
+
+.tartar-salmon-page .eq-intro h2 {
+    margin: 12px 0 17px;
+    color: var(--salmon-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 34px;
+    font-weight: 600;
+}
+
+.tartar-salmon-page .eq-intro p {
+    margin: 0 auto;
+    max-width: 760px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 2;
+}
+
+/* =========================================
+   SECCIONES Y TÍTULOS
+========================================= */
+
+.tartar-salmon-page .recipe-section {
+    margin: 55px 0;
+}
+
+.tartar-salmon-page .eq-heading {
+    margin-bottom: 25px;
+}
+
+.tartar-salmon-page .eq-heading h2 {
+    margin: 9px 0 0;
+    color: var(--salmon-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+/* =========================================
+   IMÁGENES
+========================================= */
+
+.tartar-salmon-page .recipe-image-space {
+    min-height: 270px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 1px dashed #a9c0bb;
+    background:
+        linear-gradient(rgba(255, 250, 244, .82), rgba(255, 250, 244, .82)),
+        repeating-linear-gradient(
+            45deg,
+            #e1ebe7,
+            #e1ebe7 10px,
+            #f0f4ef 10px,
+            #f0f4ef 20px
+        );
+    color: var(--salmon-blue);
+    text-align: center;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+}
+
+.tartar-salmon-page .recipe-image-space img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-height: 420px;
+    object-fit: cover;
+}
+
+/* =========================================
+   INFORMACIÓN GENERAL
+========================================= */
+
+.tartar-salmon-page .recipe-information {
+    margin: 45px 0 60px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.tartar-salmon-page .recipe-data {
+    min-height: 105px;
+    padding: 23px 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--salmon-blue);
+    box-shadow: 0 5px 15px rgba(52, 83, 79, .035);
+}
+
+.tartar-salmon-page .recipe-data:nth-child(3n + 2) {
+    border-top-color: var(--sage);
+}
+
+.tartar-salmon-page .recipe-data:nth-child(3n) {
+    border-top-color: var(--gold);
+}
+
+.tartar-salmon-page .recipe-data span {
+    color: var(--muted);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+    line-height: 1.5;
+}
+
+.tartar-salmon-page .recipe-data strong {
+    color: var(--salmon-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* =========================================
+   TARJETAS
+========================================= */
+
+.tartar-salmon-page .eq-card.recipe-content-card {
+    padding: 30px 34px;
+    background: #fff;
+    border: 1px solid var(--border);
+    box-shadow: 0 8px 24px rgba(52, 83, 79, .045);
+}
+
+/* =========================================
+   TABLA DE INGREDIENTES
+========================================= */
+
+.tartar-salmon-page .recipe-ingredients-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: var(--text);
+    font-size: 13px;
+}
+
+.tartar-salmon-page .recipe-ingredients-table thead {
+    background: var(--salmon-pale);
+}
+
+.tartar-salmon-page .recipe-ingredients-table th {
+    padding: 17px 20px;
+    color: var(--salmon-dark);
+    text-align: left;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+}
+
+.tartar-salmon-page .recipe-ingredients-table td {
+    padding: 15px 20px;
+    border-bottom: 1px solid #e9eeea;
+    line-height: 1.6;
+}
+
+.tartar-salmon-page .recipe-ingredients-table tbody tr:nth-child(even) {
+    background: #f8fbf8;
+}
+
+.tartar-salmon-page .recipe-ingredients-table tbody tr:hover {
+    background: #edf3ef;
+}
+
+.tartar-salmon-page .recipe-ingredients-table td:last-child,
+.tartar-salmon-page .recipe-ingredients-table th:last-child {
+    text-align: center;
+}
+
+/* =========================================
+   LISTAS Y MISE EN PLACE
+========================================= */
+
+.tartar-salmon-page .recipe-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.tartar-salmon-page .recipe-list li {
+    position: relative;
+    margin: 0;
+    padding: 15px 12px 15px 38px;
+    border-bottom: 1px solid #edf0eb;
+    color: #5e6a65;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.tartar-salmon-page .recipe-list li:last-child {
+    border-bottom: none;
+}
+
+.tartar-salmon-page .recipe-content-card > ol.recipe-list:not(.recipe-steps) {
+    counter-reset: mise;
+}
+
+.tartar-salmon-page .recipe-content-card > ol.recipe-list:not(.recipe-steps) li {
+    counter-increment: mise;
+}
+
+.tartar-salmon-page .recipe-content-card > ol.recipe-list:not(.recipe-steps) li::before {
+    content: counter(mise, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    top: 15px;
+    color: var(--sage);
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* =========================================
+   PROCEDIMIENTO
+========================================= */
+
+.tartar-salmon-page .recipe-steps {
+    counter-reset: steps;
+}
+
+.tartar-salmon-page .recipe-steps li {
+    counter-increment: steps;
+    padding: 19px 15px 19px 58px;
+    min-height: 58px;
+}
+
+.tartar-salmon-page .recipe-steps li::before {
+    content: counter(steps, decimal-leading-zero);
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--salmon-blue);
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* =========================================
+   PRESENTACIÓN
+========================================= */
+
+.tartar-salmon-page .recipe-content-card p {
+    margin: 0 0 17px;
+    color: #63716b;
+    font-size: 13px;
+    line-height: 2;
+}
+
+.tartar-salmon-page .recipe-content-card p:last-child {
+    margin-bottom: 0;
+}
+
+/* =========================================
+   NOTA GASTRONÓMICA
+========================================= */
+
+.tartar-salmon-page .recipe-note {
+    position: relative;
+    margin: 55px 0;
+    padding: 32px 38px;
+    background: linear-gradient(115deg, #e4eeeb, #edf0e7);
+    border-left: 4px solid var(--salmon-blue);
+}
+
+.tartar-salmon-page .recipe-note h3 {
+    margin: 10px 0 12px;
+    color: var(--salmon-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+}
+
+.tartar-salmon-page .recipe-note p {
+    margin: 0;
+    color: #63716b;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+/* =========================================
+   GALERÍA
+========================================= */
+
+.tartar-salmon-page .recipe-gallery-space {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.tartar-salmon-page .recipe-gallery-space .recipe-image-space {
+    min-height: 240px;
+}
+
+/* =========================================
+   NAVEGACIÓN INFERIOR
+========================================= */
+
+.tartar-salmon-page .eq-page-navigation {
+    margin-top: 65px;
+    padding-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border-top: 1px solid var(--border);
+}
+
+.tartar-salmon-page .eq-page-navigation a {
+    color: var(--salmon-dark);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    transition: .2s ease;
+}
+
+.tartar-salmon-page .eq-page-navigation a:hover {
+    color: var(--sage);
+}
+
+.tartar-salmon-page .eq-page-navigation span {
+    color: var(--muted);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+    text-align: right;
+}
+
+/* =========================================
+   PIE DE PÁGINA
+========================================= */
+
+.tartar-salmon-page .eq-footer {
+    max-width: 1120px;
+    margin: 20px auto 0;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+.tartar-salmon-page .eq-footer p {
+    margin: 0;
+    color: #8c9991;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 760px) {
+    .tartar-salmon-page {
+        padding: 18px 12px;
+    }
+
+    .tartar-salmon-page .eq-container {
+        padding: 30px 25px;
+    }
+
+    .tartar-salmon-page .eq-cover {
+        min-height: auto;
+        padding: 42px 30px;
+    }
+
+    .tartar-salmon-page .eq-cover-drawing {
+        width: 125px;
+        height: 125px;
+    }
+
+    .tartar-salmon-page .eq-cover-drawing span {
+        font-size: 55px;
+    }
+
+    .tartar-salmon-page .recipe-information {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .tartar-salmon-page .eq-intro {
+        margin: 42px auto;
+    }
+
+    .tartar-salmon-page .recipe-section {
+        margin: 42px 0;
+    }
+}
+
+@media (max-width: 520px) {
+    .tartar-salmon-page {
+        padding: 12px 8px;
+    }
+
+    .tartar-salmon-page .eq-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .tartar-salmon-page .eq-container {
+        padding: 22px 17px;
+    }
+
+    .tartar-salmon-page .eq-cover {
+        padding: 35px 24px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .tartar-salmon-page .eq-cover-drawing {
+        align-self: center;
+        margin: 15px 0 10px;
+    }
+
+    .tartar-salmon-page .eq-cover h1 {
+        font-size: 43px;
+    }
+
+    .tartar-salmon-page .eq-intro h2 {
+        font-size: 28px;
+    }
+
+    .tartar-salmon-page .eq-heading h2 {
+        font-size: 26px;
+    }
+
+    .tartar-salmon-page .recipe-information {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .tartar-salmon-page .recipe-data {
+        min-height: 95px;
+        padding: 17px 13px;
+    }
+
+    .tartar-salmon-page .recipe-data strong {
+        font-size: 16px;
+    }
+
+    .tartar-salmon-page .eq-card.recipe-content-card {
+        padding: 22px 17px;
+    }
+
+    .tartar-salmon-page .recipe-ingredients-table th,
+    .tartar-salmon-page .recipe-ingredients-table td {
+        padding: 12px 9px;
+        font-size: 11px;
+    }
+
+    .tartar-salmon-page .recipe-gallery-space {
+        grid-template-columns: 1fr;
+    }
+
+    .tartar-salmon-page .recipe-note {
+        padding: 25px 22px;
+    }
+
+    .tartar-salmon-page .eq-page-navigation {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .tartar-salmon-page .eq-page-navigation span {
+        text-align: left;
+    }
+}

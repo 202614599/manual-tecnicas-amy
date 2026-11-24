@@ -1,0 +1,596 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Caveat:wght@500;600&display=swap');
+
+/* =====================================
+   AROMATIZANTES · CUADERNO GASTRONÓMICO
+===================================== */
+
+body.aromatizantes-page {
+    --ar-olive: #73785a;
+    --ar-dark: #454b37;
+    --ar-sage: #e9eadc;
+    --ar-light: #f3f0e5;
+    --ar-terracotta: #bd8067;
+    --ar-brown: #927b62;
+    --ar-ink: #48483f;
+    --ar-muted: #898575;
+    --ar-line: #e6e0d1;
+
+    background: #e8e1d5;
+    color: var(--ar-ink);
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.7;
+    padding: 25px 16px;
+}
+
+/* ENCABEZADO */
+
+.aromatizantes-page .eq-header {
+    max-width: 1120px;
+    margin: 0 auto 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.aromatizantes-page .eq-back {
+    color: var(--ar-dark);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    transition: .2s;
+}
+
+.aromatizantes-page .eq-back:hover {
+    color: var(--ar-terracotta);
+    transform: translateX(-3px);
+}
+
+.aromatizantes-page .eq-label {
+    color: var(--ar-muted);
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+/* HOJA PRINCIPAL */
+
+.aromatizantes-page .eq-container {
+    max-width: 1120px;
+    margin: auto;
+    padding: 42px 55px;
+    background: #faf8f1;
+    border: 1px solid #e3ddcf;
+    box-shadow: 0 12px 35px rgba(75, 65, 45, .08);
+    position: relative;
+    overflow: hidden;
+}
+
+.aromatizantes-page .eq-container::before,
+.aromatizantes-page .eq-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: #eee9dc;
+}
+
+.aromatizantes-page .eq-container::before {
+    left: 24px;
+}
+
+.aromatizantes-page .eq-container::after {
+    right: 24px;
+}
+
+/* PORTADA */
+
+.aromatizantes-page .eq-cover {
+    min-height: 285px;
+    padding: 38px 42px;
+    margin-bottom: 55px;
+    background: linear-gradient(120deg, #e9eadc, #f1e8dc);
+    border: 1px solid #dedbc9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.aromatizantes-page .eq-cover::before {
+    content: "";
+    position: absolute;
+    width: 270px;
+    height: 270px;
+    border: 1px solid rgba(115, 120, 90, .18);
+    border-radius: 50%;
+    right: 75px;
+    top: -105px;
+}
+
+.aromatizantes-page .eq-cover::after {
+    content: "";
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    border: 1px solid rgba(189, 128, 103, .25);
+    border-radius: 50%;
+    right: 15px;
+    bottom: -110px;
+}
+
+.aromatizantes-page .eq-cover-text {
+    max-width: 570px;
+    position: relative;
+    z-index: 2;
+}
+
+.aromatizantes-page .eq-kicker {
+    display: block;
+    color: var(--ar-olive);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.aromatizantes-page .eq-cover h1 {
+    color: var(--ar-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(38px, 5vw, 58px);
+    line-height: 1.1;
+    margin: 0 0 15px;
+}
+
+.aromatizantes-page .eq-cover p {
+    max-width: 430px;
+    color: #777565;
+    font-size: 14px;
+    margin: 0;
+}
+
+.aromatizantes-page .eq-line {
+    width: 65px;
+    height: 3px;
+    background: var(--ar-terracotta);
+    margin: 20px 0 12px;
+}
+
+.aromatizantes-page .eq-small {
+    color: var(--ar-brown);
+    font-family: 'Caveat', cursive;
+    font-size: 19px;
+}
+
+.aromatizantes-page .eq-cover-drawing {
+    width: 215px;
+    height: 215px;
+    flex-shrink: 0;
+    padding: 12px;
+    border-radius: 50%;
+    background: rgba(250, 248, 241, .65);
+    border: 1px solid rgba(115, 120, 90, .35);
+    position: relative;
+    z-index: 2;
+}
+
+/* ESPACIOS PARA FOTOGRAFÍAS */
+
+.aromatizantes-page .recipe-image-space {
+    min-height: 190px;
+    background: #f0eee4;
+    border: 1px dashed #c5bda9;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    color: #898575;
+    font-size: 12px;
+    overflow: hidden;
+    transition: .25s;
+}
+
+.aromatizantes-page .recipe-image-space:hover {
+    background: #e9eadc;
+    border-color: var(--ar-olive);
+}
+
+.aromatizantes-page .eq-cover-drawing .recipe-image-space {
+    min-height: 100%;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 50%;
+    background: #e4e5d6;
+    font-size: 11px;
+}
+
+/* INTRODUCCIÓN */
+
+.aromatizantes-page .eq-intro {
+    max-width: 850px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.aromatizantes-page .eq-intro h2,
+.aromatizantes-page .eq-heading h2 {
+    color: var(--ar-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    line-height: 1.2;
+    margin: 0 0 15px;
+}
+
+.aromatizantes-page .eq-card {
+    background: #fffefa;
+    border: 1px solid var(--ar-line);
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 5px 16px rgba(75, 65, 45, .035);
+}
+
+.aromatizantes-page .recipe-content-card p {
+    color: #68675c;
+    font-size: 14px;
+    margin: 0 0 12px;
+}
+
+.aromatizantes-page .recipe-content-card p:last-child {
+    margin-bottom: 0;
+}
+
+/* SECCIONES */
+
+.aromatizantes-page .recipe-section {
+    margin-bottom: 58px;
+    scroll-margin-top: 25px;
+}
+
+.aromatizantes-page .eq-heading {
+    margin: 35px 0 22px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--ar-line);
+}
+
+.aromatizantes-page .eq-heading h2 {
+    margin-bottom: 7px;
+}
+
+.aromatizantes-page .eq-heading h3 {
+    color: var(--ar-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    margin: 0;
+}
+
+.aromatizantes-page .eq-heading p {
+    color: var(--ar-muted);
+    font-size: 13px;
+    margin: 5px 0 0;
+}
+
+/* ÍNDICE DE AROMATIZANTES */
+
+.aromatizantes-page .eq-table-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.aromatizantes-page .cut-color-card {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    padding: 22px 24px;
+    border-radius: 9px;
+    border-left: 4px solid var(--ar-olive);
+    transition: .25s;
+}
+
+.aromatizantes-page .cut-color-card:nth-child(2) {
+    border-left-color: #bd8067;
+    background: #fbf4ed;
+}
+
+.aromatizantes-page .cut-color-card:nth-child(3) {
+    border-left-color: #a7a16d;
+    background: #f4f3e9;
+}
+
+.aromatizantes-page .cut-color-card:nth-child(4) {
+    border-left-color: #927b62;
+    background: #f4eee7;
+}
+
+.aromatizantes-page .cut-color-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(75, 65, 45, .09);
+}
+
+.aromatizantes-page .cut-color-card h3 {
+    color: var(--ar-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    margin: 5px 0;
+}
+
+.aromatizantes-page .cut-color-card p {
+    color: var(--ar-muted);
+    font-size: 12px;
+    margin: 0;
+}
+
+/* FOTOGRAFÍA DE CADA PREPARACIÓN */
+
+.aromatizantes-page .recipe-section > .recipe-image-space {
+    min-height: 240px;
+    margin: 22px 0;
+    background: linear-gradient(135deg, #edf0e5, #f5eee7);
+}
+
+/* TABLAS */
+
+.aromatizantes-page .recipe-ingredients-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.aromatizantes-page .recipe-ingredients-table th {
+    background: #e9eadc;
+    color: var(--ar-dark);
+    font-weight: 700;
+    text-align: left;
+    padding: 13px 15px;
+}
+
+.aromatizantes-page .recipe-ingredients-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid var(--ar-line);
+    color: #656458;
+}
+
+.aromatizantes-page .recipe-ingredients-table tbody tr:nth-child(even) {
+    background: #f8f6ef;
+}
+
+.aromatizantes-page .recipe-ingredients-table tbody tr:hover {
+    background: #f1eee3;
+}
+
+/* LISTAS */
+
+.aromatizantes-page .recipe-list {
+    padding-left: 22px;
+    margin: 0;
+}
+
+.aromatizantes-page .recipe-list li {
+    color: #656458;
+    font-size: 14px;
+    padding: 5px 0 5px 4px;
+}
+
+.aromatizantes-page .recipe-list li::marker {
+    color: var(--ar-terracotta);
+}
+
+/* PROCEDIMIENTO POR PASOS */
+
+.aromatizantes-page .recipe-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.aromatizantes-page .recipe-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 20px 22px;
+    background: #fffefa;
+    border: 1px solid var(--ar-line);
+    border-radius: 8px;
+}
+
+.aromatizantes-page .step-number {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e9eadc;
+    color: var(--ar-dark);
+    border-radius: 50%;
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.aromatizantes-page .recipe-step:nth-child(even) .step-number {
+    background: #f1e4da;
+    color: #95644e;
+}
+
+.aromatizantes-page .recipe-step h3 {
+    color: var(--ar-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    margin: 0 0 5px;
+}
+
+.aromatizantes-page .recipe-step p {
+    color: #777568;
+    font-size: 13px;
+    margin: 0;
+}
+
+/* NOTAS GASTRONÓMICAS */
+
+.aromatizantes-page .recipe-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 23px 25px;
+    margin: 28px 0;
+    background: #f1eee2;
+    border-left: 4px solid var(--ar-terracotta);
+    border-radius: 5px;
+}
+
+.aromatizantes-page .recipe-note > span {
+    color: var(--ar-terracotta);
+    font-size: 22px;
+}
+
+.aromatizantes-page .recipe-note h3 {
+    color: var(--ar-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    margin: 0 0 5px;
+}
+
+.aromatizantes-page .recipe-note p {
+    color: #777568;
+    font-size: 13px;
+    margin: 0;
+}
+
+/* GALERÍAS */
+
+.aromatizantes-page .recipe-gallery-space {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 13px;
+    margin-top: 25px;
+}
+
+.aromatizantes-page .recipe-gallery-space .recipe-image-space {
+    min-height: 155px;
+}
+
+/* SEPARADORES */
+
+.aromatizantes-page .eq-container > .eq-line {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #d9d2c2, transparent);
+    margin: 48px 0;
+}
+
+/* NAVEGACIÓN FINAL */
+
+.aromatizantes-page .eq-page-navigation {
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px 0;
+    margin-top: 30px;
+    border-top: 1px solid var(--ar-line);
+}
+
+.aromatizantes-page .eq-page-navigation a {
+    color: var(--ar-dark);
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: .2s;
+}
+
+.aromatizantes-page .eq-page-navigation a:hover {
+    color: var(--ar-terracotta);
+    transform: translateX(-3px);
+}
+
+/* PIE DE PÁGINA */
+
+.aromatizantes-page .eq-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 22px 0 0;
+    margin-top: 20px;
+    border-top: 1px solid var(--ar-line);
+    color: var(--ar-muted);
+    font-size: 11px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 760px) {
+    body.aromatizantes-page {
+        padding: 15px 10px;
+    }
+
+    .aromatizantes-page .eq-container {
+        padding: 28px 35px;
+    }
+
+    .aromatizantes-page .eq-cover {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px;
+    }
+
+    .aromatizantes-page .eq-cover-drawing {
+        width: 170px;
+        height: 170px;
+        align-self: center;
+    }
+
+    .aromatizantes-page .eq-table-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .aromatizantes-page .recipe-gallery-space {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .aromatizantes-page .eq-container {
+        padding: 22px;
+    }
+
+    .aromatizantes-page .eq-container::before,
+    .aromatizantes-page .eq-container::after {
+        display: none;
+    }
+
+    .aromatizantes-page .eq-header {
+        flex-wrap: wrap;
+    }
+
+    .aromatizantes-page .eq-cover h1 {
+        font-size: 38px;
+    }
+
+    .aromatizantes-page .recipe-gallery-space {
+        grid-template-columns: 1fr;
+    }
+
+    .aromatizantes-page .recipe-step {
+        gap: 12px;
+        padding: 16px;
+    }
+
+    .aromatizantes-page .eq-footer {
+        flex-direction: column;
+    }
+
+    .aromatizantes-page .recipe-ingredients-table {
+        font-size: 11px;
+    }
+
+    .aromatizantes-page .recipe-ingredients-table th,
+    .aromatizantes-page .recipe-ingredients-table td {
+        padding: 9px 7px;
+    }
+}

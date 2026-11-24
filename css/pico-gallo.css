@@ -1,0 +1,603 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Caveat:wght@500;600&display=swap');
+
+/* ========================================
+   PICO DE GALLO | CUADERNO GASTRONÓMICO
+   Paleta: jitomate, cilantro y terracota
+======================================== */
+
+.pico-gallo-page {
+    --pico-red: #a9473d;
+    --pico-red-dark: #78382f;
+    --pico-coral: #cf7963;
+    --pico-green: #637b52;
+    --pico-green-light: #a7b58d;
+    --pico-cream: #faf5eb;
+    --pico-pale: #f0e9dc;
+    --pico-gold: #bd9a63;
+    --pico-text: #514a40;
+    --pico-muted: #81776b;
+
+    margin: 0;
+    padding: 30px 18px;
+    background: #e9e0d5;
+    color: var(--pico-text);
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* ENCABEZADO */
+
+.pico-gallo-page .eq-header {
+    max-width: 1120px;
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.pico-gallo-page .eq-back {
+    display: inline-flex;
+    align-items: center;
+    padding: 11px 19px;
+    border: 1px solid #d5bdb0;
+    border-radius: 30px;
+    background: #faf7f0;
+    color: var(--pico-red-dark);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: .25s ease;
+}
+
+.pico-gallo-page .eq-back:hover {
+    background: var(--pico-red-dark);
+    color: white;
+    border-color: var(--pico-red-dark);
+    transform: translateX(-3px);
+}
+
+.pico-gallo-page .eq-label {
+    color: #8b7569;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: right;
+}
+
+/* CONTENEDOR PRINCIPAL */
+
+.pico-gallo-page .eq-container {
+    position: relative;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 45px 55px;
+    overflow: hidden;
+    background: var(--pico-cream);
+    border: 1px solid #ded4c6;
+    box-shadow: 0 15px 45px rgba(86, 57, 43, .10);
+}
+
+.pico-gallo-page .eq-container::before,
+.pico-gallo-page .eq-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background: linear-gradient(
+        to bottom,
+        var(--pico-red),
+        var(--pico-gold),
+        var(--pico-green)
+    );
+    opacity: .65;
+}
+
+.pico-gallo-page .eq-container::before {
+    left: 0;
+}
+
+.pico-gallo-page .eq-container::after {
+    right: 0;
+}
+
+/* PORTADA */
+
+.pico-gallo-page .eq-cover {
+    position: relative;
+    min-height: 390px;
+    padding: 55px 48px;
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    align-items: center;
+    gap: 35px;
+    overflow: hidden;
+    background: linear-gradient(
+        125deg,
+        #f0dfd1 0%,
+        #ead0bd 48%,
+        #d9b49d 100%
+    );
+    border: 1px solid #dfc2ae;
+}
+
+.pico-gallo-page .eq-cover::before {
+    content: "";
+    position: absolute;
+    width: 330px;
+    height: 330px;
+    top: -180px;
+    right: -75px;
+    border: 1px solid rgba(137, 66, 52, .18);
+    border-radius: 50%;
+}
+
+.pico-gallo-page .eq-cover::after {
+    content: "";
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    bottom: -155px;
+    left: 40%;
+    border: 1px solid rgba(137, 66, 52, .18);
+    border-radius: 50%;
+}
+
+.pico-gallo-page .eq-cover-text {
+    position: relative;
+    z-index: 2;
+}
+
+.pico-gallo-page .eq-kicker {
+    display: block;
+    margin-bottom: 13px;
+    color: var(--pico-red);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+}
+
+.pico-gallo-page .eq-cover h1 {
+    margin: 0 0 20px;
+    color: var(--pico-red-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(48px, 6vw, 68px);
+    font-weight: 600;
+    line-height: 1.08;
+}
+
+.pico-gallo-page .eq-cover p {
+    max-width: 470px;
+    margin: 0;
+    color: #70564a;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.pico-gallo-page .eq-line {
+    width: 75px;
+    height: 2px;
+    margin: 27px 0 16px;
+    background: var(--pico-gold);
+}
+
+.pico-gallo-page .eq-small {
+    color: #80675a;
+    font-family: 'Caveat', cursive;
+    font-size: 22px;
+}
+
+.pico-gallo-page .eq-cover-drawing {
+    position: relative;
+    z-index: 2;
+    min-height: 245px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(250, 247, 237, .55);
+    border: 1px solid rgba(151, 93, 68, .25);
+    box-shadow: 0 12px 28px rgba(100, 58, 42, .08);
+}
+
+.pico-gallo-page .eq-cover-drawing > span {
+    color: var(--pico-green);
+    font-size: 105px;
+    opacity: .75;
+}
+
+.pico-gallo-page .eq-page-number {
+    position: absolute;
+    right: 25px;
+    bottom: 20px;
+    z-index: 3;
+    color: var(--pico-red);
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+}
+
+/* INTRODUCCIÓN */
+
+.pico-gallo-page .eq-intro {
+    padding: 58px 0 45px;
+}
+
+.pico-gallo-page .eq-intro h2,
+.pico-gallo-page .eq-heading h2 {
+    margin: 0 0 20px;
+    color: var(--pico-red-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 31px;
+    font-weight: 600;
+}
+
+.pico-gallo-page .eq-intro > p {
+    max-width: 850px;
+    margin: 0;
+    color: #6b6257;
+    font-size: 14px;
+    line-height: 2;
+}
+
+/* IMÁGENES */
+
+.pico-gallo-page .recipe-image-space {
+    min-height: 210px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f1eae0;
+    border: 1px dashed #c9a99a;
+    color: #92796a;
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: .5px;
+}
+
+.pico-gallo-page .recipe-image-space img {
+    width: 100%;
+    height: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    display: block;
+}
+
+.pico-gallo-page .eq-cover .recipe-image-space {
+    width: 100%;
+    min-height: 245px;
+    background: rgba(250, 247, 237, .65);
+}
+
+/* INFORMACIÓN GENERAL */
+
+.pico-gallo-page .recipe-information {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin: 0 0 55px;
+}
+
+.pico-gallo-page .recipe-information .recipe-data {
+    min-height: 105px;
+    padding: 20px 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    background: #f2e9df;
+    border: 1px solid #e5d7c9;
+    border-left: 3px solid var(--pico-red);
+}
+
+.pico-gallo-page .recipe-data span {
+    color: var(--pico-muted);
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.pico-gallo-page .recipe-data strong {
+    color: var(--pico-red-dark);
+    font-size: 15px;
+    font-weight: 700;
+}
+
+/* SECCIONES */
+
+.pico-gallo-page .recipe-section {
+    margin: 0 0 55px;
+}
+
+.pico-gallo-page .eq-heading {
+    margin-bottom: 23px;
+}
+
+.pico-gallo-page .eq-heading .eq-kicker {
+    margin-bottom: 10px;
+}
+
+.pico-gallo-page .eq-heading h2 {
+    margin-bottom: 10px;
+}
+
+.pico-gallo-page .eq-heading p {
+    margin: 0;
+    color: var(--pico-muted);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* TARJETAS */
+
+.pico-gallo-page .eq-card.recipe-content-card {
+    padding: 30px 34px;
+    background: #fffef9;
+    border: 1px solid #e9dfd3;
+    box-shadow: 0 6px 20px rgba(86, 57, 43, .045);
+}
+
+.pico-gallo-page .recipe-content-card > p {
+    margin: 0;
+    color: #62594e;
+    font-size: 14px;
+    line-height: 2;
+}
+
+/* LISTAS */
+
+.pico-gallo-page .recipe-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.pico-gallo-page .recipe-list li {
+    position: relative;
+    margin: 0;
+    padding: 15px 15px 15px 38px;
+    border-bottom: 1px solid #eee6dc;
+    color: #5c554b;
+    font-size: 14px;
+    line-height: 1.85;
+}
+
+.pico-gallo-page .recipe-list li:last-child {
+    border-bottom: none;
+}
+
+.pico-gallo-page .recipe-list:not(.recipe-steps) li::before {
+    content: "✦";
+    position: absolute;
+    left: 8px;
+    top: 16px;
+    color: var(--pico-green);
+    font-size: 13px;
+}
+
+/* LISTAS NUMERADAS Y PROCEDIMIENTO */
+
+.pico-gallo-page ol.recipe-list {
+    counter-reset: pico-step;
+}
+
+.pico-gallo-page ol.recipe-list:not(.recipe-steps) {
+    counter-reset: pico-item;
+}
+
+.pico-gallo-page ol.recipe-list:not(.recipe-steps) li {
+    counter-increment: pico-item;
+}
+
+.pico-gallo-page ol.recipe-list:not(.recipe-steps) li::before {
+    content: counter(pico-item, decimal-leading-zero);
+    color: var(--pico-red);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.pico-gallo-page .recipe-steps {
+    counter-reset: pico-step;
+}
+
+.pico-gallo-page .recipe-steps li {
+    counter-increment: pico-step;
+    margin-bottom: 15px;
+    padding: 22px 25px 22px 70px;
+    background: #f6f0e8;
+    border: 1px solid #eadfd3;
+    border-left: 4px solid var(--pico-green);
+    line-height: 1.9;
+}
+
+.pico-gallo-page .recipe-steps li:last-child {
+    margin-bottom: 0;
+}
+
+.pico-gallo-page .recipe-steps li::before {
+    content: counter(pico-step, decimal-leading-zero);
+    position: absolute;
+    top: 21px;
+    left: 20px;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #e6e9dc;
+    color: var(--pico-green);
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* NOTA GASTRONÓMICA */
+
+.pico-gallo-page .recipe-note {
+    margin: 55px 0 45px;
+    padding: 30px 34px;
+    background: #e9eee2;
+    border: 1px solid #d8e0ce;
+    border-left: 4px solid var(--pico-green);
+}
+
+.pico-gallo-page .recipe-note .eq-kicker {
+    margin-bottom: 12px;
+    color: var(--pico-green);
+}
+
+.pico-gallo-page .recipe-note h3 {
+    margin: 0 0 12px;
+    color: var(--pico-red-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+}
+
+.pico-gallo-page .recipe-note p {
+    margin: 0;
+    color: #5d6655;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* GALERÍA */
+
+.pico-gallo-page .recipe-gallery-space {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.pico-gallo-page .recipe-gallery-space .recipe-image-space {
+    min-height: 220px;
+    background: #f1eae0;
+}
+
+/* NAVEGACIÓN */
+
+.pico-gallo-page .eq-page-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 25px 0;
+    border-top: 1px solid #e5d9cc;
+    border-bottom: 1px solid #e5d9cc;
+}
+
+.pico-gallo-page .eq-page-navigation a {
+    color: var(--pico-red-dark);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    transition: .2s ease;
+}
+
+.pico-gallo-page .eq-page-navigation a:hover {
+    color: var(--pico-green);
+    transform: translateY(-2px);
+}
+
+.pico-gallo-page .eq-page-navigation span {
+    color: #8b7b6d;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+/* PIE DE PÁGINA */
+
+.pico-gallo-page .eq-footer {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 22px 5px 0;
+    color: #8a7c70;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 760px) {
+    .pico-gallo-page {
+        padding: 18px 10px;
+    }
+
+    .pico-gallo-page .eq-container {
+        padding: 25px 22px;
+    }
+
+    .pico-gallo-page .eq-cover {
+        grid-template-columns: 1fr;
+        padding: 38px 28px;
+        gap: 25px;
+    }
+
+    .pico-gallo-page .eq-cover h1 {
+        font-size: 52px;
+    }
+
+    .pico-gallo-page .recipe-information {
+        grid-template-columns: 1fr;
+    }
+
+    .pico-gallo-page .recipe-gallery-space {
+        grid-template-columns: 1fr;
+    }
+
+    .pico-gallo-page .eq-card.recipe-content-card {
+        padding: 22px 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pico-gallo-page .eq-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .pico-gallo-page .eq-label {
+        text-align: left;
+    }
+
+    .pico-gallo-page .eq-container {
+        padding: 22px 17px;
+    }
+
+    .pico-gallo-page .eq-cover {
+        padding: 32px 22px;
+    }
+
+    .pico-gallo-page .eq-cover h1 {
+        font-size: 43px;
+    }
+
+    .pico-gallo-page .eq-intro h2,
+    .pico-gallo-page .eq-heading h2 {
+        font-size: 26px;
+    }
+
+    .pico-gallo-page .recipe-steps li {
+        padding: 20px 15px 20px 58px;
+    }
+
+    .pico-gallo-page .recipe-steps li::before {
+        left: 12px;
+    }
+
+    .pico-gallo-page .recipe-note {
+        padding: 23px 19px;
+    }
+
+    .pico-gallo-page .eq-page-navigation {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 17px;
+    }
+
+    .pico-gallo-page .eq-page-navigation span {
+        line-height: 1.7;
+    }
+}

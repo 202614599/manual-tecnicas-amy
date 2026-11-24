@@ -1,0 +1,553 @@
+
+/* =========================================
+   CALAMARES A LA ROMANA
+   Estilo editorial · Cuaderno gastronómico
+========================================= */
+
+body.calamares-romana-page {
+    --cream: #faf8f1;
+    --paper: #fffdf7;
+    --beige: #e8e0d2;
+    --sand: #d9c8ae;
+    --blue: #78949a;
+    --blue-dark: #506c72;
+    --blue-light: #e5edef;
+    --sage: #92977b;
+    --sage-light: #eceee3;
+    --terracotta: #bd8068;
+    --brown: #635545;
+    --text: #716c61;
+    --muted: #999184;
+
+    background: var(--beige);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* FONDO Y ESTRUCTURA GENERAL */
+
+body.calamares-romana-page .eq-page {
+    width: min(1120px, calc(100% - 60px));
+    margin: 0 auto;
+    padding: 0 0 45px;
+    background: transparent;
+}
+
+/* ENCABEZADO Y FLECHA SUPERIOR */
+
+body.calamares-romana-page .eq-header {
+    min-height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+body.calamares-romana-page .eq-header a {
+    color: var(--blue-dark);
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .2s ease;
+}
+
+body.calamares-romana-page .eq-header a:hover {
+    color: var(--terracotta);
+    transform: translateX(-4px);
+}
+
+body.calamares-romana-page .eq-header span {
+    color: #918879;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+/* PORTADA */
+
+body.calamares-romana-page .eq-cover {
+    min-height: 390px;
+    position: relative;
+    padding: 65px 75px;
+    margin-bottom: 65px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 90% 15%, #dce8e6 0, transparent 34%),
+        linear-gradient(120deg, #fffdf7, #f3eee3);
+    border: 1px solid rgba(255,255,255,.7);
+}
+
+body.calamares-romana-page .eq-cover::before {
+    content: "";
+    position: absolute;
+    width: 390px;
+    height: 390px;
+    right: -100px;
+    bottom: -245px;
+    border: 1px solid rgba(120,148,154,.35);
+    border-radius: 50%;
+}
+
+body.calamares-romana-page .eq-cover::after {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    right: -45px;
+    bottom: -190px;
+    border: 1px solid rgba(189,128,104,.3);
+    border-radius: 50%;
+}
+
+body.calamares-romana-page .eq-cover > div {
+    position: relative;
+    z-index: 2;
+    max-width: 680px;
+}
+
+body.calamares-romana-page .eq-subtitle {
+    margin: 0 0 20px;
+    color: var(--blue-dark);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+}
+
+body.calamares-romana-page .eq-cover h1 {
+    max-width: 600px;
+    margin: 0 0 20px;
+    color: #514b40;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 5.5vw, 68px);
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+body.calamares-romana-page .eq-cover > div > p:last-child {
+    max-width: 530px;
+    margin: 0;
+    color: #80796d;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+body.calamares-romana-page .eq-cover-number {
+    position: absolute;
+    right: 45px;
+    bottom: 25px;
+    z-index: 2;
+    color: var(--terracotta);
+    font-family: 'Playfair Display', serif;
+    font-size: 27px;
+}
+
+/* INTRODUCCIÓN */
+
+body.calamares-romana-page .eq-intro {
+    max-width: 850px;
+    margin: 0 auto 65px;
+    padding: 0 25px;
+    text-align: center;
+}
+
+body.calamares-romana-page .eq-intro .eq-heading {
+    margin: 0 0 16px;
+    color: var(--terracotta);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+body.calamares-romana-page .eq-intro > p:last-child {
+    margin: 0;
+    color: #716d63;
+    font-size: 14px;
+    line-height: 2;
+}
+
+/* DATOS DE LA RECETA */
+
+body.calamares-romana-page .recipe-data {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin-bottom: 75px;
+}
+
+body.calamares-romana-page .recipe-data .eq-card {
+    min-height: 105px;
+    padding: 20px 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    background: rgba(255,253,247,.75);
+    border: 1px solid #ded7c9;
+    border-bottom: 3px solid var(--blue);
+}
+
+body.calamares-romana-page .recipe-data .eq-card:nth-child(3n + 2) {
+    border-bottom-color: var(--terracotta);
+}
+
+body.calamares-romana-page .recipe-data .eq-card:nth-child(3n) {
+    border-bottom-color: var(--sage);
+}
+
+body.calamares-romana-page .recipe-data span {
+    color: #948b7d;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+body.calamares-romana-page .recipe-data strong {
+    color: var(--brown);
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* SECCIONES */
+
+body.calamares-romana-page .recipe-section {
+    margin-bottom: 75px;
+}
+
+body.calamares-romana-page .recipe-section > .eq-heading {
+    position: relative;
+    margin: 0 0 28px;
+    padding: 0 0 14px;
+    color: #514b40;
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 500;
+    border-bottom: 1px solid #cfc5b5;
+}
+
+body.calamares-romana-page .recipe-section > .eq-heading::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 65px;
+    height: 3px;
+    background: var(--blue);
+}
+
+/* CONTENIDO DE TABLAS Y LISTAS */
+
+body.calamares-romana-page .recipe-content-card {
+    padding: 28px 32px;
+    background: rgba(255,253,247,.75);
+    border: 1px solid #e0d8ca;
+}
+
+/* TABLA */
+
+body.calamares-romana-page .recipe-ingredients-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+body.calamares-romana-page .recipe-ingredients-table thead {
+    background: var(--blue-light);
+}
+
+body.calamares-romana-page .recipe-ingredients-table th {
+    padding: 16px 18px;
+    color: var(--blue-dark);
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+body.calamares-romana-page .recipe-ingredients-table td {
+    padding: 14px 18px;
+    border-bottom: 1px solid #eae4d9;
+    color: #70695e;
+}
+
+body.calamares-romana-page .recipe-ingredients-table tbody tr:nth-child(even) {
+    background: rgba(232,224,210,.28);
+}
+
+body.calamares-romana-page .recipe-ingredients-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* MISE EN PLACE */
+
+body.calamares-romana-page .recipe-list {
+    padding-left: 25px;
+    margin: 0;
+    color: #70695e;
+    font-size: 14px;
+    line-height: 2;
+}
+
+body.calamares-romana-page .recipe-list li {
+    padding-left: 8px;
+    margin-bottom: 10px;
+}
+
+body.calamares-romana-page .recipe-list li::marker {
+    color: var(--terracotta);
+    font-weight: 700;
+}
+
+/* PROCEDIMIENTO */
+
+body.calamares-romana-page .recipe-steps {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+    list-style: none;
+}
+
+body.calamares-romana-page .recipe-step {
+    padding: 23px 25px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background: rgba(255,253,247,.75);
+    border: 1px solid #e0d8ca;
+    transition: .2s ease;
+}
+
+body.calamares-romana-page .recipe-step:nth-child(even) {
+    background: #f0f0e7;
+}
+
+body.calamares-romana-page .recipe-step:hover {
+    border-color: #a9b8b5;
+}
+
+body.calamares-romana-page .step-number {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--blue-light);
+    color: var(--blue-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+}
+
+body.calamares-romana-page .recipe-step:nth-child(even) .step-number {
+    background: #e4e7d9;
+    color: #727957;
+}
+
+body.calamares-romana-page .recipe-step strong {
+    display: block;
+    margin: 2px 0 9px;
+    color: #5c5143;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+body.calamares-romana-page .recipe-step p {
+    margin: 0;
+    color: #777165;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+/* AYUDA VISUAL */
+
+body.calamares-romana-page .recipe-gallery-space {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+body.calamares-romana-page .recipe-image-space {
+    min-height: 260px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #e8eeee;
+    border: 1px dashed #9eafb0;
+    transition: .2s ease;
+}
+
+body.calamares-romana-page .recipe-image-space:nth-child(even) {
+    background: #efeee4;
+    border-color: #b5b59b;
+}
+
+body.calamares-romana-page .recipe-image-space span {
+    color: var(--blue-dark);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+body.calamares-romana-page .recipe-image-space:nth-child(even) span {
+    color: #777d5d;
+}
+
+body.calamares-romana-page .recipe-image-space p {
+    max-width: 270px;
+    margin: 13px 0 0;
+    color: #817d72;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+/* NAVEGACIÓN INFERIOR */
+
+body.calamares-romana-page .eq-page-navigation {
+    margin: 75px 0 25px;
+    padding: 23px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border-top: 1px solid #cfc5b5;
+    border-bottom: 1px solid #cfc5b5;
+}
+
+body.calamares-romana-page .eq-page-navigation a {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--blue-dark);
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .2s ease;
+}
+
+body.calamares-romana-page .eq-page-navigation a:hover {
+    color: var(--terracotta);
+}
+
+body.calamares-romana-page .eq-page-navigation a:first-child:hover {
+    transform: translateX(-4px);
+}
+
+body.calamares-romana-page .eq-page-navigation a:last-child:hover {
+    transform: translateX(4px);
+}
+
+/* PIE DE PÁGINA */
+
+body.calamares-romana-page .eq-footer {
+    padding: 15px 0;
+    text-align: center;
+}
+
+body.calamares-romana-page .eq-footer p {
+    margin: 0;
+    color: #928879;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 750px) {
+    body.calamares-romana-page .eq-page {
+        width: calc(100% - 36px);
+    }
+
+    body.calamares-romana-page .eq-cover {
+        min-height: 320px;
+        padding: 45px;
+    }
+
+    body.calamares-romana-page .recipe-data {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 520px) {
+    body.calamares-romana-page .eq-page {
+        width: calc(100% - 26px);
+    }
+
+    body.calamares-romana-page .eq-header {
+        min-height: 65px;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        gap: 7px;
+    }
+
+    body.calamares-romana-page .eq-cover {
+        min-height: 290px;
+        padding: 35px 25px;
+        margin-bottom: 45px;
+    }
+
+    body.calamares-romana-page .eq-cover h1 {
+        font-size: 40px;
+    }
+
+    body.calamares-romana-page .eq-intro {
+        padding: 0 8px;
+        margin-bottom: 45px;
+    }
+
+    body.calamares-romana-page .recipe-data {
+        gap: 10px;
+        margin-bottom: 55px;
+    }
+
+    body.calamares-romana-page .recipe-data .eq-card {
+        min-height: 90px;
+        padding: 14px;
+    }
+
+    body.calamares-romana-page .recipe-section {
+        margin-bottom: 55px;
+    }
+
+    body.calamares-romana-page .recipe-section > .eq-heading {
+        font-size: 27px;
+    }
+
+    body.calamares-romana-page .recipe-content-card {
+        padding: 20px 14px;
+    }
+
+    body.calamares-romana-page .recipe-ingredients-table th,
+    body.calamares-romana-page .recipe-ingredients-table td {
+        padding: 11px 8px;
+        font-size: 11px;
+    }
+
+    body.calamares-romana-page .recipe-step {
+        padding: 18px 14px;
+        gap: 13px;
+    }
+
+    body.calamares-romana-page .recipe-gallery-space {
+        grid-template-columns: 1fr;
+    }
+
+    body.calamares-romana-page .eq-page-navigation {
+        gap: 12px;
+    }
+
+    body.calamares-romana-page .eq-page-navigation a {
+        font-size: 11px;
+    }
+}
+

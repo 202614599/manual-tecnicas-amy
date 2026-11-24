@@ -1,0 +1,681 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Caveat:wght@500;600&display=swap');
+
+/* =====================================
+   CEVICHE DE ATÚN · CUADERNO GASTRONÓMICO
+===================================== */
+
+body.ceviche-atun-page {
+    --cv-blue: #548b91;
+    --cv-dark: #315d63;
+    --cv-light: #e2eeee;
+    --cv-pale: #f0f5f1;
+    --cv-coral: #d98772;
+    --cv-sand: #d9b991;
+    --cv-ink: #454a46;
+    --cv-muted: #85877e;
+    --cv-line: #e5e2d7;
+
+    background: #e8e1d5;
+    color: var(--cv-ink);
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.7;
+    padding: 25px 16px;
+}
+
+/* ENCABEZADO */
+
+.ceviche-atun-page .eq-header {
+    max-width: 1120px;
+    margin: 0 auto 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.ceviche-atun-page .eq-back {
+    color: var(--cv-dark);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    transition: .2s ease;
+}
+
+.ceviche-atun-page .eq-back:hover {
+    color: var(--cv-coral);
+    transform: translateX(-3px);
+}
+
+.ceviche-atun-page .eq-label {
+    color: var(--cv-muted);
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+/* HOJA PRINCIPAL */
+
+.ceviche-atun-page .eq-container {
+    max-width: 1120px;
+    margin: auto;
+    padding: 42px 55px;
+    background: #faf8f1;
+    border: 1px solid #e3ddcf;
+    box-shadow: 0 12px 35px rgba(75, 65, 45, .08);
+    position: relative;
+    overflow: hidden;
+}
+
+.ceviche-atun-page .eq-container::before,
+.ceviche-atun-page .eq-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: #eee9dc;
+    pointer-events: none;
+}
+
+.ceviche-atun-page .eq-container::before {
+    left: 24px;
+}
+
+.ceviche-atun-page .eq-container::after {
+    right: 24px;
+}
+
+/* PORTADA */
+
+.ceviche-atun-page .eq-cover {
+    min-height: 285px;
+    padding: 38px 42px;
+    margin-bottom: 55px;
+    background: linear-gradient(120deg, #e1eeee, #f4e8df);
+    border: 1px solid #d8e1dc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.ceviche-atun-page .eq-cover::before {
+    content: "";
+    position: absolute;
+    width: 270px;
+    height: 270px;
+    border: 1px solid rgba(84, 139, 145, .22);
+    border-radius: 50%;
+    right: 75px;
+    top: -105px;
+}
+
+.ceviche-atun-page .eq-cover::after {
+    content: "";
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    border: 1px solid rgba(217, 135, 114, .3);
+    border-radius: 50%;
+    right: 15px;
+    bottom: -110px;
+}
+
+.ceviche-atun-page .eq-cover-text {
+    max-width: 570px;
+    position: relative;
+    z-index: 2;
+}
+
+.ceviche-atun-page .eq-kicker {
+    display: block;
+    color: var(--cv-blue);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.ceviche-atun-page .eq-cover h1 {
+    color: var(--cv-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(38px, 5vw, 58px);
+    line-height: 1.1;
+    margin: 0 0 15px;
+}
+
+.ceviche-atun-page .eq-cover p {
+    max-width: 430px;
+    color: #727a75;
+    font-size: 14px;
+    margin: 0;
+}
+
+.ceviche-atun-page .eq-line {
+    width: 65px;
+    height: 3px;
+    background: var(--cv-coral);
+    margin: 20px 0 12px;
+}
+
+.ceviche-atun-page .eq-small {
+    color: #987b62;
+    font-family: 'Caveat', cursive;
+    font-size: 19px;
+}
+
+.ceviche-atun-page .eq-cover-drawing {
+    width: 215px;
+    height: 215px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: rgba(250, 248, 241, .7);
+    border: 1px solid rgba(84, 139, 145, .35);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    color: var(--cv-dark);
+}
+
+.ceviche-atun-page .recipe-cover-decoration {
+    color: var(--cv-coral);
+    font-size: 30px;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.ceviche-atun-page .eq-cover-drawing > span {
+    font-family: 'Playfair Display', serif;
+    font-size: 65px;
+    line-height: 1;
+}
+
+.ceviche-atun-page .eq-cover-drawing small {
+    color: var(--cv-muted);
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+.ceviche-atun-page .eq-page-number {
+    position: absolute;
+    right: 20px;
+    bottom: 15px;
+    color: rgba(49, 93, 99, .55);
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+}
+
+/* INTRODUCCIÓN */
+
+.ceviche-atun-page .eq-intro {
+    max-width: 850px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.ceviche-atun-page .eq-intro h2,
+.ceviche-atun-page .eq-heading h2 {
+    color: var(--cv-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    line-height: 1.2;
+    margin: 0 0 15px;
+}
+
+.ceviche-atun-page .eq-intro p {
+    max-width: 760px;
+    margin: 0 auto;
+    color: #74766e;
+    font-size: 14px;
+}
+
+/* SECCIONES */
+
+.ceviche-atun-page .recipe-section {
+    margin-bottom: 58px;
+    scroll-margin-top: 25px;
+}
+
+.ceviche-atun-page .eq-heading {
+    margin: 35px 0 22px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--cv-line);
+}
+
+.ceviche-atun-page .eq-heading h2 {
+    margin-bottom: 7px;
+}
+
+.ceviche-atun-page .eq-heading p {
+    color: var(--cv-muted);
+    font-size: 13px;
+    margin: 5px 0 0;
+}
+
+/* TARJETAS */
+
+.ceviche-atun-page .eq-card,
+.ceviche-atun-page .recipe-content-card {
+    background: #fffefa;
+    border: 1px solid var(--cv-line);
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 5px 16px rgba(75, 65, 45, .035);
+}
+
+.ceviche-atun-page .recipe-content-card p {
+    color: #68675c;
+    font-size: 14px;
+}
+
+/* DATOS DE LA RECETA */
+
+.ceviche-atun-page .recipe-data {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 13px;
+    margin-top: 22px;
+}
+
+.ceviche-atun-page .recipe-information {
+    min-height: 100px;
+    padding: 19px 16px;
+    background: #edf3ef;
+    border: 1px solid #dce7e1;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+.ceviche-atun-page .recipe-information:nth-child(3n + 2) {
+    background: #f8eee8;
+    border-color: #eedbd1;
+}
+
+.ceviche-atun-page .recipe-information:nth-child(3n) {
+    background: #f3f0e5;
+    border-color: #e8e1d2;
+}
+
+.ceviche-atun-page .recipe-information span {
+    color: var(--cv-muted);
+    font-size: 11px;
+}
+
+.ceviche-atun-page .recipe-information strong {
+    color: var(--cv-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    line-height: 1.25;
+}
+
+/* ESPACIOS PARA FOTOGRAFÍAS */
+
+.ceviche-atun-page .recipe-image-space {
+    min-height: 230px;
+    background: linear-gradient(135deg, #eaf1ed, #f7eee7);
+    border: 1px dashed #b9c9c2;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    text-align: center;
+    color: #7d8982;
+    overflow: hidden;
+    transition: .25s ease;
+}
+
+.ceviche-atun-page .recipe-image-space:hover {
+    background: linear-gradient(135deg, #e1eeee, #f4e8df);
+    border-color: var(--cv-blue);
+}
+
+.ceviche-atun-page .image-placeholder-icon {
+    color: var(--cv-coral);
+    font-size: 25px;
+    margin-bottom: 7px;
+}
+
+.ceviche-atun-page .recipe-image-space p {
+    color: var(--cv-dark);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin: 4px 0;
+}
+
+.ceviche-atun-page .recipe-image-space small {
+    color: var(--cv-muted);
+    font-size: 11px;
+}
+
+.ceviche-atun-page .recipe-gallery-space .recipe-image-space {
+    min-height: 175px;
+}
+
+/* TABLA DE INGREDIENTES */
+
+.ceviche-atun-page .recipe-ingredients-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.ceviche-atun-page .recipe-ingredients-table th {
+    background: #e2eeee;
+    color: var(--cv-dark);
+    font-weight: 700;
+    text-align: left;
+    padding: 13px 15px;
+}
+
+.ceviche-atun-page .recipe-ingredients-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid var(--cv-line);
+    color: #65665e;
+}
+
+.ceviche-atun-page .recipe-ingredients-table tbody tr:nth-child(even) {
+    background: #f8f6ef;
+}
+
+.ceviche-atun-page .recipe-ingredients-table tbody tr:hover {
+    background: #f0f4ef;
+}
+
+/* ABREVIATURAS */
+
+.ceviche-atun-page .recipe-note {
+    padding: 20px 23px;
+    margin-top: 22px;
+    background: #f7eee7;
+    border-left: 4px solid var(--cv-coral);
+    border-radius: 5px;
+}
+
+.ceviche-atun-page .recipe-note strong {
+    color: var(--cv-dark);
+    font-size: 13px;
+}
+
+.ceviche-atun-page .recipe-note p {
+    color: #74766e;
+    font-size: 13px;
+    margin: 7px 0 0;
+}
+
+/* MISE EN PLACE */
+
+.ceviche-atun-page .recipe-list {
+    padding-left: 23px;
+    margin: 0;
+}
+
+.ceviche-atun-page .recipe-list li {
+    color: #65665e;
+    font-size: 14px;
+    padding: 7px 0 7px 5px;
+}
+
+.ceviche-atun-page .recipe-list li::marker {
+    color: var(--cv-coral);
+    font-weight: 700;
+}
+
+/* PROCEDIMIENTO */
+
+.ceviche-atun-page .recipe-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    counter-reset: ceviche-step;
+}
+
+.ceviche-atun-page .recipe-steps > li {
+    counter-increment: ceviche-step;
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 21px 23px;
+    background: #fffefa;
+    border: 1px solid var(--cv-line);
+    border-radius: 8px;
+}
+
+.ceviche-atun-page .recipe-steps > li::before {
+    content: counter(ceviche-step, decimal-leading-zero);
+    width: 39px;
+    height: 39px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e2eeee;
+    color: var(--cv-dark);
+    border-radius: 50%;
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.ceviche-atun-page .recipe-steps > li:nth-child(even)::before {
+    background: #f7e8df;
+    color: #a76555;
+}
+
+.ceviche-atun-page .recipe-steps h3 {
+    color: var(--cv-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    margin: 0 0 5px;
+}
+
+.ceviche-atun-page .recipe-steps p {
+    color: #77766c;
+    font-size: 13px;
+    margin: 0;
+}
+
+/* GALERÍA */
+
+.ceviche-atun-page .recipe-gallery-space {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 22px;
+}
+
+/* NOTA GASTRONÓMICA */
+
+.ceviche-atun-page .recipe-section > .recipe-note {
+    padding: 25px 28px;
+    margin: 0;
+    background: #edf3ef;
+    border-left: 4px solid var(--cv-blue);
+}
+
+.ceviche-atun-page .recipe-note .eq-kicker {
+    margin-bottom: 8px;
+}
+
+.ceviche-atun-page .recipe-note h3 {
+    color: var(--cv-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    margin: 0 0 8px;
+}
+
+.ceviche-atun-page .recipe-section > .recipe-note p {
+    color: #68736c;
+    font-size: 13px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* NAVEGACIÓN CON FLECHAS LATERALES */
+
+.ceviche-atun-page .eq-page-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 22px 0;
+    margin-top: 35px;
+    border-top: 1px solid var(--cv-line);
+    border-bottom: 1px solid var(--cv-line);
+}
+
+.ceviche-atun-page .eq-nav-link {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    color: var(--cv-dark);
+    text-decoration: none;
+    transition: .2s ease;
+}
+
+.ceviche-atun-page .eq-nav-link span {
+    color: var(--cv-muted);
+    font-size: 11px;
+}
+
+.ceviche-atun-page .eq-nav-link strong {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.ceviche-atun-page .eq-nav-link:hover {
+    color: var(--cv-coral);
+    transform: translateX(-3px);
+}
+
+.ceviche-atun-page .eq-nav-link.next {
+    text-align: right;
+}
+
+.ceviche-atun-page .eq-nav-link.next:hover {
+    transform: translateX(3px);
+}
+
+/* PIE DE PÁGINA */
+
+.ceviche-atun-page .eq-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 22px 0 0;
+    margin-top: 20px;
+    border-top: 1px solid var(--cv-line);
+    color: var(--cv-muted);
+    font-size: 11px;
+    letter-spacing: .5px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 760px) {
+    body.ceviche-atun-page {
+        padding: 15px 10px;
+    }
+
+    .ceviche-atun-page .eq-container {
+        padding: 28px 35px;
+    }
+
+    .ceviche-atun-page .eq-cover {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px;
+    }
+
+    .ceviche-atun-page .eq-cover-drawing {
+        width: 170px;
+        height: 170px;
+        align-self: center;
+    }
+
+    .ceviche-atun-page .recipe-data {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .ceviche-atun-page .recipe-gallery-space {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .ceviche-atun-page .eq-container {
+        padding: 22px;
+    }
+
+    .ceviche-atun-page .eq-container::before,
+    .ceviche-atun-page .eq-container::after {
+        display: none;
+    }
+
+    .ceviche-atun-page .eq-header {
+        flex-wrap: wrap;
+    }
+
+    .ceviche-atun-page .eq-cover h1 {
+        font-size: 38px;
+    }
+
+    .ceviche-atun-page .recipe-data {
+        grid-template-columns: 1fr 1fr;
+        gap: 9px;
+    }
+
+    .ceviche-atun-page .recipe-information {
+        padding: 14px 12px;
+        min-height: 85px;
+    }
+
+    .ceviche-atun-page .recipe-information strong {
+        font-size: 16px;
+    }
+
+    .ceviche-atun-page .recipe-gallery-space {
+        grid-template-columns: 1fr;
+    }
+
+    .ceviche-atun-page .recipe-steps > li {
+        gap: 12px;
+        padding: 16px;
+    }
+
+    .ceviche-atun-page .eq-page-navigation {
+        align-items: flex-start;
+    }
+
+    .ceviche-atun-page .eq-nav-link strong {
+        font-size: 11px;
+    }
+
+    .ceviche-atun-page .eq-footer {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .ceviche-atun-page .recipe-ingredients-table {
+        font-size: 11px;
+    }
+
+    .ceviche-atun-page .recipe-ingredients-table th,
+    .ceviche-atun-page .recipe-ingredients-table td {
+        padding: 9px 7px;
+    }
+}

@@ -1,0 +1,656 @@
+
+/* =========================================
+   COULIS DE PIMIENTO
+   Cuaderno gastronómico
+========================================= */
+
+body.coulis-pimiento-page {
+    --cp-red: #b96755;
+    --cp-dark: #75483d;
+    --cp-light: #f1e2dc;
+    --cp-pale: #f8eee8;
+    --cp-green: #858b70;
+    --cp-sand: #d9bd9e;
+    --cp-ink: #49463f;
+    --cp-muted: #898477;
+    --cp-line: #e8dfd3;
+
+    background: #e8e1d5;
+    color: var(--cp-ink);
+    font-family: "DM Sans", sans-serif;
+}
+
+/* ENCABEZADO */
+
+.coulis-pimiento-page .eq-header {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 30px 25px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.coulis-pimiento-page .eq-back {
+    color: var(--cp-dark);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: color .25s ease;
+}
+
+.coulis-pimiento-page .eq-back:hover {
+    color: var(--cp-red);
+}
+
+.coulis-pimiento-page .eq-label {
+    color: var(--cp-muted);
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* HOJA PRINCIPAL */
+
+.coulis-pimiento-page .eq-container {
+    max-width: 1120px;
+    margin: 0 auto 55px;
+    padding: 42px 58px 35px;
+    background: #faf8f1;
+    border: 1px solid #e4dccf;
+    box-shadow: 0 12px 35px rgba(75, 60, 42, .08);
+    position: relative;
+    overflow: hidden;
+}
+
+.coulis-pimiento-page .eq-container::before,
+.coulis-pimiento-page .eq-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: rgba(185, 103, 85, .16);
+    pointer-events: none;
+}
+
+.coulis-pimiento-page .eq-container::before {
+    left: 25px;
+}
+
+.coulis-pimiento-page .eq-container::after {
+    right: 25px;
+}
+
+/* PORTADA */
+
+.coulis-pimiento-page .eq-cover {
+    min-height: 390px;
+    padding: 55px 48px;
+    display: grid;
+    grid-template-columns: 1.25fr .75fr;
+    align-items: center;
+    gap: 35px;
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 85% 20%, rgba(255,255,255,.65), transparent 28%),
+        linear-gradient(125deg, #f1e1d8 0%, #f7eee5 55%, #e9e8d9 100%);
+    border: 1px solid #eadbd0;
+}
+
+.coulis-pimiento-page .eq-cover::before {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border: 1px solid rgba(185, 103, 85, .22);
+    border-radius: 50%;
+    right: -75px;
+    top: -100px;
+}
+
+.coulis-pimiento-page .eq-cover::after {
+    content: "";
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    border: 1px solid rgba(133, 139, 112, .25);
+    border-radius: 50%;
+    right: 20px;
+    bottom: -100px;
+}
+
+.coulis-pimiento-page .eq-cover-text {
+    position: relative;
+    z-index: 2;
+}
+
+.coulis-pimiento-page .eq-kicker {
+    display: block;
+    color: var(--cp-red);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.coulis-pimiento-page .eq-cover h1 {
+    color: var(--cp-dark);
+    font-family: "Playfair Display", serif;
+    font-size: clamp(40px, 5vw, 65px);
+    line-height: 1.08;
+    font-weight: 500;
+    margin: 0 0 20px;
+}
+
+.coulis-pimiento-page .eq-cover p {
+    max-width: 480px;
+    color: #69645a;
+    font-size: 14px;
+    line-height: 1.9;
+    margin: 0;
+}
+
+.coulis-pimiento-page .eq-line {
+    width: 65px;
+    height: 2px;
+    background: var(--cp-red);
+    margin: 25px 0 15px;
+}
+
+.coulis-pimiento-page .eq-small {
+    color: var(--cp-muted);
+    font-size: 11px;
+    letter-spacing: .7px;
+}
+
+/* ESPACIO DE IMAGEN DE PORTADA */
+
+.coulis-pimiento-page .eq-cover-drawing {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
+}
+
+.coulis-pimiento-page .eq-cover-drawing .recipe-image-space {
+    width: 100%;
+    min-height: 220px;
+    background: rgba(255, 255, 255, .58);
+    border: 1px solid rgba(185, 103, 85, .22);
+    border-radius: 48% 48% 45% 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 25px;
+}
+
+.coulis-pimiento-page .eq-cover-drawing .recipe-image-space span {
+    color: var(--cp-dark);
+    font-family: "Caveat", cursive;
+    font-size: 22px;
+}
+
+.coulis-pimiento-page .eq-page-number {
+    position: absolute;
+    bottom: 20px;
+    right: 25px;
+    color: rgba(117, 72, 61, .55);
+    font-family: "Playfair Display", serif;
+    font-size: 14px;
+}
+
+/* INTRODUCCIÓN Y FICHA */
+
+.coulis-pimiento-page .eq-intro {
+    padding: 48px 10px 42px;
+    border-bottom: 1px solid var(--cp-line);
+}
+
+.coulis-pimiento-page .eq-intro h2,
+.coulis-pimiento-page .eq-heading h2 {
+    color: var(--cp-dark);
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    font-weight: 500;
+    margin: 0 0 22px;
+}
+
+.coulis-pimiento-page .recipe-data {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.coulis-pimiento-page .recipe-data > div {
+    min-height: 82px;
+    padding: 17px 16px;
+    background: #fffefa;
+    border: 1px solid var(--cp-line);
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+}
+
+.coulis-pimiento-page .recipe-data span {
+    color: var(--cp-muted);
+    font-size: 10px;
+    letter-spacing: .7px;
+    text-transform: uppercase;
+}
+
+.coulis-pimiento-page .recipe-data strong {
+    color: var(--cp-dark);
+    font-family: "Playfair Display", serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* SECCIONES */
+
+.coulis-pimiento-page .recipe-section {
+    padding: 42px 10px 12px;
+}
+
+.coulis-pimiento-page .eq-heading {
+    margin-bottom: 23px;
+}
+
+.coulis-pimiento-page .eq-heading h2 {
+    margin-bottom: 9px;
+}
+
+.coulis-pimiento-page .eq-heading p {
+    color: var(--cp-muted);
+    font-size: 13px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* TARJETAS */
+
+.coulis-pimiento-page .eq-card.recipe-content-card {
+    background: #fffefa;
+    border: 1px solid var(--cp-line);
+    border-radius: 10px;
+    padding: 27px 30px;
+    box-shadow: 0 5px 16px rgba(75, 60, 42, .035);
+}
+
+/* TABLA DE INGREDIENTES */
+
+.coulis-pimiento-page .recipe-ingredients-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.coulis-pimiento-page .recipe-ingredients-table th {
+    background: var(--cp-pale);
+    color: var(--cp-dark);
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 15px 16px;
+    text-align: left;
+}
+
+.coulis-pimiento-page .recipe-ingredients-table td {
+    padding: 15px 16px;
+    border-bottom: 1px solid var(--cp-line);
+    color: #555147;
+    line-height: 1.6;
+}
+
+.coulis-pimiento-page .recipe-ingredients-table tr:last-child td {
+    border-bottom: none;
+}
+
+.coulis-pimiento-page .recipe-ingredients-table tbody tr:nth-child(even) {
+    background: #fcfaf5;
+}
+
+.coulis-pimiento-page .recipe-ingredients-table th:nth-child(2),
+.coulis-pimiento-page .recipe-ingredients-table th:nth-child(3),
+.coulis-pimiento-page .recipe-ingredients-table td:nth-child(2),
+.coulis-pimiento-page .recipe-ingredients-table td:nth-child(3) {
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* MISE EN PLACE */
+
+.coulis-pimiento-page .recipe-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0;
+}
+
+.coulis-pimiento-page .recipe-list li {
+    position: relative;
+    padding: 15px 12px 15px 34px;
+    border-bottom: 1px solid var(--cp-line);
+    color: #555147;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.coulis-pimiento-page .recipe-list li:last-child {
+    border-bottom: none;
+}
+
+.coulis-pimiento-page .recipe-list li::before {
+    content: "✦";
+    position: absolute;
+    left: 8px;
+    top: 16px;
+    color: var(--cp-red);
+    font-size: 12px;
+}
+
+/* PROCEDIMIENTO */
+
+.coulis-pimiento-page .recipe-steps {
+    display: grid;
+    gap: 13px;
+}
+
+.coulis-pimiento-page .recipe-step {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: 19px;
+    align-items: start;
+    padding: 23px 25px;
+    background: #fffefa;
+    border: 1px solid var(--cp-line);
+    border-radius: 9px;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.coulis-pimiento-page .recipe-step:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 17px rgba(75, 60, 42, .06);
+}
+
+.coulis-pimiento-page .step-number {
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    background: var(--cp-light);
+    color: var(--cp-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Playfair Display", serif;
+    font-size: 16px;
+}
+
+.coulis-pimiento-page .recipe-step h3 {
+    color: var(--cp-dark);
+    font-family: "Playfair Display", serif;
+    font-size: 19px;
+    font-weight: 500;
+    margin: 0 0 8px;
+}
+
+.coulis-pimiento-page .recipe-step p {
+    color: #69645a;
+    font-size: 13px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* GALERÍA */
+
+.coulis-pimiento-page .recipe-gallery-space {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.coulis-pimiento-page .recipe-gallery-space .recipe-image-space {
+    min-height: 185px;
+    padding: 20px;
+    background: #f1eee5;
+    border: 1px dashed #cbb9a6;
+    border-radius: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--cp-muted);
+    font-family: "Caveat", cursive;
+    font-size: 19px;
+    line-height: 1.4;
+}
+
+/* NOTA GASTRONÓMICA */
+
+.coulis-pimiento-page .recipe-note {
+    margin: 40px 10px 25px;
+    padding: 27px 30px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    background: #edf0e5;
+    border-left: 4px solid var(--cp-green);
+    border-radius: 0 9px 9px 0;
+}
+
+.coulis-pimiento-page .recipe-note > span {
+    color: var(--cp-green);
+    font-size: 23px;
+    line-height: 1;
+}
+
+.coulis-pimiento-page .recipe-note h3 {
+    color: #596047;
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0 0 9px;
+}
+
+.coulis-pimiento-page .recipe-note p {
+    color: #66675b;
+    font-size: 13px;
+    line-height: 1.85;
+    margin: 0;
+}
+
+/* NAVEGACIÓN INFERIOR */
+
+.coulis-pimiento-page .eq-page-navigation {
+    margin: 42px 10px 25px;
+    padding-top: 23px;
+    border-top: 1px solid var(--cp-line);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.coulis-pimiento-page .eq-page-navigation a {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--cp-dark);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    transition: color .2s ease, transform .2s ease;
+}
+
+.coulis-pimiento-page .eq-page-navigation a:hover {
+    color: var(--cp-red);
+    transform: translateX(3px);
+}
+
+.coulis-pimiento-page .eq-page-navigation a:first-child:hover {
+    transform: translateX(-3px);
+}
+
+/* PIE DE PÁGINA */
+
+.coulis-pimiento-page .eq-footer {
+    padding: 20px 10px 5px;
+    border-top: 1px solid var(--cp-line);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    color: var(--cp-muted);
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 760px) {
+    .coulis-pimiento-page .eq-container {
+        padding: 25px 30px;
+        margin: 0 12px 30px;
+    }
+
+    .coulis-pimiento-page .eq-cover {
+        grid-template-columns: 1fr;
+        padding: 40px 30px;
+        gap: 25px;
+    }
+
+    .coulis-pimiento-page .eq-cover-drawing .recipe-image-space {
+        min-height: 160px;
+        border-radius: 15px;
+    }
+
+    .coulis-pimiento-page .recipe-data {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .coulis-pimiento-page .recipe-gallery-space {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .coulis-pimiento-page .eq-intro,
+    .coulis-pimiento-page .recipe-section {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .coulis-pimiento-page .eq-header {
+        padding: 20px 18px;
+        align-items: flex-start;
+    }
+
+    .coulis-pimiento-page .eq-label {
+        font-size: 8px;
+        text-align: right;
+    }
+
+    .coulis-pimiento-page .eq-container {
+        padding: 18px 22px;
+    }
+
+    .coulis-pimiento-page .eq-container::before {
+        left: 10px;
+    }
+
+    .coulis-pimiento-page .eq-container::after {
+        right: 10px;
+    }
+
+    .coulis-pimiento-page .eq-cover {
+        padding: 32px 23px;
+    }
+
+    .coulis-pimiento-page .eq-cover h1 {
+        font-size: 40px;
+    }
+
+    .coulis-pimiento-page .eq-intro h2,
+    .coulis-pimiento-page .eq-heading h2 {
+        font-size: 25px;
+    }
+
+    .coulis-pimiento-page .recipe-data {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    .coulis-pimiento-page .recipe-data > div {
+        padding: 13px 11px;
+    }
+
+    .coulis-pimiento-page .recipe-data strong {
+        font-size: 14px;
+    }
+
+    .coulis-pimiento-page .eq-card.recipe-content-card {
+        padding: 17px 13px;
+    }
+
+    .coulis-pimiento-page .recipe-ingredients-table {
+        font-size: 11px;
+    }
+
+    .coulis-pimiento-page .recipe-ingredients-table th,
+    .coulis-pimiento-page .recipe-ingredients-table td {
+        padding: 12px 8px;
+    }
+
+    .coulis-pimiento-page .recipe-step {
+        grid-template-columns: 38px 1fr;
+        gap: 12px;
+        padding: 18px 14px;
+    }
+
+    .coulis-pimiento-page .step-number {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    .coulis-pimiento-page .recipe-gallery-space {
+        grid-template-columns: 1fr;
+    }
+
+    .coulis-pimiento-page .recipe-gallery-space .recipe-image-space {
+        min-height: 150px;
+    }
+
+    .coulis-pimiento-page .recipe-note {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 20px 17px;
+    }
+
+    .coulis-pimiento-page .eq-page-navigation {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .coulis-pimiento-page .eq-page-navigation a {
+        font-size: 10px;
+    }
+
+    .coulis-pimiento-page .eq-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        line-height: 1.8;
+    }
+}

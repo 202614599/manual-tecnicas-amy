@@ -1,0 +1,410 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Caveat:wght@500;600&display=swap');
+
+/* ==================================
+   BASE PARA HELADO
+================================== */
+
+body.base-helado-page {
+    --ice-green: #84947b;
+    --ice-dark: #4e604a;
+    --ice-pink: #d9a9a0;
+    --ice-peach: #edc9ad;
+    --ice-cream: #f5efe3;
+    --ice-paper: #faf8f1;
+    --ice-text: #48483f;
+    --ice-muted: #898575;
+    --ice-line: #e6e0d1;
+
+    background: #e8e1d5;
+    color: var(--ice-text);
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.7;
+    padding: 25px 16px;
+}
+
+/* ENCABEZADO */
+
+.base-helado-page .eq-header {
+    max-width: 1120px;
+    margin: 0 auto 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.base-helado-page .eq-back {
+    color: var(--ice-dark);
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: .2s;
+}
+
+.base-helado-page .eq-back:hover {
+    color: #b77e75;
+    transform: translateX(-3px);
+}
+
+.base-helado-page .eq-label {
+    color: var(--ice-muted);
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+/* HOJA PRINCIPAL */
+
+.base-helado-page .eq-container {
+    max-width: 1120px;
+    margin: auto;
+    padding: 45px 55px;
+    background: var(--ice-paper);
+    border: 1px solid #e3ddcf;
+    box-shadow: 0 12px 35px rgba(75, 65, 45, .08);
+    position: relative;
+    overflow: hidden;
+}
+
+.base-helado-page .eq-container::before,
+.base-helado-page .eq-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: #eee9dc;
+}
+
+.base-helado-page .eq-container::before {
+    left: 24px;
+}
+
+.base-helado-page .eq-container::after {
+    right: 24px;
+}
+
+/* PORTADA */
+
+.base-helado-page .eq-cover {
+    min-height: 290px;
+    padding: 40px 45px;
+    margin-bottom: 48px;
+    background: linear-gradient(120deg, #e5eadf, #f3e5df 75%, #f5eadb);
+    border: 1px solid #e1dccc;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.base-helado-page .eq-cover::before {
+    content: "";
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    border: 1px solid rgba(132, 148, 123, .3);
+    right: 60px;
+    top: -110px;
+}
+
+.base-helado-page .eq-cover::after {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 1px solid rgba(217, 169, 160, .5);
+    right: -20px;
+    bottom: -100px;
+}
+
+.base-helado-page .eq-cover > div {
+    max-width: 700px;
+    position: relative;
+    z-index: 2;
+}
+
+.base-helado-page .eq-kicker {
+    display: block;
+    color: var(--ice-green);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.base-helado-page .eq-cover h1 {
+    max-width: 650px;
+    color: var(--ice-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(35px, 5vw, 53px);
+    line-height: 1.12;
+    margin: 0 0 15px;
+}
+
+.base-helado-page .eq-cover p {
+    max-width: 520px;
+    color: #777568;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* SECCIONES */
+
+.base-helado-page .recipe-section {
+    margin-bottom: 48px;
+    scroll-margin-top: 25px;
+}
+
+.base-helado-page .recipe-heading {
+    color: var(--ice-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 27px;
+    margin: 0 0 22px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--ice-line);
+}
+
+/* INFORMACIÓN DE RECETA */
+
+.base-helado-page .eq-table-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.base-helado-page .eq-card {
+    background: #fffefa;
+    border: 1px solid var(--ice-line);
+    border-radius: 9px;
+    padding: 20px;
+    box-shadow: 0 4px 14px rgba(75, 65, 45, .035);
+    transition: .2s;
+}
+
+.base-helado-page .eq-table-grid .eq-card:nth-child(3n + 1) {
+    border-top: 3px solid var(--ice-green);
+}
+
+.base-helado-page .eq-table-grid .eq-card:nth-child(3n + 2) {
+    border-top: 3px solid var(--ice-pink);
+}
+
+.base-helado-page .eq-table-grid .eq-card:nth-child(3n) {
+    border-top: 3px solid var(--ice-peach);
+}
+
+.base-helado-page .eq-card span {
+    display: block;
+    color: var(--ice-muted);
+    font-size: 11px;
+    margin-bottom: 5px;
+}
+
+.base-helado-page .eq-card strong {
+    color: var(--ice-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+}
+
+/* CONTENIDO Y TABLAS */
+
+.base-helado-page .recipe-content {
+    background: #fffefa;
+    border: 1px solid var(--ice-line);
+    border-radius: 9px;
+    padding: 25px;
+}
+
+.base-helado-page .recipe-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.base-helado-page .recipe-table th {
+    background: #e8ece2;
+    color: var(--ice-dark);
+    padding: 13px 15px;
+    text-align: left;
+    font-weight: 700;
+}
+
+.base-helado-page .recipe-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid var(--ice-line);
+    color: #656458;
+}
+
+.base-helado-page .recipe-table tbody tr:nth-child(even) {
+    background: #f8f5ef;
+}
+
+.base-helado-page .recipe-table tbody tr:hover {
+    background: #f5eae6;
+}
+
+/* MISE EN PLACE Y PREPARACIÓN */
+
+.base-helado-page .recipe-block ol {
+    padding-left: 23px;
+    margin: 0;
+}
+
+.base-helado-page .recipe-block li {
+    color: #656458;
+    font-size: 14px;
+    padding: 7px 0 7px 5px;
+}
+
+.base-helado-page .recipe-block li::marker {
+    color: #b77e75;
+    font-weight: 700;
+}
+
+/* GALERÍA */
+
+.base-helado-page .recipe-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.base-helado-page .recipe-photo {
+    min-height: 175px;
+    padding: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #898575;
+    font-size: 12px;
+    background: linear-gradient(135deg, #edf0e7, #f6eae5);
+    border: 1px dashed #c9bdb0;
+    border-radius: 9px;
+    transition: .2s;
+}
+
+.base-helado-page .recipe-photo:nth-child(2) {
+    background: linear-gradient(135deg, #f4e9e5, #f5eee3);
+}
+
+.base-helado-page .recipe-photo:nth-child(3) {
+    background: linear-gradient(135deg, #f5eee3, #e9eee4);
+}
+
+.base-helado-page .recipe-photo:hover {
+    transform: translateY(-3px);
+}
+
+/* DATO GASTRONÓMICO */
+
+.base-helado-page .recipe-note {
+    padding: 25px 28px;
+    background: #edf0e7;
+    border-left: 4px solid var(--ice-green);
+    border-radius: 7px;
+    color: #64685b;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* NAVEGACIÓN */
+
+.base-helado-page .eq-page-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 22px 0;
+    margin-top: 30px;
+    border-top: 1px solid var(--ice-line);
+}
+
+.base-helado-page .eq-page-navigation a {
+    color: var(--ice-dark);
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: .2s;
+}
+
+.base-helado-page .eq-page-navigation a:hover {
+    color: #b77e75;
+}
+
+/* FOOTER */
+
+.base-helado-page .eq-footer {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 18px 5px;
+    text-align: center;
+    color: var(--ice-muted);
+    font-size: 11px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 760px) {
+    .base-helado-page .eq-container {
+        padding: 30px 38px;
+    }
+
+    .base-helado-page .eq-table-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .base-helado-page .recipe-gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .base-helado-page .eq-cover {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    body.base-helado-page {
+        padding: 12px 8px;
+    }
+
+    .base-helado-page .eq-container {
+        padding: 22px;
+    }
+
+    .base-helado-page .eq-container::before,
+    .base-helado-page .eq-container::after {
+        display: none;
+    }
+
+    .base-helado-page .eq-table-grid,
+    .base-helado-page .recipe-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .base-helado-page .eq-cover h1 {
+        font-size: 36px;
+    }
+
+    .base-helado-page .eq-page-navigation {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .base-helado-page .recipe-content {
+        padding: 16px;
+    }
+
+    .base-helado-page .recipe-table {
+        font-size: 11px;
+    }
+
+    .base-helado-page .recipe-table th,
+    .base-helado-page .recipe-table td {
+        padding: 9px 7px;
+    }
+}

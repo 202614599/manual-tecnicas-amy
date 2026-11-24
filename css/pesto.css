@@ -1,0 +1,629 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Caveat:wght@500;600&display=swap');
+
+/* ========================================
+   PESTO | CUADERNO GASTRONÓMICO
+   Paleta: albahaca, olivo y crema
+======================================== */
+
+.pesto-page {
+    --pesto-dark: #344b35;
+    --pesto-green: #657d50;
+    --pesto-light: #a9b58a;
+    --pesto-pale: #e8ebdc;
+    --pesto-cream: #f8f6ed;
+    --pesto-gold: #b49b62;
+    --pesto-text: #454b3e;
+    --pesto-muted: #777b6c;
+
+    margin: 0;
+    padding: 30px 18px;
+    background: #e5e5d9;
+    color: var(--pesto-text);
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* ENCABEZADO */
+
+.pesto-page .eq-header {
+    max-width: 1120px;
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.pesto-page .eq-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 19px;
+    border: 1px solid #c4cbb5;
+    border-radius: 30px;
+    background: #f8f7f0;
+    color: var(--pesto-dark);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: .25s ease;
+}
+
+.pesto-page .eq-back:hover {
+    background: var(--pesto-dark);
+    color: white;
+    border-color: var(--pesto-dark);
+    transform: translateX(-3px);
+}
+
+.pesto-page .eq-label {
+    color: #747b65;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: right;
+}
+
+/* CONTENEDOR PRINCIPAL */
+
+.pesto-page .eq-container {
+    position: relative;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 45px 55px;
+    overflow: hidden;
+    background: var(--pesto-cream);
+    border: 1px solid #d9d8c9;
+    box-shadow: 0 15px 45px rgba(54, 65, 43, .10);
+}
+
+.pesto-page .eq-container::before,
+.pesto-page .eq-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background: linear-gradient(
+        to bottom,
+        var(--pesto-green),
+        #d4c99e,
+        var(--pesto-light)
+    );
+    opacity: .65;
+}
+
+.pesto-page .eq-container::before {
+    left: 0;
+}
+
+.pesto-page .eq-container::after {
+    right: 0;
+}
+
+/* PORTADA */
+
+.pesto-page .eq-cover {
+    position: relative;
+    min-height: 390px;
+    padding: 55px 48px;
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    align-items: center;
+    gap: 35px;
+    overflow: hidden;
+    background: linear-gradient(
+        125deg,
+        #e3e9d8 0%,
+        #d5dfc5 48%,
+        #b7c59e 100%
+    );
+    border: 1px solid #c4cfb2;
+}
+
+.pesto-page .eq-cover::before {
+    content: "";
+    position: absolute;
+    width: 330px;
+    height: 330px;
+    top: -180px;
+    right: -75px;
+    border: 1px solid rgba(65, 91, 55, .18);
+    border-radius: 50%;
+}
+
+.pesto-page .eq-cover::after {
+    content: "";
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    bottom: -155px;
+    left: 40%;
+    border: 1px solid rgba(65, 91, 55, .18);
+    border-radius: 50%;
+}
+
+.pesto-page .eq-cover-text {
+    position: relative;
+    z-index: 2;
+}
+
+.pesto-page .eq-kicker {
+    display: block;
+    margin-bottom: 13px;
+    color: var(--pesto-green);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+}
+
+.pesto-page .eq-cover h1 {
+    margin: 0 0 20px;
+    color: var(--pesto-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(52px, 7vw, 76px);
+    font-weight: 600;
+    line-height: 1.05;
+}
+
+.pesto-page .eq-cover p {
+    max-width: 470px;
+    margin: 0;
+    color: #505d48;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.pesto-page .eq-line {
+    width: 75px;
+    height: 2px;
+    margin: 27px 0 16px;
+    background: var(--pesto-gold);
+}
+
+.pesto-page .eq-small {
+    color: #68745b;
+    font-family: 'Caveat', cursive;
+    font-size: 22px;
+}
+
+.pesto-page .eq-cover-drawing {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pesto-page .eq-cover .recipe-image-space {
+    width: 100%;
+    min-height: 245px;
+    background: rgba(248, 248, 237, .68);
+    border: 1px solid rgba(92, 112, 73, .30);
+    box-shadow: 0 12px 28px rgba(55, 76, 43, .10);
+}
+
+.pesto-page .eq-page-number {
+    position: absolute;
+    right: 25px;
+    bottom: 20px;
+    z-index: 3;
+    color: #657652;
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+}
+
+/* ESPACIOS PARA IMÁGENES */
+
+.pesto-page .recipe-image-space {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 190px;
+    padding: 20px;
+    background: #f0f1e7;
+    border: 1px dashed #aeb99a;
+    color: #77836a;
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: .5px;
+}
+
+/* INTRODUCCIÓN Y FICHA TÉCNICA */
+
+.pesto-page .eq-intro {
+    padding: 58px 0 45px;
+}
+
+.pesto-page .eq-intro h2,
+.pesto-page .eq-heading h2 {
+    margin: 0 0 25px;
+    color: var(--pesto-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 31px;
+    font-weight: 600;
+}
+
+.pesto-page .recipe-data {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.pesto-page .recipe-data > div {
+    min-height: 92px;
+    padding: 20px 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 9px;
+    background: #eef0e5;
+    border: 1px solid #dce1d1;
+    border-left: 3px solid var(--pesto-green);
+}
+
+.pesto-page .recipe-data span {
+    color: var(--pesto-muted);
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.pesto-page .recipe-data strong {
+    color: var(--pesto-dark);
+    font-size: 15px;
+    font-weight: 700;
+}
+
+/* SECCIONES */
+
+.pesto-page .recipe-section {
+    margin: 0 0 55px;
+}
+
+.pesto-page .eq-heading {
+    margin-bottom: 23px;
+}
+
+.pesto-page .eq-heading .eq-kicker {
+    margin-bottom: 10px;
+}
+
+.pesto-page .eq-heading h2 {
+    margin-bottom: 10px;
+}
+
+.pesto-page .eq-heading p {
+    margin: 0;
+    color: var(--pesto-muted);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* TARJETAS */
+
+.pesto-page .eq-card.recipe-content-card {
+    padding: 30px 34px;
+    background: #fffef9;
+    border: 1px solid #e5e4d8;
+    box-shadow: 0 6px 20px rgba(58, 68, 47, .045);
+}
+
+/* TABLA DE INGREDIENTES */
+
+.pesto-page .recipe-ingredients-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.pesto-page .recipe-ingredients-table th {
+    padding: 16px 18px;
+    background: var(--pesto-dark);
+    color: #fffef7;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.pesto-page .recipe-ingredients-table th:first-child {
+    border-radius: 5px 0 0 0;
+}
+
+.pesto-page .recipe-ingredients-table th:last-child {
+    border-radius: 0 5px 0 0;
+}
+
+.pesto-page .recipe-ingredients-table td {
+    padding: 16px 18px;
+    border-bottom: 1px solid #e8e9df;
+    color: #515747;
+    font-size: 14px;
+}
+
+.pesto-page .recipe-ingredients-table tbody tr:nth-child(even) {
+    background: #f1f3e9;
+}
+
+.pesto-page .recipe-ingredients-table tbody tr:hover {
+    background: #e8eddd;
+}
+
+/* MISE EN PLACE */
+
+.pesto-page .recipe-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.pesto-page .recipe-list li {
+    position: relative;
+    margin: 0;
+    padding: 15px 15px 15px 38px;
+    border-bottom: 1px solid #e9e9df;
+    color: #515747;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.pesto-page .recipe-list li:last-child {
+    border-bottom: none;
+}
+
+.pesto-page .recipe-list li::before {
+    content: "✦";
+    position: absolute;
+    left: 8px;
+    top: 16px;
+    color: var(--pesto-green);
+    font-size: 13px;
+}
+
+/* PROCEDIMIENTO */
+
+.pesto-page .recipe-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.pesto-page .recipe-step {
+    display: grid;
+    grid-template-columns: 55px 1fr;
+    align-items: start;
+    gap: 22px;
+    padding: 25px 28px;
+    background: #f5f5ed;
+    border: 1px solid #e3e5d9;
+    border-left: 4px solid var(--pesto-green);
+    transition: .25s ease;
+}
+
+.pesto-page .recipe-step:hover {
+    background: #edf0e4;
+    transform: translateX(3px);
+}
+
+.pesto-page .step-number {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #dce5d0;
+    color: var(--pesto-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.pesto-page .recipe-step h3 {
+    margin: 2px 0 9px;
+    color: var(--pesto-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.pesto-page .recipe-step p {
+    margin: 0;
+    color: #626858;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* GALERÍA */
+
+.pesto-page .recipe-gallery-space {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.pesto-page .recipe-gallery-space .recipe-image-space {
+    min-height: 205px;
+    padding: 18px;
+    background: #eef0e5;
+    border: 1px dashed #b6c1a5;
+}
+
+/* NOTA GASTRONÓMICA */
+
+.pesto-page .recipe-note {
+    display: grid;
+    grid-template-columns: 35px 1fr;
+    gap: 18px;
+    margin: 55px 0 45px;
+    padding: 30px 34px;
+    background: #e9eddf;
+    border: 1px solid #d5ddc9;
+    border-left: 4px solid var(--pesto-gold);
+}
+
+.pesto-page .recipe-note > span {
+    color: var(--pesto-gold);
+    font-size: 25px;
+}
+
+.pesto-page .recipe-note h3 {
+    margin: 0 0 10px;
+    color: var(--pesto-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+}
+
+.pesto-page .recipe-note p {
+    margin: 0;
+    color: #5e6654;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* NAVEGACIÓN INFERIOR */
+
+.pesto-page .eq-page-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 25px 0;
+    border-top: 1px solid #dfe1d5;
+    border-bottom: 1px solid #dfe1d5;
+}
+
+.pesto-page .eq-page-navigation a {
+    color: var(--pesto-dark);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    transition: .2s ease;
+}
+
+.pesto-page .eq-page-navigation a:hover {
+    color: var(--pesto-green);
+    transform: translateY(-2px);
+}
+
+/* PIE DE PÁGINA */
+
+.pesto-page .eq-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding-top: 25px;
+    color: #8a8d7e;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 760px) {
+    .pesto-page {
+        padding: 18px 10px;
+    }
+
+    .pesto-page .eq-container {
+        padding: 25px 22px;
+    }
+
+    .pesto-page .eq-cover {
+        grid-template-columns: 1fr;
+        padding: 38px 28px;
+        gap: 25px;
+    }
+
+    .pesto-page .eq-cover h1 {
+        font-size: 55px;
+    }
+
+    .pesto-page .eq-cover .recipe-image-space {
+        min-height: 210px;
+    }
+
+    .pesto-page .recipe-data {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pesto-page .recipe-gallery-space {
+        grid-template-columns: 1fr;
+    }
+
+    .pesto-page .recipe-gallery-space .recipe-image-space {
+        min-height: 190px;
+    }
+
+    .pesto-page .eq-card.recipe-content-card {
+        padding: 22px 18px;
+        overflow-x: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .pesto-page .eq-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .pesto-page .eq-label {
+        text-align: left;
+    }
+
+    .pesto-page .eq-container {
+        padding: 22px 17px;
+    }
+
+    .pesto-page .eq-cover {
+        padding: 32px 22px;
+    }
+
+    .pesto-page .eq-cover h1 {
+        font-size: 47px;
+    }
+
+    .pesto-page .eq-intro h2,
+    .pesto-page .eq-heading h2 {
+        font-size: 26px;
+    }
+
+    .pesto-page .recipe-data {
+        grid-template-columns: 1fr;
+    }
+
+    .pesto-page .recipe-step {
+        grid-template-columns: 42px 1fr;
+        gap: 13px;
+        padding: 20px 15px;
+    }
+
+    .pesto-page .step-number {
+        width: 38px;
+        height: 38px;
+        font-size: 14px;
+    }
+
+    .pesto-page .recipe-note {
+        grid-template-columns: 25px 1fr;
+        padding: 23px 18px;
+    }
+
+    .pesto-page .eq-page-navigation {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .pesto-page .eq-footer {
+        flex-direction: column;
+    }
+
+    .pesto-page .recipe-ingredients-table th,
+    .pesto-page .recipe-ingredients-table td {
+        padding: 13px 12px;
+        font-size: 12px;
+    }
+}

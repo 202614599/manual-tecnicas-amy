@@ -1,0 +1,613 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Caveat:wght@500;600&display=swap');
+
+/* =====================================
+   HUEVOS BENEDICTINOS
+   Paleta: salmón, terracota y salvia
+===================================== */
+
+body.huevos-benedictinos-page {
+    --hb-dark: #805348;
+    --hb-main: #b87563;
+    --hb-medium: #d9a18e;
+    --hb-light: #f1d9cc;
+    --hb-pale: #f8eee8;
+    --hb-cream: #faf8f1;
+    --hb-sage: #aab59b;
+    --hb-text: #554d46;
+    --hb-muted: #918078;
+
+    margin: 0;
+    padding: 0;
+    background: #eee4dc;
+    color: var(--hb-text);
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* ENCABEZADO */
+
+.huevos-benedictinos-page .eq-header {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 25px 35px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.huevos-benedictinos-page .eq-back {
+    color: var(--hb-dark);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    transition: .25s ease;
+}
+
+.huevos-benedictinos-page .eq-back:hover {
+    color: var(--hb-main);
+    transform: translateX(-4px);
+}
+
+.huevos-benedictinos-page .eq-label {
+    color: var(--hb-muted);
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* HOJA PRINCIPAL */
+
+.huevos-benedictinos-page .eq-container {
+    max-width: 1120px;
+    width: calc(100% - 48px);
+    margin: 0 auto 45px;
+    padding: 45px 65px;
+    background: var(--hb-cream);
+    border: 1px solid #e5d9ce;
+    box-shadow: 0 15px 45px rgba(95, 65, 52, .09);
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.huevos-benedictinos-page .eq-container::before,
+.huevos-benedictinos-page .eq-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #f0e5dc;
+    pointer-events: none;
+}
+
+.huevos-benedictinos-page .eq-container::before {
+    left: 22px;
+}
+
+.huevos-benedictinos-page .eq-container::after {
+    right: 22px;
+}
+
+/* PORTADA */
+
+.huevos-benedictinos-page .eq-cover {
+    min-height: 290px;
+    margin-bottom: 60px;
+    padding: 45px 50px;
+    border-radius: 5px;
+    background:
+        radial-gradient(circle at 90% 15%, rgba(255,255,255,.65), transparent 28%),
+        linear-gradient(125deg, #f2ded3 0%, #e9c8b8 52%, #e9e9d9 100%);
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.huevos-benedictinos-page .eq-cover::before {
+    content: "";
+    position: absolute;
+    width: 270px;
+    height: 270px;
+    border: 1px solid rgba(128, 83, 72, .17);
+    border-radius: 50%;
+    right: -70px;
+    top: -100px;
+}
+
+.huevos-benedictinos-page .eq-cover::after {
+    content: "";
+    position: absolute;
+    width: 175px;
+    height: 175px;
+    border: 1px solid rgba(128, 83, 72, .15);
+    border-radius: 50%;
+    right: 45px;
+    bottom: -115px;
+}
+
+.huevos-benedictinos-page .eq-cover > div {
+    max-width: 650px;
+    position: relative;
+    z-index: 1;
+}
+
+.huevos-benedictinos-page .eq-kicker {
+    display: block;
+    color: var(--hb-main);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 13px;
+}
+
+.huevos-benedictinos-page .eq-cover h1 {
+    color: var(--hb-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 6vw, 65px);
+    line-height: 1.08;
+    margin: 0 0 17px;
+    font-weight: 600;
+}
+
+.huevos-benedictinos-page .eq-cover p {
+    color: #80665c;
+    font-size: 14px;
+    line-height: 1.85;
+    max-width: 500px;
+    margin: 0;
+}
+
+/* SECCIÓN DE RECETA */
+
+.huevos-benedictinos-page .recipe-section {
+    margin-bottom: 60px;
+}
+
+.huevos-benedictinos-page .recipe-heading {
+    margin-bottom: 25px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #eaded4;
+}
+
+.huevos-benedictinos-page .recipe-heading h2 {
+    color: var(--hb-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 600;
+    margin: 0 0 10px;
+}
+
+.huevos-benedictinos-page .recipe-heading p {
+    color: var(--hb-muted);
+    font-size: 13px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* DATOS */
+
+.huevos-benedictinos-page .eq-table-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 13px;
+    margin-bottom: 30px;
+}
+
+.huevos-benedictinos-page .eq-table-grid .eq-card {
+    padding: 20px 17px;
+    min-height: 85px;
+    background: #f5eae2;
+    border: 1px solid #eadbd0;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 9px;
+    box-sizing: border-box;
+}
+
+.huevos-benedictinos-page .eq-table-grid .eq-card:nth-child(even) {
+    background: #eef0e6;
+    border-color: #dfe5d8;
+}
+
+.huevos-benedictinos-page .eq-table-grid .eq-card span {
+    color: var(--hb-muted);
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.huevos-benedictinos-page .eq-table-grid .eq-card strong {
+    color: var(--hb-dark);
+    font-size: 17px;
+    font-weight: 700;
+}
+
+/* CONTENIDO */
+
+.huevos-benedictinos-page .recipe-content {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
+
+.huevos-benedictinos-page .recipe-block {
+    padding: 28px 32px;
+    background: #fffefa;
+    border: 1px solid #e9e1d7;
+    border-radius: 6px;
+    box-shadow: 0 5px 18px rgba(95, 65, 52, .035);
+}
+
+.huevos-benedictinos-page .recipe-block h3 {
+    color: var(--hb-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0 0 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #eee5dc;
+}
+
+/* TABLA DE INGREDIENTES */
+
+.huevos-benedictinos-page .recipe-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.huevos-benedictinos-page .recipe-table thead {
+    background: #f1ded3;
+}
+
+.huevos-benedictinos-page .recipe-table th {
+    color: var(--hb-dark);
+    text-align: left;
+    padding: 15px 17px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.huevos-benedictinos-page .recipe-table td {
+    color: #625950;
+    padding: 13px 17px;
+    border-bottom: 1px solid #eee9df;
+    line-height: 1.5;
+}
+
+.huevos-benedictinos-page .recipe-table tbody tr:nth-child(even) {
+    background: #faf4ed;
+}
+
+.huevos-benedictinos-page .recipe-table tbody tr:hover {
+    background: #f3e6dc;
+}
+
+.huevos-benedictinos-page .recipe-table td:last-child {
+    color: var(--hb-dark);
+    font-weight: 700;
+}
+
+/* LISTAS NUMERADAS */
+
+.huevos-benedictinos-page .recipe-block ol {
+    list-style: none;
+    counter-reset: hb-counter;
+    padding: 0;
+    margin: 0;
+}
+
+.huevos-benedictinos-page .recipe-block ol li {
+    counter-increment: hb-counter;
+    position: relative;
+    padding: 13px 12px 13px 48px;
+    margin: 0;
+    border-bottom: 1px solid #eee9df;
+    color: #625950;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.huevos-benedictinos-page .recipe-block ol li:last-child {
+    border-bottom: none;
+}
+
+.huevos-benedictinos-page .recipe-block ol li::before {
+    content: counter(hb-counter, decimal-leading-zero);
+    position: absolute;
+    left: 5px;
+    top: 12px;
+    width: 29px;
+    height: 29px;
+    border-radius: 50%;
+    background: #f1ded3;
+    color: var(--hb-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+/* GALERÍA */
+
+.huevos-benedictinos-page .recipe-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.huevos-benedictinos-page .recipe-photo {
+    min-height: 220px;
+    padding: 20px;
+    background: #f5eae2;
+    border: 1px dashed #d5a995;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+    color: #987568;
+    font-family: 'Caveat', cursive;
+    font-size: 21px;
+    transition: .25s ease;
+}
+
+.huevos-benedictinos-page .recipe-photo:nth-child(even) {
+    background: #eef0e6;
+    border-color: #b9c3a9;
+    color: #77836d;
+}
+
+.huevos-benedictinos-page .recipe-photo:hover {
+    transform: translateY(-3px);
+    border-color: var(--hb-main);
+}
+
+/* NOTA: RELACIÓN CON SALSAS MADRE */
+
+.huevos-benedictinos-page .recipe-note {
+    margin-top: 5px;
+    padding: 25px 28px;
+    background: #eef0e6;
+    border-left: 4px solid var(--hb-sage);
+    border-radius: 4px;
+}
+
+.huevos-benedictinos-page .recipe-note h3 {
+    color: var(--hb-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    margin: 0 0 10px;
+}
+
+.huevos-benedictinos-page .recipe-note p {
+    color: #66705e;
+    font-size: 13px;
+    line-height: 1.8;
+    margin: 0 0 15px;
+}
+
+.huevos-benedictinos-page .recipe-note a {
+    color: var(--hb-dark);
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: .2s ease;
+}
+
+.huevos-benedictinos-page .recipe-note a:hover {
+    color: var(--hb-main);
+}
+
+/* NAVEGACIÓN */
+
+.huevos-benedictinos-page .eq-page-navigation {
+    margin-top: 65px;
+    padding: 35px;
+    background: #f3eae1;
+    border: 1px solid #e8dcd0;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.huevos-benedictinos-page .eq-page-navigation > .eq-kicker {
+    margin-bottom: 10px;
+}
+
+.huevos-benedictinos-page .eq-page-navigation > h2 {
+    color: var(--hb-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    margin: 0 0 25px;
+}
+
+.huevos-benedictinos-page .eq-page-navigation > a {
+    display: block;
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 23px 26px;
+    box-sizing: border-box;
+    background: #fffefa;
+    border: 1px solid #e8dfd5;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: left;
+    transition: .25s ease;
+}
+
+.huevos-benedictinos-page .eq-page-navigation > a:hover {
+    transform: translateY(-3px);
+    border-color: #d2a28d;
+    box-shadow: 0 8px 20px rgba(95, 65, 52, .08);
+}
+
+.huevos-benedictinos-page .eq-page-navigation > a > span {
+    display: block;
+    color: var(--hb-main);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 9px;
+}
+
+.huevos-benedictinos-page .eq-page-navigation > a h3 {
+    color: var(--hb-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    margin: 0 0 8px;
+}
+
+.huevos-benedictinos-page .eq-page-navigation > a p {
+    color: var(--hb-muted);
+    font-size: 12px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* PIE DE PÁGINA */
+
+.huevos-benedictinos-page .eq-footer {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 10px 35px 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.huevos-benedictinos-page .eq-footer a {
+    color: var(--hb-dark);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    transition: .2s ease;
+}
+
+.huevos-benedictinos-page .eq-footer a:hover {
+    color: var(--hb-main);
+}
+
+.huevos-benedictinos-page .eq-footer span {
+    color: var(--hb-muted);
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+    .huevos-benedictinos-page .eq-container {
+        width: calc(100% - 28px);
+        padding: 30px 35px;
+    }
+
+    .huevos-benedictinos-page .eq-table-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .huevos-benedictinos-page .recipe-heading h2 {
+        font-size: 28px;
+    }
+
+    .huevos-benedictinos-page .eq-cover {
+        padding: 35px;
+    }
+}
+
+@media (max-width: 550px) {
+    .huevos-benedictinos-page .eq-header {
+        padding: 20px;
+    }
+
+    .huevos-benedictinos-page .eq-label {
+        display: none;
+    }
+
+    .huevos-benedictinos-page .eq-container {
+        width: calc(100% - 18px);
+        padding: 22px 19px;
+    }
+
+    .huevos-benedictinos-page .eq-container::before {
+        left: 8px;
+    }
+
+    .huevos-benedictinos-page .eq-container::after {
+        right: 8px;
+    }
+
+    .huevos-benedictinos-page .eq-cover {
+        min-height: 230px;
+        padding: 28px 23px;
+        margin-bottom: 45px;
+    }
+
+    .huevos-benedictinos-page .eq-cover h1 {
+        font-size: 42px;
+    }
+
+    .huevos-benedictinos-page .recipe-heading h2 {
+        font-size: 26px;
+    }
+
+    .huevos-benedictinos-page .eq-table-grid {
+        gap: 9px;
+    }
+
+    .huevos-benedictinos-page .eq-table-grid .eq-card {
+        padding: 15px 12px;
+    }
+
+    .huevos-benedictinos-page .recipe-block {
+        padding: 21px 17px;
+    }
+
+    .huevos-benedictinos-page .recipe-table {
+        font-size: 11px;
+    }
+
+    .huevos-benedictinos-page .recipe-table th,
+    .huevos-benedictinos-page .recipe-table td {
+        padding: 11px 8px;
+    }
+
+    .huevos-benedictinos-page .recipe-block ol li {
+        padding-left: 42px;
+        font-size: 12px;
+    }
+
+    .huevos-benedictinos-page .recipe-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .huevos-benedictinos-page .recipe-photo {
+        min-height: 180px;
+    }
+
+    .huevos-benedictinos-page .eq-page-navigation {
+        padding: 25px 16px;
+    }
+
+    .huevos-benedictinos-page .eq-page-navigation > h2 {
+        font-size: 25px;
+    }
+
+    .huevos-benedictinos-page .eq-footer {
+        padding: 10px 20px 30px;
+        flex-wrap: wrap;
+    }
+}

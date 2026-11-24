@@ -1,0 +1,553 @@
+
+/* =========================================
+   CREMA INGLESA
+   Cuaderno gastronómico
+========================================= */
+
+body.crema-inglesa-page {
+    --ci-gold: #b79555;
+    --ci-dark: #755d3e;
+    --ci-light: #f2e8cf;
+    --ci-pale: #faf4e6;
+    --ci-brown: #987b57;
+    --ci-cream: #eee0bd;
+    --ci-ink: #4c493f;
+    --ci-muted: #898273;
+    --ci-line: #e8dfce;
+
+    background: #e8e1d5;
+    color: var(--ci-ink);
+    font-family: "DM Sans", sans-serif;
+}
+
+/* ENCABEZADO */
+
+.crema-inglesa-page .eq-header {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 30px 25px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.crema-inglesa-page .eq-back {
+    color: var(--ci-dark);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: color .2s ease;
+}
+
+.crema-inglesa-page .eq-back:hover {
+    color: var(--ci-gold);
+}
+
+.crema-inglesa-page .eq-label {
+    color: var(--ci-muted);
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* HOJA PRINCIPAL */
+
+.crema-inglesa-page .eq-container {
+    max-width: 1120px;
+    margin: 0 auto 55px;
+    padding: 42px 58px 40px;
+    background: #faf8f1;
+    border: 1px solid #e4dccf;
+    box-shadow: 0 12px 35px rgba(75, 60, 42, .08);
+    position: relative;
+    overflow: hidden;
+}
+
+.crema-inglesa-page .eq-container::before,
+.crema-inglesa-page .eq-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: rgba(183, 149, 85, .18);
+    pointer-events: none;
+}
+
+.crema-inglesa-page .eq-container::before {
+    left: 25px;
+}
+
+.crema-inglesa-page .eq-container::after {
+    right: 25px;
+}
+
+/* PORTADA */
+
+.crema-inglesa-page .eq-cover {
+    min-height: 340px;
+    padding: 65px 55px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 85% 20%, rgba(255,255,255,.75), transparent 30%),
+        linear-gradient(125deg, #f5e9cf 0%, #f8f1df 55%, #eee4ce 100%);
+    border: 1px solid #eadfc9;
+}
+
+.crema-inglesa-page .eq-cover::before {
+    content: "";
+    position: absolute;
+    width: 270px;
+    height: 270px;
+    right: -75px;
+    top: -105px;
+    border: 1px solid rgba(183, 149, 85, .28);
+    border-radius: 50%;
+}
+
+.crema-inglesa-page .eq-cover::after {
+    content: "";
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    right: 15px;
+    bottom: -115px;
+    border: 1px solid rgba(152, 123, 87, .25);
+    border-radius: 50%;
+}
+
+.crema-inglesa-page .eq-cover > div {
+    max-width: 620px;
+    position: relative;
+    z-index: 2;
+}
+
+.crema-inglesa-page .eq-kicker {
+    display: block;
+    color: var(--ci-gold);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.crema-inglesa-page .eq-cover h1 {
+    color: var(--ci-dark);
+    font-family: "Playfair Display", serif;
+    font-size: clamp(43px, 5vw, 66px);
+    font-weight: 500;
+    line-height: 1.08;
+    margin: 0 0 20px;
+}
+
+.crema-inglesa-page .eq-cover p {
+    max-width: 490px;
+    color: #6d6557;
+    font-size: 14px;
+    line-height: 1.9;
+    margin: 0;
+}
+
+/* ENCABEZADOS DE RECETA */
+
+.crema-inglesa-page .recipe-section {
+    padding: 48px 10px 15px;
+}
+
+.crema-inglesa-page .recipe-heading {
+    margin-bottom: 28px;
+}
+
+.crema-inglesa-page .recipe-heading h2 {
+    color: var(--ci-dark);
+    font-family: "Playfair Display", serif;
+    font-size: 32px;
+    font-weight: 500;
+    margin: 0 0 13px;
+}
+
+.crema-inglesa-page .recipe-heading p {
+    max-width: 760px;
+    color: #777164;
+    font-size: 13px;
+    line-height: 1.9;
+    margin: 0;
+}
+
+/* TARJETAS DE INFORMACIÓN */
+
+.crema-inglesa-page .eq-table-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 13px;
+    margin: 28px 0 35px;
+}
+
+.crema-inglesa-page .eq-table-grid .eq-card {
+    min-height: 90px;
+    padding: 17px;
+    background: #fffefa;
+    border: 1px solid var(--ci-line);
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 9px;
+    box-shadow: 0 4px 12px rgba(75, 60, 42, .035);
+}
+
+.crema-inglesa-page .eq-table-grid .eq-card span {
+    color: var(--ci-muted);
+    font-size: 10px;
+    letter-spacing: .8px;
+    text-transform: uppercase;
+}
+
+.crema-inglesa-page .eq-table-grid .eq-card strong {
+    color: var(--ci-dark);
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* CONTENIDO DE LA RECETA */
+
+.crema-inglesa-page .recipe-content {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.crema-inglesa-page .recipe-block {
+    padding: 27px 30px;
+    background: #fffefa;
+    border: 1px solid var(--ci-line);
+    border-radius: 10px;
+    box-shadow: 0 5px 16px rgba(75, 60, 42, .035);
+}
+
+.crema-inglesa-page .recipe-block h3 {
+    color: var(--ci-dark);
+    font-family: "Playfair Display", serif;
+    font-size: 23px;
+    font-weight: 500;
+    margin: 0 0 21px;
+    padding-bottom: 13px;
+    border-bottom: 1px solid var(--ci-line);
+}
+
+/* TABLA DE INGREDIENTES */
+
+.crema-inglesa-page .recipe-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.crema-inglesa-page .recipe-table th {
+    background: var(--ci-pale);
+    color: var(--ci-dark);
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 15px 16px;
+    text-align: left;
+}
+
+.crema-inglesa-page .recipe-table td {
+    padding: 15px 16px;
+    border-bottom: 1px solid var(--ci-line);
+    color: #555147;
+    line-height: 1.6;
+}
+
+.crema-inglesa-page .recipe-table tbody tr:nth-child(even) {
+    background: #fcfaf5;
+}
+
+.crema-inglesa-page .recipe-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.crema-inglesa-page .recipe-table th:nth-child(2),
+.crema-inglesa-page .recipe-table th:nth-child(3),
+.crema-inglesa-page .recipe-table td:nth-child(2),
+.crema-inglesa-page .recipe-table td:nth-child(3) {
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* MISE EN PLACE Y PREPARACIÓN */
+
+.crema-inglesa-page .recipe-block ol {
+    margin: 0;
+    padding-left: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.crema-inglesa-page .recipe-block ol li {
+    padding-left: 8px;
+    color: #5d594f;
+    font-size: 13px;
+    line-height: 1.85;
+}
+
+.crema-inglesa-page .recipe-block ol li::marker {
+    color: var(--ci-gold);
+    font-weight: 700;
+}
+
+/* NOTA GASTRONÓMICA */
+
+.crema-inglesa-page .recipe-note {
+    padding: 27px 30px;
+    background: #f3eddd;
+    border-left: 4px solid var(--ci-gold);
+    border-radius: 0 9px 9px 0;
+}
+
+.crema-inglesa-page .recipe-note h3 {
+    color: var(--ci-dark);
+    font-family: "Playfair Display", serif;
+    font-size: 21px;
+    font-weight: 500;
+    margin: 0 0 10px;
+}
+
+.crema-inglesa-page .recipe-note p {
+    color: #686153;
+    font-size: 13px;
+    line-height: 1.9;
+    margin: 0;
+}
+
+/* GALERÍA */
+
+.crema-inglesa-page .recipe-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 17px;
+}
+
+.crema-inglesa-page .recipe-photo {
+    min-height: 210px;
+    padding: 20px;
+    background: #f3eee2;
+    border: 1px dashed #cdbb99;
+    border-radius: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--ci-muted);
+    font-family: "Caveat", cursive;
+    font-size: 22px;
+    line-height: 1.4;
+}
+
+/* NAVEGACIÓN */
+
+.crema-inglesa-page .eq-page-navigation {
+    margin: 48px 10px 20px;
+    padding-top: 28px;
+    border-top: 1px solid var(--ci-line);
+}
+
+.crema-inglesa-page .eq-page-navigation > .eq-kicker {
+    margin-bottom: 10px;
+}
+
+.crema-inglesa-page .eq-page-navigation > h2 {
+    color: var(--ci-dark);
+    font-family: "Playfair Display", serif;
+    font-size: 27px;
+    font-weight: 500;
+    margin: 0 0 20px;
+}
+
+.crema-inglesa-page .eq-page-navigation .cut-color-card {
+    display: block;
+    padding: 23px 26px;
+    background: #f5edda;
+    border: 1px solid #e6dac0;
+    border-radius: 9px;
+    text-decoration: none;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.crema-inglesa-page .eq-page-navigation .cut-color-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(75, 60, 42, .07);
+}
+
+.crema-inglesa-page .cut-color-card span {
+    color: var(--ci-muted);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.crema-inglesa-page .cut-color-card h3 {
+    color: var(--ci-dark);
+    font-family: "Playfair Display", serif;
+    font-size: 21px;
+    font-weight: 500;
+    margin: 9px 0;
+}
+
+.crema-inglesa-page .cut-color-card p {
+    color: #777164;
+    font-size: 12px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* PIE DE PÁGINA */
+
+.crema-inglesa-page .eq-footer {
+    max-width: 1120px;
+    margin: -55px auto 0;
+    padding: 20px 25px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    color: var(--ci-muted);
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.crema-inglesa-page .eq-footer a {
+    color: var(--ci-dark);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.crema-inglesa-page .eq-footer a:hover {
+    color: var(--ci-gold);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 760px) {
+    .crema-inglesa-page .eq-container {
+        padding: 25px 30px;
+        margin: 0 12px 55px;
+    }
+
+    .crema-inglesa-page .eq-cover {
+        min-height: 280px;
+        padding: 45px 32px;
+    }
+
+    .crema-inglesa-page .eq-table-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .crema-inglesa-page .recipe-section {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .crema-inglesa-page .crema-inglesa-page .eq-footer {
+        margin-top: -55px;
+    }
+}
+
+@media (max-width: 480px) {
+    .crema-inglesa-page .eq-header {
+        padding: 20px 18px;
+    }
+
+    .crema-inglesa-page .eq-label {
+        font-size: 8px;
+        text-align: right;
+    }
+
+    .crema-inglesa-page .eq-container {
+        padding: 18px 22px;
+    }
+
+    .crema-inglesa-page .eq-container::before {
+        left: 10px;
+    }
+
+    .crema-inglesa-page .eq-container::after {
+        right: 10px;
+    }
+
+    .crema-inglesa-page .eq-cover {
+        padding: 35px 23px;
+    }
+
+    .crema-inglesa-page .eq-cover h1 {
+        font-size: 42px;
+    }
+
+    .crema-inglesa-page .recipe-heading h2 {
+        font-size: 27px;
+    }
+
+    .crema-inglesa-page .eq-table-grid {
+        gap: 9px;
+    }
+
+    .crema-inglesa-page .eq-table-grid .eq-card {
+        padding: 13px;
+        min-height: 78px;
+    }
+
+    .crema-inglesa-page .eq-table-grid .eq-card strong {
+        font-size: 17px;
+    }
+
+    .crema-inglesa-page .recipe-block {
+        padding: 20px 16px;
+    }
+
+    .crema-inglesa-page .recipe-block h3 {
+        font-size: 21px;
+    }
+
+    .crema-inglesa-page .recipe-table {
+        font-size: 11px;
+    }
+
+    .crema-inglesa-page .recipe-table th,
+    .crema-inglesa-page .recipe-table td {
+        padding: 12px 8px;
+    }
+
+    .crema-inglesa-page .recipe-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .crema-inglesa-page .recipe-photo {
+        min-height: 165px;
+    }
+
+    .crema-inglesa-page .recipe-note {
+        padding: 21px 18px;
+    }
+
+    .crema-inglesa-page .eq-page-navigation {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .crema-inglesa-page .eq-footer {
+        margin-top: -55px;
+        padding: 20px 18px;
+        flex-wrap: wrap;
+        font-size: 9px;
+    }
+}

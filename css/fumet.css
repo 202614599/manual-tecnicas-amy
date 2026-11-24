@@ -1,0 +1,709 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Caveat:wght@500;600&display=swap');
+
+/* =====================================
+   FUMET · CUADERNO GASTRONÓMICO
+   Paleta: azul petróleo y verde agua
+===================================== */
+
+body.fumet-page {
+    --fumet-dark: #28545a;
+    --fumet-main: #47777a;
+    --fumet-medium: #8eafb0;
+    --fumet-light: #dcebea;
+    --fumet-pale: #edf5f2;
+    --fumet-cream: #faf8f1;
+    --fumet-gold: #c5a875;
+    --fumet-text: #394b4b;
+    --fumet-muted: #788b88;
+
+    background: #e2e9e5;
+    color: var(--fumet-text);
+    font-family: 'DM Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* ENCABEZADO */
+
+.fumet-page .eq-header {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 25px 35px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.fumet-page .eq-back {
+    color: var(--fumet-dark);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    transition: .25s ease;
+}
+
+.fumet-page .eq-back:hover {
+    color: #a17f4e;
+    transform: translateX(-4px);
+}
+
+.fumet-page .eq-label {
+    color: var(--fumet-muted);
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* HOJA PRINCIPAL */
+
+.fumet-page .eq-container {
+    max-width: 1120px;
+    width: calc(100% - 48px);
+    margin: 0 auto 50px;
+    padding: 45px 65px;
+    background: var(--fumet-cream);
+    border: 1px solid #d9e0d9;
+    box-shadow: 0 15px 45px rgba(44, 75, 72, .09);
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.fumet-page .eq-container::before,
+.fumet-page .eq-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #dce9e5;
+    opacity: .8;
+}
+
+.fumet-page .eq-container::before {
+    left: 22px;
+}
+
+.fumet-page .eq-container::after {
+    right: 22px;
+}
+
+/* PORTADA */
+
+.fumet-page .eq-cover {
+    min-height: 340px;
+    padding: 45px;
+    margin-bottom: 65px;
+    border-radius: 5px;
+    background:
+        radial-gradient(circle at 90% 15%, rgba(255,255,255,.65), transparent 25%),
+        linear-gradient(125deg, #dcebe7 0%, #c5ddda 48%, #e8eee3 100%);
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    align-items: center;
+    gap: 35px;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.fumet-page .eq-cover::before {
+    content: "";
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    border: 1px solid rgba(40, 84, 90, .15);
+    border-radius: 50%;
+    right: -65px;
+    top: -90px;
+}
+
+.fumet-page .eq-cover::after {
+    content: "";
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    border: 1px solid rgba(40, 84, 90, .13);
+    border-radius: 50%;
+    right: 35px;
+    bottom: -110px;
+}
+
+.fumet-page .eq-cover-text {
+    position: relative;
+    z-index: 1;
+}
+
+.fumet-page .eq-kicker {
+    display: block;
+    color: var(--fumet-main);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 13px;
+}
+
+.fumet-page .eq-cover h1 {
+    color: var(--fumet-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(48px, 7vw, 76px);
+    line-height: 1;
+    margin: 0 0 20px;
+    font-weight: 600;
+}
+
+.fumet-page .eq-cover p {
+    color: #506966;
+    font-size: 14px;
+    line-height: 1.9;
+    max-width: 480px;
+    margin: 0;
+}
+
+.fumet-page .eq-line {
+    width: 65px;
+    height: 2px;
+    background: var(--fumet-gold);
+    margin: 25px 0 13px;
+}
+
+.fumet-page .eq-small {
+    color: var(--fumet-dark);
+    font-family: 'Caveat', cursive;
+    font-size: 20px;
+}
+
+.fumet-page .eq-cover-drawing {
+    position: relative;
+    z-index: 1;
+}
+
+.fumet-page .recipe-image-space {
+    min-height: 180px;
+    background: rgba(250, 248, 241, .65);
+    border: 1px dashed #8eaaa5;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    color: #718b86;
+    font-family: 'Caveat', cursive;
+    font-size: 19px;
+}
+
+.fumet-page .eq-cover-drawing .recipe-image-space {
+    min-height: 230px;
+    background: rgba(250, 248, 241, .55);
+}
+
+.fumet-page .eq-page-number {
+    position: absolute;
+    bottom: 18px;
+    right: 25px;
+    color: var(--fumet-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+}
+
+/* INTRODUCCIÓN Y DATOS */
+
+.fumet-page .eq-intro {
+    margin: 0 0 65px;
+    padding: 0 5px;
+}
+
+.fumet-page .eq-intro h2,
+.fumet-page .eq-heading h2 {
+    color: var(--fumet-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0 0 25px;
+}
+
+.fumet-page .recipe-data {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 13px;
+    margin-top: 25px;
+}
+
+.fumet-page .recipe-data > div {
+    background: #eef4f0;
+    border: 1px solid #dce8e2;
+    border-radius: 5px;
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-height: 70px;
+    box-sizing: border-box;
+}
+
+.fumet-page .recipe-data span {
+    color: var(--fumet-muted);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.fumet-page .recipe-data strong {
+    color: var(--fumet-dark);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.fumet-page .recipe-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+    padding: 18px 22px;
+    margin-top: 20px;
+    background: #f0f4eb;
+    border-left: 3px solid var(--fumet-gold);
+    border-radius: 3px;
+    color: #5d7068;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.fumet-page .recipe-note > span:first-child {
+    color: #b2925d;
+    font-size: 17px;
+    flex-shrink: 0;
+}
+
+.fumet-page .recipe-note h3 {
+    color: var(--fumet-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    margin: 0 0 7px;
+}
+
+.fumet-page .recipe-note p {
+    margin: 0;
+}
+
+/* SECCIONES */
+
+.fumet-page .recipe-section {
+    margin: 0 0 65px;
+}
+
+.fumet-page .eq-heading {
+    margin-bottom: 23px;
+}
+
+.fumet-page .eq-heading h2 {
+    margin-bottom: 10px;
+}
+
+.fumet-page .eq-heading > p {
+    color: var(--fumet-muted);
+    font-size: 13px;
+    line-height: 1.7;
+    margin: 8px 0 0;
+}
+
+.fumet-page .eq-card {
+    background: #fffefa;
+    border: 1px solid #e5e8df;
+    border-radius: 6px;
+    box-shadow: 0 5px 18px rgba(44, 75, 72, .045);
+}
+
+.fumet-page .recipe-content-card {
+    padding: 30px 34px;
+}
+
+.fumet-page .recipe-content-card > p:not(.recipe-note) {
+    color: #566663;
+    font-size: 14px;
+    line-height: 1.95;
+    margin: 0 0 17px;
+}
+
+.fumet-page .recipe-content-card > p:last-child {
+    margin-bottom: 0;
+}
+
+/* TABLA DE INGREDIENTES */
+
+.fumet-page .recipe-ingredients-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.fumet-page .recipe-ingredients-table thead {
+    background: #dcebe7;
+}
+
+.fumet-page .recipe-ingredients-table th {
+    color: var(--fumet-dark);
+    text-align: left;
+    padding: 15px 17px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.fumet-page .recipe-ingredients-table td {
+    color: #566663;
+    padding: 13px 17px;
+    border-bottom: 1px solid #e9eee9;
+    line-height: 1.5;
+}
+
+.fumet-page .recipe-ingredients-table tbody tr:nth-child(even) {
+    background: #f4f7f2;
+}
+
+.fumet-page .recipe-ingredients-table tbody tr:hover {
+    background: #eaf2ed;
+}
+
+.fumet-page .recipe-ingredients-table td:last-child,
+.fumet-page .recipe-ingredients-table th:last-child {
+    font-weight: 700;
+    color: var(--fumet-dark);
+}
+
+/* LISTAS */
+
+.fumet-page .recipe-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.fumet-page .recipe-list li {
+    position: relative;
+    padding: 13px 15px;
+    margin: 0;
+    border-bottom: 1px solid #e9eee9;
+    color: #566663;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.fumet-page .recipe-list li:last-child {
+    border-bottom: none;
+}
+
+.fumet-page .recipe-list li::before {
+    content: none;
+}
+
+/* PROCEDIMIENTO */
+
+.fumet-page .recipe-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.fumet-page .recipe-step {
+    display: grid;
+    grid-template-columns: 55px 1fr;
+    align-items: start;
+    gap: 20px;
+    padding: 23px 25px;
+    background: #fffefa;
+    border: 1px solid #e5e8df;
+    border-radius: 6px;
+    box-shadow: 0 4px 14px rgba(44, 75, 72, .035);
+}
+
+.fumet-page .step-number {
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    background: #dcebe7;
+    color: var(--fumet-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.fumet-page .recipe-step h3 {
+    color: var(--fumet-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    margin: 2px 0 9px;
+}
+
+.fumet-page .recipe-step p {
+    color: #667671;
+    font-size: 13px;
+    line-height: 1.85;
+    margin: 0;
+}
+
+/* TÉCNICAS */
+
+.fumet-page .eq-table-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 17px;
+}
+
+.fumet-page .cut-color-card {
+    padding: 25px 27px;
+    background: #edf4ef;
+    border-color: #dce8e1;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.fumet-page .cut-color-card:nth-child(2) {
+    background: #edf3f3;
+}
+
+.fumet-page .cut-color-card:nth-child(3) {
+    background: #f3f1e8;
+}
+
+.fumet-page .cut-color-card:nth-child(4) {
+    background: #e9f0ed;
+}
+
+.fumet-page .cut-color-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 9px 20px rgba(44, 75, 72, .08);
+}
+
+.fumet-page .cut-color-card h3 {
+    color: var(--fumet-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    margin: 0 0 12px;
+}
+
+.fumet-page .cut-color-card p {
+    color: #60716c;
+    font-size: 13px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* GALERÍA */
+
+.fumet-page .recipe-gallery-space {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 17px;
+}
+
+.fumet-page .recipe-gallery-space .recipe-image-space {
+    min-height: 175px;
+    background: #edf3ef;
+    border-color: #c6d8d1;
+    transition: .25s ease;
+}
+
+.fumet-page .recipe-gallery-space .recipe-image-space:nth-child(even) {
+    background: #e8f0ef;
+}
+
+.fumet-page .recipe-gallery-space .recipe-image-space:hover {
+    border-color: var(--fumet-main);
+    transform: translateY(-3px);
+}
+
+/* DATO GASTRONÓMICO */
+
+.fumet-page > .eq-container > .recipe-note {
+    margin: 0 0 60px;
+    padding: 25px 28px;
+    background: #eaf2ed;
+    border-left: 4px solid var(--fumet-main);
+}
+
+.fumet-page > .eq-container > .recipe-note h3 {
+    font-size: 21px;
+}
+
+/* NAVEGACIÓN */
+
+.fumet-page .eq-page-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-top: 65px;
+    padding: 25px 0;
+    border-top: 1px solid #dce5de;
+    border-bottom: 1px solid #dce5de;
+}
+
+.fumet-page .eq-page-navigation a {
+    display: inline-block;
+    color: var(--fumet-dark);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 12px 18px;
+    background: #eaf2ed;
+    border: 1px solid #d9e6df;
+    border-radius: 4px;
+    transition: .25s ease;
+}
+
+.fumet-page .eq-page-navigation a:hover {
+    background: var(--fumet-dark);
+    color: white;
+    border-color: var(--fumet-dark);
+    transform: translateY(-2px);
+}
+
+/* PIE DE PÁGINA */
+
+.fumet-page .eq-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 25px 5px 5px;
+    color: #8a9991;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 760px) {
+    .fumet-page .eq-container {
+        width: calc(100% - 24px);
+        padding: 28px 25px;
+    }
+
+    .fumet-page .eq-container::before {
+        left: 9px;
+    }
+
+    .fumet-page .eq-container::after {
+        right: 9px;
+    }
+
+    .fumet-page .eq-header {
+        padding: 20px 18px;
+    }
+
+    .fumet-page .eq-label {
+        display: none;
+    }
+
+    .fumet-page .eq-cover {
+        grid-template-columns: 1fr;
+        padding: 30px;
+        gap: 25px;
+        margin-bottom: 45px;
+    }
+
+    .fumet-page .eq-cover h1 {
+        font-size: 55px;
+    }
+
+    .fumet-page .recipe-data {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .fumet-page .recipe-gallery-space {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .fumet-page .eq-table-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fumet-page .recipe-section,
+    .fumet-page .eq-intro {
+        margin-bottom: 48px;
+    }
+}
+
+@media (max-width: 480px) {
+    .fumet-page .eq-container {
+        padding: 22px 18px;
+    }
+
+    .fumet-page .eq-cover {
+        padding: 25px 20px;
+    }
+
+    .fumet-page .eq-cover h1 {
+        font-size: 46px;
+    }
+
+    .fumet-page .eq-intro h2,
+    .fumet-page .eq-heading h2 {
+        font-size: 25px;
+    }
+
+    .fumet-page .recipe-data {
+        grid-template-columns: 1fr 1fr;
+        gap: 9px;
+    }
+
+    .fumet-page .recipe-data > div {
+        padding: 14px;
+    }
+
+    .fumet-page .recipe-content-card {
+        padding: 20px 17px;
+    }
+
+    .fumet-page .recipe-ingredients-table {
+        font-size: 11px;
+    }
+
+    .fumet-page .recipe-ingredients-table th,
+    .fumet-page .recipe-ingredients-table td {
+        padding: 10px 8px;
+    }
+
+    .fumet-page .recipe-step {
+        grid-template-columns: 40px 1fr;
+        gap: 12px;
+        padding: 18px 14px;
+    }
+
+    .fumet-page .step-number {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    .fumet-page .recipe-gallery-space {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .fumet-page .recipe-gallery-space .recipe-image-space {
+        min-height: 135px;
+        font-size: 16px;
+    }
+
+    .fumet-page .eq-page-navigation {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .fumet-page .eq-page-navigation a {
+        text-align: center;
+    }
+
+    .fumet-page .eq-footer {
+        flex-direction: column;
+        line-height: 1.7;
+    }
+}

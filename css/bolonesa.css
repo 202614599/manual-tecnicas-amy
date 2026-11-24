@@ -1,0 +1,769 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Caveat:wght@500;600&display=swap');
+
+/* =========================================
+   SALSA BOLOÑESA
+   Cuaderno gastronómico
+   Paleta: terracota, vino y oliva
+========================================= */
+
+body.bolonesa-page {
+    --terracotta: #b96f56;
+    --terracotta-dark: #92513f;
+    --terracotta-light: #f3e5dc;
+    --wine: #754b45;
+    --wine-light: #eee3df;
+    --olive: #85866a;
+    --olive-light: #edefe3;
+    --cream: #f8f5ed;
+    --paper: #fffdf8;
+    --brown: #655344;
+    --text: #625b51;
+    --muted: #91877a;
+    --border: #e9dfd2;
+
+    margin: 0;
+    padding: 30px 18px;
+    background: #e9e3da;
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.75;
+}
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+body.bolonesa-page .eq-header {
+    max-width: 1120px;
+    margin: 0 auto 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+body.bolonesa-page .eq-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 19px;
+    background: var(--paper);
+    border: 1px solid #e5d6c9;
+    border-radius: 30px;
+    color: var(--terracotta-dark);
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .25s ease;
+}
+
+body.bolonesa-page .eq-back:hover {
+    background: var(--terracotta-dark);
+    border-color: var(--terracotta-dark);
+    color: white;
+    transform: translateX(-3px);
+}
+
+body.bolonesa-page .eq-label {
+    padding: 9px 17px;
+    background: var(--wine-light);
+    border-radius: 30px;
+    color: var(--wine);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+}
+
+/* =========================================
+   CONTENEDOR PRINCIPAL
+========================================= */
+
+body.bolonesa-page .eq-container {
+    position: relative;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 48px 55px;
+    overflow: hidden;
+    background: var(--paper);
+    border: 1px solid #e9dfd2;
+    box-shadow: 0 15px 45px rgba(83, 59, 43, .09);
+}
+
+body.bolonesa-page .eq-container::before,
+body.bolonesa-page .eq-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(
+        to bottom,
+        var(--terracotta),
+        #d4b28c,
+        var(--olive)
+    );
+    opacity: .65;
+}
+
+body.bolonesa-page .eq-container::before {
+    left: 0;
+}
+
+body.bolonesa-page .eq-container::after {
+    right: 0;
+}
+
+/* =========================================
+   PORTADA
+========================================= */
+
+body.bolonesa-page .eq-cover {
+    position: relative;
+    min-height: 390px;
+    margin-bottom: 65px;
+    padding: 55px 48px;
+    display: grid;
+    grid-template-columns: 1.15fr .85fr;
+    align-items: center;
+    gap: 35px;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 90% 12%, #efd9cc 0, transparent 35%),
+        linear-gradient(120deg, #f8eee6, #f4e8dc 55%, #f2e9dc);
+    border: 1px solid #ead8c9;
+}
+
+body.bolonesa-page .eq-cover::before {
+    content: "";
+    position: absolute;
+    width: 340px;
+    height: 340px;
+    right: -100px;
+    top: -160px;
+    border: 1px solid rgba(169, 102, 78, .23);
+    border-radius: 50%;
+}
+
+body.bolonesa-page .eq-cover::after {
+    content: "";
+    position: absolute;
+    width: 245px;
+    height: 245px;
+    right: -55px;
+    top: -110px;
+    border: 1px solid rgba(169, 102, 78, .2);
+    border-radius: 50%;
+}
+
+body.bolonesa-page .eq-cover-text {
+    position: relative;
+    z-index: 2;
+    max-width: 590px;
+}
+
+body.bolonesa-page .eq-kicker {
+    display: block;
+    margin-bottom: 12px;
+    color: var(--terracotta-dark);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+body.bolonesa-page .eq-cover h1 {
+    margin: 10px 0 20px;
+    color: #65473d;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(43px, 5.8vw, 67px);
+    font-weight: 600;
+    line-height: 1.08;
+}
+
+body.bolonesa-page .eq-cover-text > p {
+    max-width: 510px;
+    margin: 0;
+    color: #786d62;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+body.bolonesa-page .eq-line {
+    width: 75px;
+    height: 3px;
+    margin: 25px 0 15px;
+    background: var(--terracotta);
+}
+
+body.bolonesa-page .eq-small {
+    color: #92796a;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+body.bolonesa-page .eq-cover-drawing {
+    position: relative;
+    z-index: 2;
+    width: 245px;
+    height: 245px;
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #d9bca9;
+    border-radius: 50%;
+    background: rgba(255, 253, 248, .75);
+}
+
+body.bolonesa-page .eq-cover-drawing .recipe-image-space {
+    width: 195px;
+    min-height: 195px;
+    margin: 0;
+    padding: 15px;
+    border: 1px dashed #c59b82;
+    border-radius: 50%;
+    background: #f5e8dd;
+}
+
+body.bolonesa-page .eq-cover-drawing .recipe-image-space span {
+    color: #956b57;
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+body.bolonesa-page .eq-page-number {
+    position: absolute;
+    right: 25px;
+    bottom: 20px;
+    color: #a58d7b;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+}
+
+/* =========================================
+   INTRODUCCIÓN
+========================================= */
+
+body.bolonesa-page .eq-intro {
+    margin: 0 0 65px;
+    padding: 32px;
+    background: #f8f3eb;
+    border-left: 4px solid var(--terracotta);
+}
+
+body.bolonesa-page .eq-intro > .eq-kicker {
+    color: var(--terracotta-dark);
+}
+
+body.bolonesa-page .eq-intro > h2 {
+    margin: 0 0 23px;
+    color: #674b3e;
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+/* =========================================
+   SECCIONES Y ENCABEZADOS
+========================================= */
+
+body.bolonesa-page .recipe-section {
+    margin: 60px 0;
+}
+
+body.bolonesa-page .eq-heading {
+    position: relative;
+    margin-bottom: 28px;
+    padding-left: 20px;
+    border-left: 4px solid var(--terracotta);
+}
+
+body.bolonesa-page .eq-heading .eq-kicker {
+    margin-bottom: 8px;
+    color: var(--terracotta-dark);
+}
+
+body.bolonesa-page .eq-heading h2 {
+    margin: 0;
+    color: #65483c;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(25px, 3.5vw, 34px);
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+body.bolonesa-page .eq-heading h3 {
+    margin: 0;
+    color: #704f40;
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    font-weight: 600;
+}
+
+body.bolonesa-page .eq-heading > p {
+    max-width: 760px;
+    margin: 12px 0 0;
+    color: #85796d;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+/* =========================================
+   TARJETAS
+========================================= */
+
+body.bolonesa-page .eq-card,
+body.bolonesa-page .recipe-content-card {
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    box-shadow: 0 6px 20px rgba(83, 59, 43, .045);
+}
+
+body.bolonesa-page .recipe-content-card {
+    padding: 30px 34px;
+    margin-bottom: 25px;
+}
+
+body.bolonesa-page .recipe-content-card p {
+    margin: 0 0 17px;
+    color: #6e655a;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+body.bolonesa-page .recipe-content-card p:last-child {
+    margin-bottom: 0;
+}
+
+/* =========================================
+   DATOS DE LA RECETA
+========================================= */
+
+body.bolonesa-page .recipe-data {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+    margin: 30px 0 40px;
+}
+
+body.bolonesa-page .recipe-data > div {
+    min-height: 82px;
+    padding: 17px 19px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7px;
+    background: #f8f1e9;
+    border: 1px solid #eadfd2;
+    border-bottom: 3px solid var(--terracotta);
+    border-radius: 3px;
+}
+
+body.bolonesa-page .recipe-data > div:nth-child(even) {
+    background: #f0f0e7;
+    border-bottom-color: var(--olive);
+}
+
+body.bolonesa-page .recipe-data span {
+    color: #958777;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+body.bolonesa-page .recipe-data strong {
+    color: #674e3e;
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* =========================================
+   TABLAS
+========================================= */
+
+body.bolonesa-page .recipe-content-card:has(.recipe-ingredients-table) {
+    overflow-x: auto;
+}
+
+body.bolonesa-page .recipe-ingredients-table {
+    width: 100%;
+    margin: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 13px;
+}
+
+body.bolonesa-page .recipe-ingredients-table thead {
+    background: #f0e5dc;
+}
+
+body.bolonesa-page .recipe-ingredients-table th {
+    padding: 16px 18px;
+    color: #754f3f;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: left;
+    text-transform: uppercase;
+    border-bottom: 2px solid #dfc9b9;
+}
+
+body.bolonesa-page .recipe-ingredients-table td {
+    padding: 14px 18px;
+    color: #6f665b;
+    border-bottom: 1px solid #eee7de;
+}
+
+body.bolonesa-page .recipe-ingredients-table tbody tr:nth-child(even) {
+    background: #faf6f0;
+}
+
+body.bolonesa-page .recipe-ingredients-table tbody tr:hover {
+    background: #f4ece3;
+}
+
+body.bolonesa-page .recipe-ingredients-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* =========================================
+   LISTAS
+========================================= */
+
+body.bolonesa-page .recipe-list {
+    margin: 0;
+    padding-left: 23px;
+    color: #6e655a;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+body.bolonesa-page .recipe-list li {
+    padding-left: 7px;
+    margin-bottom: 12px;
+}
+
+body.bolonesa-page .recipe-list li:last-child {
+    margin-bottom: 0;
+}
+
+body.bolonesa-page .recipe-list li::marker {
+    color: var(--terracotta);
+}
+
+/* =========================================
+   PROCEDIMIENTO
+========================================= */
+
+body.bolonesa-page .recipe-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+body.bolonesa-page .recipe-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 24px 26px;
+    background: #fffdf8;
+    border: 1px solid #eae0d5;
+    border-left: 3px solid var(--terracotta);
+    border-radius: 4px;
+    transition: .25s ease;
+}
+
+body.bolonesa-page .recipe-step:hover {
+    background: #fcf7f0;
+    border-color: #d8b6a3;
+    transform: translateX(3px);
+}
+
+body.bolonesa-page .step-number {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #f2e4dc;
+    color: var(--terracotta-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+body.bolonesa-page .recipe-step h3 {
+    margin: 2px 0 8px;
+    color: #704e3e;
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+body.bolonesa-page .recipe-step p {
+    margin: 0;
+    color: #786e62;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+/* =========================================
+   FOTOGRAFÍAS
+========================================= */
+
+body.bolonesa-page .recipe-image-space {
+    min-height: 210px;
+    margin: 0;
+    padding: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(145deg, #f3e9df, #faf5ed);
+    border: 1px dashed #c9a58e;
+    border-radius: 5px;
+    color: #987561;
+    font-family: 'Caveat', cursive;
+    font-size: 21px;
+    line-height: 1.6;
+    transition: .25s ease;
+}
+
+body.bolonesa-page .recipe-image-space:hover {
+    background: #f0eee4;
+    border-color: var(--olive);
+}
+
+body.bolonesa-page .eq-cover-drawing .recipe-image-space {
+    min-height: 195px;
+}
+
+body.bolonesa-page .recipe-gallery-space {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 17px;
+    margin: 35px 0 20px;
+}
+
+body.bolonesa-page .recipe-gallery-space .recipe-image-space {
+    min-height: 160px;
+    font-size: 18px;
+}
+
+body.bolonesa-page .recipe-gallery-space .recipe-image-space:nth-child(2) {
+    background: linear-gradient(145deg, #eff0e6, #faf9f2);
+    border-color: #b9b99d;
+    color: #7d8066;
+}
+
+body.bolonesa-page .recipe-gallery-space .recipe-image-space:nth-child(3) {
+    background: linear-gradient(145deg, #f1e2db, #faf3ed);
+}
+
+/* =========================================
+   NOTA GASTRONÓMICA
+========================================= */
+
+body.bolonesa-page .recipe-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    margin: 55px 0;
+    padding: 28px 32px;
+    background: #eff0e7;
+    border: 1px solid #e1e3d4;
+    border-left: 4px solid var(--olive);
+}
+
+body.bolonesa-page .recipe-note > span {
+    color: var(--olive);
+    font-size: 26px;
+}
+
+body.bolonesa-page .recipe-note h3 {
+    margin: 0 0 8px;
+    color: #65674d;
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    font-weight: 600;
+}
+
+body.bolonesa-page .recipe-note p {
+    margin: 0;
+    color: #737363;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+/* =========================================
+   NAVEGACIÓN
+========================================= */
+
+body.bolonesa-page .eq-page-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 65px;
+    padding: 25px 0;
+    border-top: 1px solid var(--border);
+}
+
+body.bolonesa-page .eq-page-navigation a {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 19px;
+    background: #f4eae2;
+    border: 1px solid #ead9cc;
+    border-radius: 30px;
+    color: var(--terracotta-dark);
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: .25s ease;
+}
+
+body.bolonesa-page .eq-page-navigation a:hover {
+    background: var(--terracotta-dark);
+    border-color: var(--terracotta-dark);
+    color: white;
+}
+
+/* =========================================
+   PIE DE PÁGINA
+========================================= */
+
+body.bolonesa-page .eq-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 20px;
+    padding-top: 22px;
+    border-top: 1px solid #eee7de;
+    color: #988b7d;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 850px) {
+    body.bolonesa-page .eq-container {
+        padding: 35px 30px;
+    }
+
+    body.bolonesa-page .eq-cover {
+        padding: 40px 30px;
+    }
+
+    body.bolonesa-page .eq-cover-drawing {
+        width: 200px;
+        height: 200px;
+    }
+
+    body.bolonesa-page .eq-cover-drawing .recipe-image-space {
+        width: 160px;
+        min-height: 160px;
+    }
+
+    body.bolonesa-page .recipe-data {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    body.bolonesa-page {
+        padding: 15px 10px;
+    }
+
+    body.bolonesa-page .eq-container {
+        padding: 25px 18px;
+    }
+
+    body.bolonesa-page .eq-cover {
+        grid-template-columns: 1fr;
+        padding: 35px 23px;
+        gap: 25px;
+        margin-bottom: 45px;
+    }
+
+    body.bolonesa-page .eq-cover h1 {
+        font-size: 43px;
+    }
+
+    body.bolonesa-page .eq-cover-drawing {
+        width: 210px;
+        height: 210px;
+    }
+
+    body.bolonesa-page .eq-cover-drawing .recipe-image-space {
+        width: 170px;
+        min-height: 170px;
+    }
+
+    body.bolonesa-page .eq-intro {
+        padding: 23px 19px;
+        margin-bottom: 45px;
+    }
+
+    body.bolonesa-page .eq-intro > h2 {
+        font-size: 25px;
+    }
+
+    body.bolonesa-page .recipe-section {
+        margin: 45px 0;
+    }
+
+    body.bolonesa-page .recipe-content-card {
+        padding: 20px 17px;
+    }
+
+    body.bolonesa-page .recipe-content-card:has(.recipe-ingredients-table) {
+        overflow-x: auto;
+    }
+
+    body.bolonesa-page .recipe-ingredients-table {
+        min-width: 420px;
+    }
+
+    body.bolonesa-page .recipe-gallery-space {
+        grid-template-columns: 1fr;
+    }
+
+    body.bolonesa-page .recipe-step {
+        gap: 13px;
+        padding: 19px 15px;
+    }
+
+    body.bolonesa-page .recipe-note {
+        padding: 22px 18px;
+    }
+
+    body.bolonesa-page .eq-page-navigation {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    body.bolonesa-page .eq-page-navigation a {
+        justify-content: center;
+    }
+
+    body.bolonesa-page .eq-footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
